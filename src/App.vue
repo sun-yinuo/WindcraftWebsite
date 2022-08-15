@@ -1,30 +1,25 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <Menu></Menu>
 </template>
+<script>
+import Menu from './components/Menu/Menu';
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+export default {
+  components: {
+    Menu
+  },
+  /**
+   * 设置导航栏的颜色:light,dark,primary
+   * @returns {{theme: string}}
+   */
+  data () {
+    return {
+      theme: 'light',
+      value: ''
+    }
+  },
+  methods: {
 
-nav {
-  padding: 30px;
+  },
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>

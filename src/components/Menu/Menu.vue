@@ -1,7 +1,7 @@
 <template>
   <Menu mode="horizontal" :theme="theme" active-name="1" @on-select="OnSelectId" >
     <!--首页-->
-    <MenuItem name="1" >首页</MenuItem>
+    <MenuItem name="1" @click="gotoMainPage">首页</MenuItem>
     <!--介绍-->
     <MenuItem name="2">介绍</MenuItem>
     <!--截图-->
@@ -28,7 +28,9 @@
 </template>
 
 <script>
-export default {
+import router from "@/router";
+
+export default{
   /**传参**/
   data () {
     return {
@@ -39,7 +41,11 @@ export default {
   /**获取菜单栏选择项的id**/
   methods:{
     OnSelectId (name) {
-      console.log(name)}
-  }
+      console.log(name)
+    },
+    gotoMainPage(){
+      return router.push("login")
+    }
+  },
 }
 </script>

@@ -1,51 +1,40 @@
 <template>
-  <div class="login">
-    <Login @on-submit="handleSubmit">
-      <UserName name="username" />
-      <Password name="password" />
-      <div class="auto-login">
-        <Checkbox v-model="autoLogin" size="large">自动登录</Checkbox>
-        <a>忘记密码</a>
-      </div>
-      <Submit />
-    </Login>
-  </div>
+  <Modal
+      v-model="modal"
+      title="登陆/注册到WindCraft官方网站"
+      @on-ok="ok"
+      @on-cancel="cancel">
+    <div class="demo-login">
+      <Login @on-submit="handleSubmit">
+        <UserName name="username" />
+        <Password name="password" />
+        <Submit/>
+      </Login>
+    </div>
+  </Modal>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      autoLogin: true
+      //登陆窗口状态
+      modal: false,
     }
   },
   methods: {
-    handleSubmit (valid, { username, password }) {
-      if (valid) {
+    ok () {
+      console.log("log modal is on")
+    },
+    cancel () {
+      console.log("log modal is off")
+    },
+    handleSubmit (valid ,{ username, password }) {
+      if (valid){
+        //TODO 上线前给老子删掉,别他妈的留着,别他妈到时候看到用户名和密码被打日志里
         console.log(username,password)
       }
     }
   }
 }
 </script>
-<style>
-  .login{
-    width: 400px;
-    margin: 0 auto !important;
-    left: 50%;
-    top: 50%;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 20px;
-    height: 350px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-  }
-  .auto-login{
-    margin-bottom: 24px;
-    text-align: left;
-  }
-  .auto-login a{
-    float: right;
-  }
-</style>

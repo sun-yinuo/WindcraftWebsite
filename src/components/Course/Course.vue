@@ -131,27 +131,27 @@ body {
 }
 
 .section-item:nth-child(1n) .section-item__block {
-  background-image: url('/src/assets/CoursePage/serverimg1.jpg');
+  background-image: url('/src/assets/CoursePage/image-1.jpg');
 }
 
 .section-item:nth-child(2n) .section-item__block {
-  background-image: url('/src/assets/CoursePage/serverimg2.jpg');
+  background-image: url('/src/assets/CoursePage/image-2.jpg');
 }
 
 .section-item:nth-child(3n) .section-item__block {
-  background-image: url('/src/assets/CoursePage/serverimg3.jpg');
+  background-image: url('/src/assets/CoursePage/image-3.jpg');
 }
 
 .section-item:nth-child(4n) .section-item__block {
-  background-image: url('/src/assets/CoursePage/serverimg4.jpg');
+  background-image: url('/src/assets/CoursePage/image-4.jpg');
 }
 
 .section-item:nth-child(5n) .section-item__block {
-  background-image: url('/src/assets/CoursePage/serverimg5.jpg');
+  background-image: url('/src/assets/CoursePage/image-5.jpg');
 }
 
 .section-item:nth-child(6n) .section-item__block {
-  background-image: url('/src/assets/CoursePage/serverimg6.jpg');
+  background-image: url('/src/assets/CoursePage/image-6.jpg');
 }
 </style>
 

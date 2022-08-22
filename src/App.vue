@@ -1,6 +1,7 @@
 <template>
   <Menu></Menu>
   <Login></Login>
+  <router-view></router-view>
 </template>
 <script>
 import Menu from './components/Menu/Menu';

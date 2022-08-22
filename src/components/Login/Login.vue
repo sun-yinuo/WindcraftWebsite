@@ -3,7 +3,9 @@
       v-model="modal"
       title="登陆/注册到WindCraft官方网站"
       @on-ok="ok"
-      @on-cancel="cancel">
+      @on-cancel="cancel"
+      ref="login">
+
     <div class="demo-login">
       <Login @on-submit="handleSubmit">
         <UserName name="username" />
@@ -19,15 +21,15 @@ export default {
   data () {
     return {
       //登陆窗口状态
-      modal: false,
+      modal: true,
     }
   },
   methods: {
     ok () {
-      console.log("log modal is on")
+      console.log("login modal is on")
     },
     cancel () {
-      console.log("log modal is off")
+      console.log("login modal is off")
     },
     handleSubmit (valid ,{ username, password }) {
       if (valid){

@@ -1,5 +1,6 @@
 <template>
-  <Menu mode="horizontal" :theme="theme" active-name="1" @on-select="OnSelectId" >
+  <!--菜单-->
+  <Menu mode="horizontal" :theme="theme" active-name="1" @on-select="onSelectId" width="auto">
     <!--首页-->
     <MenuItem name="1" @click="gotoMainPage">首页</MenuItem>
     <!--介绍-->
@@ -9,7 +10,7 @@
     <!--op-->
     <MenuItem name="4">OP介绍</MenuItem>
     <!--历程-->
-    <MenuItem name="5">历程</MenuItem>
+    <MenuItem name="5" @click="gotoCoursePage">历程</MenuItem>
     <!--op申请-->
     <MenuItem name="7">OP申请</MenuItem>
     <!--外挂举报-->
@@ -24,28 +25,36 @@
     <Input v-model="value" placeholder="随便搜搜呗(≧∇≦)ﾉ" style="width: 400px; margin: 10px" />
     <!--搜索按钮-->
     <Button type="primary" icon="ios-search" style="margin: 10px">Search</Button>
+
   </Menu>
 </template>
 
 <script>
+//下次别给老子看到你没导入依赖，草泥马
 import router from "@/router";
+import request from "@/utils/request";
 
 export default{
   /**传参**/
   data () {
     return {
+      //导航栏颜色
       theme: 'light',
+      //输入框默认值
       value: '',
     }
   },
   /**获取菜单栏选择项的id**/
   methods:{
-    OnSelectId (name) {
+    onSelectId (name) {
       console.log(name)
     },
+    gotoCoursePage(){
+      return router.push("/course")
+    },
     gotoMainPage(){
-      return router.push("login")
+      return router.push("/")
     }
-  },
+  }
 }
 </script>

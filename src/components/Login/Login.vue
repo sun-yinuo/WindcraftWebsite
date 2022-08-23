@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import request from "@/utils/request";
+
 export default {
   data () {
     return {
@@ -33,8 +35,10 @@ export default {
     },
     handleSubmit (valid ,{ username, password }) {
       if (valid){
-        //TODO 上线前给老子删掉,别他妈的留着,别他妈到时候看到用户名和密码被打日志里
-        console.log(username,password)
+        //向后端传参{username,password}
+        request.post("/login",{username,password}).then(res =>{
+          console.log(res)
+        })
       }
     }
   }

@@ -28,7 +28,7 @@ public interface UserService {
      * @param userName 用户名
      * @return 用户实体类
      */
-    List<User> getUserByName(String userName);
+    User getUserByName(String userName);
 
     /**
      * 根据userPassword查询所有用户

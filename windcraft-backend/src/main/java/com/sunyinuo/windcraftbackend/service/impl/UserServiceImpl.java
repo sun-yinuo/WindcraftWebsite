@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
      * @return 用户实体类
      */
     @Override
-    public List<User> getUserByName(String userName) {
+    public User getUserByName(String userName) {
         return userMapper.getUserByName(userName);
     }
 

@@ -36,7 +36,7 @@ public interface UserMapper {
      * @return 用户实体类
      */
     @Select("select * from user where userName = #{userName}")
-    List<User> getUserByName(String userName);
+    User getUserByName(String userName);
 
     /**
      * 根据userPassword查询所有用户

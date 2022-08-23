@@ -35,11 +35,11 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!--mybatis-->
+        <!--MybatisPlus-->
         <dependency>
-            <groupId>com.github.tailwolf</groupId>
-            <artifactId>mybatis-complete-boot-starter</artifactId>
-            <version>0.5.2</version>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.2.0</version>
         </dependency>
         <!--SpringbootTest-->
         <dependency>
@@ -52,6 +52,7 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <!--junit-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

@@ -30,9 +30,7 @@
 </template>
 
 <script>
-//下次别给老子看到你没导入依赖，草泥马
 import router from "@/router";
-import request from "@/utils/request";
 
 export default{
   /**传参**/

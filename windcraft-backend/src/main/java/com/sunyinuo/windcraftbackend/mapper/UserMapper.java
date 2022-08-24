@@ -67,7 +67,7 @@ public interface UserMapper {
      * @param user 用户实体类
      * @return 是否成功
      */
-    @Insert("insert into user(id, userName, userPassword, time, ip) value (#{id},#{userName},#{userPassword},#{time},#{ip})")
+    @Insert("insert into user(userName, userPassword, time, ip) value (#{userName},#{userPassword},#{time},#{ip})")
     int addUser(User user);
 
     /**

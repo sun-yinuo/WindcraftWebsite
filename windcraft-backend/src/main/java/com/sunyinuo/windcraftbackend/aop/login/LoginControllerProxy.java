@@ -1,4 +1,4 @@
-package com.sunyinuo.windcraftbackend.aop;
+package com.sunyinuo.windcraftbackend.aop.login;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;

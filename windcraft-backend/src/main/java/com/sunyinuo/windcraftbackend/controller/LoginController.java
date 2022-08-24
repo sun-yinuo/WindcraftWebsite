@@ -30,8 +30,6 @@ public class LoginController {
     /**登陆失败次数上限**/
     private static final int NUMBER_OF_FAILURES_CEILING = 3;
 
-    private final User user = new User();
-
     /**
      * 登陆方法
      * @param jsonParam 前端参数
@@ -40,56 +38,58 @@ public class LoginController {
     public String login(@RequestBody JSONObject jsonParam){
         String userName = (String) jsonParam.get("username");
         String userPassword = (String) jsonParam.get("password");
+        //获取用户列表，条件userName
+        User userListByName = userService.getUserByName(userName);
 
-        //判断是否有sql注入
-        if (!SqlRegex.sqlRegex(userName) && !SqlRegex.sqlRegex(userPassword)){
-            //获取用户列表，条件userName
-            User userListByName = userService.getUserByName(userName);
-
-            if (userListByName != null){
-                //进入登陆部分
-                if (userName.equals(userListByName.getUserName()) && userPassword.equals(userListByName.getUserPassword())){
-                    numberOfFailures = 0;
-                    //返回600ok
-                    return LoginResponse.CODE_600;
-                }else {
-                    //如果失败=3次，就怀疑触发逻辑漏洞
-                    if (numberOfFailures == NUMBER_OF_FAILURES_CEILING){
-                        numberOfFailures = 0;
-                        //返回660提示用户
-                        return LoginResponse.CODE_660;
-                    }else {
-                        numberOfFailures++;
-                        //返回610用户名密码错误响应
-                        return LoginResponse.CODE_610;
-                    }
-                }
-            }else {
-                //进入注册部分
-                if (!PasswordRegex.passwordRegex(userPassword)){
-                    user.setId(0);
-                    user.setUserName(userName);
-                    user.setUserPassword(userPassword);
-                    user.setIp(GetIp.getIp());
-                    //单位ms
-                    user.setTime(System.currentTimeMillis());
-
-                    //判断是否成功
-                    if (userService.addUser(user) == 1){
-                        //返回700注册成功
-                        return RegisteredResponse.CODE_700;
-                    }else {
-                        //返回500注册失败
-                        return RegisteredResponse.CODE_500;
-                    }
-                }else {
-                    //返回770 用户名或密码不符合规范响应
-                    return RegisteredResponse.CODE_770;
-                }
-            }
-        }else {
-            //返回710响应
+        //sql注入检查部分
+        if (SqlRegex.sqlRegex(userName) || SqlRegex.sqlRegex(userPassword)){
             return RegisteredResponse.CODE_710;
         }
+
+        //注册部分
+        if (userListByName == null){
+            if (PasswordRegex.passwordRegex(userPassword)){
+                return RegisteredResponse.CODE_770;
+            }
+
+            if (!PasswordRegex.passwordRegex(userPassword)){
+                User user = new User();
+
+                //单位ms
+                user.setTime(System.currentTimeMillis());
+                user.setUserName(userName);
+                user.setUserPassword(userPassword);
+                user.setIp(GetIp.getIp());
+
+                if (userService.addUser(user) == 1){
+                    return RegisteredResponse.CODE_700;
+                }
+                if (userService.addUser(user) == 0){
+                    return RegisteredResponse.CODE_500;
+                }
+            }
+        }
+
+        //登陆部分
+        if (userListByName != null){
+            //登陆成功
+            if (userName.equals(userListByName.getUserName()) && userPassword.equals(userListByName.getUserPassword())){
+                numberOfFailures = 0;
+                return LoginResponse.CODE_600;
+            }
+
+            //提示可能触发逻辑漏洞
+            if (numberOfFailures == NUMBER_OF_FAILURES_CEILING){
+                numberOfFailures = 0;
+                return LoginResponse.CODE_660;
+            }
+
+            //提示用户名或密码错误
+            if (!userName.equals(userListByName.getUserName()) || !userPassword.equals(userListByName.getUserPassword())){
+                numberOfFailures++;
+                return LoginResponse.CODE_610;
+            }
+        }
+        return null;
     }
 }

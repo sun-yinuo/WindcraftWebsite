@@ -1,6 +1,6 @@
 <template>
   <!--菜单-->
-  <Menu mode="horizontal" :theme="theme" active-name="1" @on-select="onSelectId" width="auto">
+  <Menu mode="horizontal" :theme="theme" active-name="1" width="auto">
     <!--首页-->
     <MenuItem name="1" @click="gotoMainPage">首页</MenuItem>
     <!--介绍-->
@@ -18,7 +18,7 @@
     <!--成员动态-->
     <MenuItem name="9">成员动态</MenuItem>
     <!--小黑屋-->
-    <MenuItem name="10">小黑屋</MenuItem>
+    <MenuItem name="10">封神榜</MenuItem>
     <!--消息-->
     <MenuItem name="11">消息</MenuItem>
     <!--搜索框-->
@@ -44,9 +44,6 @@ export default{
   },
   /**获取菜单栏选择项的id**/
   methods:{
-    onSelectId (name) {
-      console.log(name)
-    },
     gotoCoursePage(){
       return router.push("/course")
     },

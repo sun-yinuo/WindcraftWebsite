@@ -51,14 +51,14 @@ class UserServiceImplTest {
 
     @Test
     void addUser() {
-        User user =  new User(0,2022,"0.0.0.0","TestUser3","TestUser3Password");
+        User user =  new User(0,2022,"0.0.0.0","TestUser2","TestUser2Password");
         int addUser = userService.addUser(user);
         System.out.println(addUser);
     }
 
     @Test
     void deleteUserByName() {
-        int deleteUserByName = userService.deleteUserByName("TestUser3");
+        int deleteUserByName = userService.deleteUserByName("TestUser2");
         System.out.println(deleteUserByName);
     }
 }

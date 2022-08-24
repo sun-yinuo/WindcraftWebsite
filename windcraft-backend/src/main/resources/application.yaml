@@ -9,6 +9,5 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 # log4j2
 logging:
-  config: windcraft-backend/src/main/resources/log4j2.xml
   level:
     cn.jay.repository: trace

@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
  * @author sunyinuo
  */
 public class PasswordRegex {
-    private static final String PATTERN = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$";
+    private static final String PATTERN = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,}$";
 
     /**
      * 判断是否合规

@@ -5,7 +5,7 @@
 </template>
 <script>
 import Menu from './components/Menu/Menu';
-import Login from './components/Login/Login'
+import Login from './components/LoginRegistered/LoginAndRegistered'
 
 export default {
   //控件导入

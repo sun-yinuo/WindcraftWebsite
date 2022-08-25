@@ -30,27 +30,29 @@ public class LoginServiceImpl implements LoginService {
      */
     @Override
     public Integer login(String userName, String userPassword) {
+        User userList = userService.getUserByName(userName);
+
 
         //sql注入检查部分
         if (SqlRegex.sqlRegex(userName) || SqlRegex.sqlRegex(userPassword)){
             return RegisteredResponse.CODE_710;
         }
 
-        List<User> userListByName = userService.getUserList();
-        for (User user : userListByName) {
+        if (userList != null){
             //登陆成功
-            if (userName.equals(user.getUserName()) && userPassword.equals(user.getUserPassword())){
+            if (userName.equals(userList.getUserName()) && userPassword.equals(userList.getUserPassword())) {
                 return LoginResponse.CODE_600;
             }
-            //
-            if (!userPassword.equals(user.getUserPassword())){
+            if (!userPassword.equals(userList.getUserPassword())){
                 return LoginResponse.CODE_610;
             }
-            if (!userName.equals(user.getUserName())){
+            if (!userName.equals(userList.getUserName())){
                 return LoginResponse.CODE_610;
             }
         }
-
+        if (userList == null){
+            return LoginResponse.CODE_610;
+        }
         return null;
     }
 }

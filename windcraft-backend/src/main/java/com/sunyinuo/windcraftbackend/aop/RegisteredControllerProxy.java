@@ -31,8 +31,11 @@ public class RegisteredControllerProxy {
         }
         //业务代码执行
         Object object = joinPoint.proceed();
+        //返回值日志
+        log.info("return:{}",object);
         //end日志
-        log.info("registered方法结束");
+        log.info("registered方法结束\n");
+
         return object;
     }
 }

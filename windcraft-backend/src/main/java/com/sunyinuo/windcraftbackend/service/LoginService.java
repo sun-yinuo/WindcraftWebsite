@@ -1,7 +1,5 @@
 package com.sunyinuo.windcraftbackend.service;
 
-import com.sunyinuo.windcraftbackend.model.User;
-
 /**
  * 登陆业务逻辑层
  * @author sunyinuo

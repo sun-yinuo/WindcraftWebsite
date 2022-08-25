@@ -26,10 +26,12 @@ public class LoginControllerProxy {
         log.info("login方法开始执行");
         //方法入参日志
         for (Object arg : args) {
-            log.info("args :{}",arg);
+            log.info("args:{}",arg);
         }
         //业务代码执行
         Object object = joinPoint.proceed();
+        //返回值日志
+        log.info("return:{}" ,object);
         //end日志
         log.info("login方法结束");
         return object;

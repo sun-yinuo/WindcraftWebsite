@@ -21,21 +21,16 @@ public class RegisteredControllerProxy {
 
     @Around("registeredPoint()")
     public Object registeredLogAround(ProceedingJoinPoint joinPoint) throws Throwable {
-        //获取参数
-        Object[] args = joinPoint.getArgs();
-        //start日志
         log.info("registered方法开始执行");
-        //方法入参日志
+
+        Object[] args = joinPoint.getArgs();
         for (Object arg : args) {
             log.info("args :{}",arg);
         }
-        //业务代码执行
         Object object = joinPoint.proceed();
-        //返回值日志
-        log.info("return:{}",object);
-        //end日志
-        log.info("registered方法结束\n");
 
+        log.info("return:{}",object);
+        log.info("registered方法结束\n");
         return object;
     }
 }

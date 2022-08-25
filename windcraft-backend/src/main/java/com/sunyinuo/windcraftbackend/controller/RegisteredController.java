@@ -32,6 +32,7 @@ public class RegisteredController {
     public Integer registered(@RequestBody JSONObject jsonParam){
         String userName = (String) jsonParam.get("username");
         String userPassword = (String) jsonParam.get("password");
+
         return registeredService.registered(userName,userPassword);
     }
 }

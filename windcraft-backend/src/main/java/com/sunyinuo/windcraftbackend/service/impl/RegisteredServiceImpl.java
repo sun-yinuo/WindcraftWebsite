@@ -8,7 +8,6 @@ import com.sunyinuo.windcraftbackend.utils.regex.SqlRegex;
 import com.sunyinuo.windcraftbackend.utils.response.RegisteredResponse;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 /**
  * 登陆业务逻辑层实现类
@@ -31,8 +30,7 @@ public class RegisteredServiceImpl implements RegisteredService {
      */
     @Override
     public Integer registered(String userName, String userPassword) {
-
-        List<User> userList = userService.getUserList();
+        User userListByName = userService.getUserByName(userName);
 
         //sql注入检查部分
         if (SqlRegex.sqlRegex(userName) || SqlRegex.sqlRegex(userPassword)){
@@ -45,28 +43,27 @@ public class RegisteredServiceImpl implements RegisteredService {
         }
 
         //用户名重复
-        for (User user : userList) {
-            if(userName.equals(user.getUserName())){
-                return RegisteredResponse.CODE_750;
+        if (userListByName == null){
+            if (!PasswordRegex.passwordRegex(userPassword)){
+                User user = new User();
+
+                //单位ms
+                user.setTime(System.currentTimeMillis());
+                user.setUserName(userName);
+                user.setUserPassword(userPassword);
+                user.setIp(GetIp.getIp());
+
+                if (userService.addUser(user) == 1){
+                    return RegisteredResponse.CODE_700;
+                }
+                if (userService.addUser(user) == 0){
+                    return RegisteredResponse.CODE_500;
+                }
             }
         }
 
-        //符合规范
-        if (!PasswordRegex.passwordRegex(userPassword)){
-            User user = new User();
-
-            //单位ms
-            user.setTime(System.currentTimeMillis());
-            user.setUserName(userName);
-            user.setUserPassword(userPassword);
-            user.setIp(GetIp.getIp());
-
-            if (userService.addUser(user) == 1){
-                return RegisteredResponse.CODE_700;
-            }
-            if (userService.addUser(user) == 0){
-                return RegisteredResponse.CODE_500;
-            }
+        if (userListByName != null){
+            return RegisteredResponse.CODE_750;
         }
 
         return null;

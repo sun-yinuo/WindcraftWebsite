@@ -18,7 +18,7 @@
     <!--成员动态-->
     <MenuItem name="9">成员动态</MenuItem>
     <!--小黑屋-->
-    <MenuItem name="10">封神榜</MenuItem>
+    <MenuItem name="10" @click="gotoBanPage">封神榜</MenuItem>
     <!--消息-->
     <MenuItem name="11">消息</MenuItem>
     <!--搜索框-->
@@ -49,6 +49,9 @@ export default{
     },
     gotoMainPage(){
       return router.push("/")
+    },
+    gotoBanPage(){
+      return router.push("/ban")
     }
   }
 }

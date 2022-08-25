@@ -28,7 +28,7 @@ public interface UserMapper {
      * @return 用户实体类
      */
     @Select("select * from user where id = #{id}")
-    List<User> getUserById(int id);
+    User getUserById(int id);
 
     /**
      * 根据userName查询所有用户

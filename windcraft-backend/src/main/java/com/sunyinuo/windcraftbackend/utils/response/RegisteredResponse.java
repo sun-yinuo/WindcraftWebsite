@@ -13,6 +13,8 @@ public class RegisteredResponse {
     public static final Integer CODE_770 = 770;
     /**注册时用户名重复**/
     public static final Integer CODE_750 = 750;
+    /**一个ip注册多次**/
+    public static final Integer CODE_730 = 730;
     /**注册失败**/
     public static final Integer CODE_500 = 500;
 }

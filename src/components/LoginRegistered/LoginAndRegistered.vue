@@ -106,7 +106,7 @@ export default {
         //成功
         case 600:
           this.notice("登陆","登陆成功");
-          this.modal = false;
+          this.loginModal = false;
           break;
         //用户名或密码错误
         case 610:

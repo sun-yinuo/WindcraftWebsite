@@ -1,6 +1,8 @@
 package com.sunyinuo.windcraftbackend.service;
 
+
 import com.sunyinuo.windcraftbackend.model.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -21,7 +23,7 @@ public interface UserService {
      * @param id id
      * @return 用户实体类
      */
-    List<User> getUserById(int id);
+    User getUserById(int id);
 
     /**
      * 根据userName查询所有用户

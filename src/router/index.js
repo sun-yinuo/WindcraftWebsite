@@ -1,6 +1,7 @@
-import { createRouter, createWebHashHistory} from 'vue-router'
+import {createRouter, createWebHashHistory} from 'vue-router'
 import Course from '/src/components/Course/Course'
 import Ban from '/src/components/Ban/Ban'
+
 const router = createRouter({
     history: createWebHashHistory(),
     routes:[

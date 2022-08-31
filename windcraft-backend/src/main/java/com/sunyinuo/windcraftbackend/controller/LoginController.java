@@ -2,9 +2,12 @@ package com.sunyinuo.windcraftbackend.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.sunyinuo.windcraftbackend.service.impl.LoginServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.sunyinuo.windcraftbackend.utils.ip.GetIp;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 登陆/注册控制器
@@ -30,7 +33,8 @@ public class LoginController {
     public Integer login(@RequestBody JSONObject jsonParam){
         String userName = (String) jsonParam.get("username");
         String userPassword = (String) jsonParam.get("password");
+        String ip = GetIp.getClientIp();
 
-        return loginService.login(userName,userPassword);
+        return loginService.login(userName,userPassword,ip);
     }
 }

@@ -5,15 +5,16 @@ import com.sunyinuo.windcraftbackend.service.LoginService;
 import com.sunyinuo.windcraftbackend.utils.regex.SqlRegex;
 import com.sunyinuo.windcraftbackend.utils.response.LoginResponse;
 import com.sunyinuo.windcraftbackend.utils.response.RegisteredResponse;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * 登陆业务逻辑层实现类
  * @author sunyinuo
  */
 @Service
+@CacheConfig(cacheNames = "loginStateCache")
 public class LoginServiceImpl implements LoginService {
 
     private final UserServiceImpl userService;
@@ -29,9 +30,9 @@ public class LoginServiceImpl implements LoginService {
      * @return code
      */
     @Override
-    public Integer login(String userName, String userPassword) {
+    @CachePut(condition = "#result == 600",value = "loginState", key = "#ip")
+    public Integer login(String userName, String userPassword, String ip) {
         User userList = userService.getUserByName(userName);
-
 
         //sql注入检查部分
         if (SqlRegex.sqlRegex(userName) || SqlRegex.sqlRegex(userPassword)){

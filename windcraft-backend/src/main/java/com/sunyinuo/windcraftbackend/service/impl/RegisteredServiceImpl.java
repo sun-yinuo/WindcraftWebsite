@@ -51,7 +51,7 @@ public class RegisteredServiceImpl implements RegisteredService {
                 user.setTime(System.currentTimeMillis());
                 user.setUserName(userName);
                 user.setUserPassword(userPassword);
-                user.setIp(GetIp.getIp());
+                user.setIp(GetIp.getClientIp());
 
                 if (userService.addUser(user) == 1){
                     return RegisteredResponse.CODE_700;

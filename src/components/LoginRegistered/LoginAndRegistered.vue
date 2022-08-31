@@ -88,6 +88,8 @@ export default {
         desc: desc,
       });
     },
+
+    //----------goto----------
     gotoRegistered() {
       this.loginModal = false;
       this.registeredModal = true;
@@ -119,8 +121,7 @@ export default {
       }
     },
 
-
-
+    //----------registered----------
     registeredHandleChangePassword (val) {
       this.passwordLen = val.length;
     },
@@ -186,6 +187,11 @@ export default {
         color
       }
     }
+  },
+
+  //自动执行
+  created() {
+
   }
 }
 </script>

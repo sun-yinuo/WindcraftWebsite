@@ -6,6 +6,6 @@ class GetIpTest {
 
     @Test
     void getIp() {
-        System.out.println(GetIp.getIp());
+        System.out.println(GetIp.getClientIp());
     }
 }

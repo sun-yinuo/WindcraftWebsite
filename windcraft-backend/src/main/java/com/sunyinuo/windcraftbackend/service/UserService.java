@@ -2,7 +2,6 @@ package com.sunyinuo.windcraftbackend.service;
 
 
 import com.sunyinuo.windcraftbackend.model.User;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

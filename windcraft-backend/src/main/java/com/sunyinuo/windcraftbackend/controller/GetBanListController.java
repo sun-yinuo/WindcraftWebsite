@@ -2,8 +2,6 @@ package com.sunyinuo.windcraftbackend.controller;
 
 import com.sunyinuo.windcraftbackend.model.Ban;
 import com.sunyinuo.windcraftbackend.service.impl.GetBanListServiceImpl;
-import org.aspectj.lang.annotation.Aspect;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

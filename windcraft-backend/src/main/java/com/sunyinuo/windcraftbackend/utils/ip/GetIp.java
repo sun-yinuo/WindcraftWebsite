@@ -11,14 +11,12 @@ import java.io.IOException;
  * 获取用户ip
  * @author sunyinuo
  */
-@Component
 public class GetIp {
 
     /**
      * 获取ip
      * @return ip
      */
-    @Bean
     public static String getClientIp(){
         Document document = null;
         try {

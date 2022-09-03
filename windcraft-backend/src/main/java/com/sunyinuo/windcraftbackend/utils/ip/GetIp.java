@@ -1,30 +1,69 @@
 package com.sunyinuo.windcraftbackend.utils.ip;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import com.alibaba.fastjson.JSON;
 
-import java.io.IOException;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Enumeration;
 
 /**
- * 获取用户ip
+ * 获取ip地址方法类
  * @author sunyinuo
  */
 public class GetIp {
-
     /**
-     * 获取ip
+     * 获取ip方法
+     * @param request HttpServletRequest
      * @return ip
      */
-    public static String getClientIp(){
-        Document document = null;
-        try {
-            document = Jsoup.connect("https://2022.ip138.com/").get();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+    public static String getIpAddress(HttpServletRequest request) {
+        String ip = null;
+
+        //X-Forwarded-For：Squid 服务代理
+        String ipAddresses = request.getHeader("X-Forwarded-For");
+        System.out.println("====ipAddresses:"+ipAddresses);
+        Enumeration<String> headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()) {
+            //打印所有头信息
+            String s = headerNames.nextElement();
+            String header = request.getHeader(s);
+            System.out.println(s+"::::"+header);
         }
-        assert document != null;
-        return document.selectXpath("/html/body/p[1]/a[1]").get(0).text();
+        System.out.println("headerNames:"+ JSON.toJSONString(headerNames));
+        System.out.println("RemoteHost:"+request.getRemoteHost());
+        System.out.println("RemoteAddr:"+request.getRemoteAddr());
+
+        String unknown = "unknown";
+        if (ipAddresses == null || ipAddresses.length() == 0 || unknown.equalsIgnoreCase(ipAddresses)) {
+            //Proxy-Client-IP：apache 服务代理
+            ipAddresses = request.getHeader("Proxy-Client-IP");
+        }
+
+        if (ipAddresses == null || ipAddresses.length() == 0 || unknown.equalsIgnoreCase(ipAddresses)) {
+            //WL-Proxy-Client-IP：WebLogic 服务代理
+            ipAddresses = request.getHeader("WL-Proxy-Client-IP");
+        }
+
+        if (ipAddresses == null || ipAddresses.length() == 0 || unknown.equalsIgnoreCase(ipAddresses)) {
+            //HTTP_CLIENT_IP：有些代理服务器
+            ipAddresses = request.getHeader("HTTP_CLIENT_IP");
+        }
+
+        if (ipAddresses == null || ipAddresses.length() == 0 || unknown.equalsIgnoreCase(ipAddresses)) {
+            //X-Real-IP：nginx服务代理
+            ipAddresses = request.getHeader("X-Real-IP");
+        }
+
+        //有些网络通过多层代理，那么获取到的ip就会有多个，一般都是通过逗号（,）分割开来，并且第一个ip为客户端的真实IP
+        if (ipAddresses != null && ipAddresses.length() != 0) {
+            ip = ipAddresses.split(",")[0];
+        }
+
+        //还是不能获取到，最后再通过request.getRemoteAddr();获取
+        if (ip == null || ip.length() == 0 || unknown.equalsIgnoreCase(ipAddresses)) {
+            ip = request.getRemoteAddr();
+        }
+
+        return ip;
     }
+
 }

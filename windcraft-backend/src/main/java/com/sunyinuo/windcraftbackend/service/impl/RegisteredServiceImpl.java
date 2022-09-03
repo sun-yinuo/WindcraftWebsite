@@ -8,6 +8,8 @@ import com.sunyinuo.windcraftbackend.utils.regex.SqlRegex;
 import com.sunyinuo.windcraftbackend.utils.response.RegisteredResponse;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+
 
 /**
  * 登陆业务逻辑层实现类
@@ -26,10 +28,11 @@ public class RegisteredServiceImpl implements RegisteredService {
      * 注册
      * @param userName     用户名
      * @param userPassword 密码
+     * @param ip HttpServletRequest
      * @return code
      */
     @Override
-    public Integer registered(String userName, String userPassword) {
+    public Integer registered(String userName, String userPassword, String ip) {
         User userListByName = userService.getUserByName(userName);
 
         //sql注入检查部分
@@ -51,7 +54,7 @@ public class RegisteredServiceImpl implements RegisteredService {
                 user.setTime(System.currentTimeMillis());
                 user.setUserName(userName);
                 user.setUserPassword(userPassword);
-                user.setIp(GetIp.getClientIp());
+                user.setIp(ip);
 
                 if (userService.addUser(user) == 1){
                     return RegisteredResponse.CODE_700;

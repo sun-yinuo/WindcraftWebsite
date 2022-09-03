@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * 登陆/注册控制器
  * @author sunyinuo
@@ -30,10 +32,10 @@ public class LoginController {
      * @return code
      */
     @PostMapping("/login")
-    public Integer login(@RequestBody JSONObject jsonParam){
+    public Integer login(@RequestBody JSONObject jsonParam, HttpServletRequest request){
         String userName = (String) jsonParam.get("username");
         String userPassword = (String) jsonParam.get("password");
-        String ip = GetIp.getClientIp();
+        String ip = GetIp.getIpAddress(request);
 
         return loginService.login(userName,userPassword,ip);
     }

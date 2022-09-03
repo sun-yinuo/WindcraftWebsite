@@ -58,7 +58,7 @@ export default {
     return {
       theme: 'light',
       //登陆窗口状态
-      loginModal: true,
+      loginModal: false,
       //注册窗口状态
       registeredModal: false,
 
@@ -89,12 +89,26 @@ export default {
       });
     },
 
+    //----------判断是否需要弹出登陆框----------
+    getLoginState(){
+      request.get("/api/getLoginState").then(res =>{
+        console.log(res)
+        if (res === true){
+          this.loginModal = false;
+        }
+        if (res === false){
+          this.loginModal = true;
+        }
+      })
+    },
+
     //----------goto----------
     gotoRegistered() {
       this.loginModal = false;
       this.registeredModal = true;
     },
 
+    //----------login----------
     loginHandleSubmit (valid ,{ username, password }) {
       if (valid){
         //向后端传参{username,password}
@@ -191,7 +205,7 @@ export default {
 
   //自动执行
   created() {
-
+    this.getLoginState();
   }
 }
 </script>

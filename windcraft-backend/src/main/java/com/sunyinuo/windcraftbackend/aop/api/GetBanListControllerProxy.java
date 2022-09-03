@@ -1,4 +1,4 @@
-package com.sunyinuo.windcraftbackend.aop;
+package com.sunyinuo.windcraftbackend.aop.api;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -15,11 +15,11 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Slf4j
 public class GetBanListControllerProxy {
-    @Pointcut("execution(* com.sunyinuo.windcraftbackend.controller.GetBanListController.getBanList(..))")
+    @Pointcut("execution(* com.sunyinuo.windcraftbackend.controller.api.GetBanListController.getBanList(..))")
     public void getBanListPoint(){}
 
     @Around("getBanListPoint()")
-    public Object GetBanListLogAround(ProceedingJoinPoint joinPoint) throws Throwable {
+    public Object getBanListLogAround(ProceedingJoinPoint joinPoint) throws Throwable {
         log.info("GetBanList方法开始执行");
         Object object = joinPoint.proceed();
         log.info("return:{}",object);

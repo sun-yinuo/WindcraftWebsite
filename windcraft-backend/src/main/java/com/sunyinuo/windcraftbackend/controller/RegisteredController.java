@@ -3,6 +3,7 @@ package com.sunyinuo.windcraftbackend.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.sunyinuo.windcraftbackend.service.impl.RegisteredServiceImpl;
 import com.sunyinuo.windcraftbackend.utils.ip.GetIp;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @CrossOrigin(origins = "*",maxAge = 3600)
 @Component
+@Slf4j
 public class RegisteredController {
 
     private final RegisteredServiceImpl registeredService;
@@ -36,6 +38,7 @@ public class RegisteredController {
         String userName = (String) jsonParam.get("username");
         String userPassword = (String) jsonParam.get("password");
         String ip = GetIp.getIpAddress(request);
+        log.info("ip:{}", ip);
 
         return registeredService.registered(userName,userPassword,ip);
     }

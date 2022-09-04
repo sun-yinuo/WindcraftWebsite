@@ -30,7 +30,7 @@ public class LoginServiceImpl implements LoginService {
      * @return code
      */
     @Override
-    @CachePut(condition = "#result == 600",value = "loginState", key = "#ip")
+    @CachePut(condition = "#result == 600",value = "loginStateCache", key = "#ip")
     public Integer login(String userName, String userPassword, String ip) {
         User userList = userService.getUserByName(userName);
 

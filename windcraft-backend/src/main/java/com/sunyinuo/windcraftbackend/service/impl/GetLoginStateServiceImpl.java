@@ -16,7 +16,7 @@ public class GetLoginStateServiceImpl implements GetLoginStateService {
         this.redisTemplate = redisTemplate;
     }
 
-    private static final String PREFIX = "loginState";
+    private static final String PREFIX = "loginStateCache";
     private static final String SEPARATION = "::";
 
     /**

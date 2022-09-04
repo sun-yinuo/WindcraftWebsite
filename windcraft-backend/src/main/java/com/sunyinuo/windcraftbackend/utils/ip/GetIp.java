@@ -1,6 +1,7 @@
 package com.sunyinuo.windcraftbackend.utils.ip;
 
 import com.alibaba.fastjson.JSON;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
@@ -9,6 +10,7 @@ import java.util.Enumeration;
  * 获取ip地址方法类
  * @author sunyinuo
  */
+@Slf4j
 public class GetIp {
     /**
      * 获取ip方法
@@ -20,17 +22,17 @@ public class GetIp {
 
         //X-Forwarded-For：Squid 服务代理
         String ipAddresses = request.getHeader("X-Forwarded-For");
-        System.out.println("====ipAddresses:"+ipAddresses);
+        log.info("====ipAddresses:"+ipAddresses);
         Enumeration<String> headerNames = request.getHeaderNames();
         while (headerNames.hasMoreElements()) {
             //打印所有头信息
             String s = headerNames.nextElement();
             String header = request.getHeader(s);
-            System.out.println(s+"::::"+header);
+            log.info(s+"::::"+header);
         }
-        System.out.println("headerNames:"+ JSON.toJSONString(headerNames));
-        System.out.println("RemoteHost:"+request.getRemoteHost());
-        System.out.println("RemoteAddr:"+request.getRemoteAddr());
+        log.info("headerNames:"+ JSON.toJSONString(headerNames));
+        log.info("RemoteHost:"+request.getRemoteHost());
+        log.info("RemoteAddr:"+request.getRemoteAddr());
 
         String unknown = "unknown";
         if (ipAddresses == null || ipAddresses.length() == 0 || unknown.equalsIgnoreCase(ipAddresses)) {

@@ -38,8 +38,6 @@ export default{
     return {
       //导航栏颜色
       theme: 'light',
-      //输入框默认值
-      value: '',
     }
   },
   /**获取菜单栏选择项的id**/

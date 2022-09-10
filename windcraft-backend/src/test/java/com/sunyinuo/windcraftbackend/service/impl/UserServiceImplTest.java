@@ -21,7 +21,7 @@ class UserServiceImplTest {
 
     @Test
     void getUserById() {
-        User userById = userService.getUserById(1);
+        User userById = userService.getUserById(27);
         System.out.println(userById);
     }
 

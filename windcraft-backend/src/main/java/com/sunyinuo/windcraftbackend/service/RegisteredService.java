@@ -1,7 +1,5 @@
 package com.sunyinuo.windcraftbackend.service;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
  * 注册业务逻辑层
  * @author sunyinuo

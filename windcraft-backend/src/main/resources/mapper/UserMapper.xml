@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunyinuo.windcraftbackend.mapper.UserMapper">
+
+        <select id="getUserList" resultType="com.sunyinuo.windcraftbackend.model.User">
+                select * from user
+        </select>
+
+        <select id="getUserById" resultType="com.sunyinuo.windcraftbackend.model.User" parameterType="int">
+                select * from user where id = #{id}
+        </select>
+
+        <select id="getUserByName" resultType="com.sunyinuo.windcraftbackend.model.User" parameterType="string">
+                select * from user where userName = #{userName}
+        </select>
+
+        <select id="getUserByPassword" resultType="com.sunyinuo.windcraftbackend.model.User" parameterType="string">
+                select * from user where userPassword = #{userPassword}
+        </select>
+
+        <select id="getUserByTime" resultType="com.sunyinuo.windcraftbackend.model.User" parameterType="long">
+                select * from user where time = #{time}
+        </select>
+
+        <select id="getUserByIp" resultType="com.sunyinuo.windcraftbackend.model.User" parameterType="string">
+                select * from user where ip = #{ip}
+        </select>
+
+        <insert id="addUser" parameterType="com.sunyinuo.windcraftbackend.model.User">
+                insert into user(userName, userPassword, time, ip) value (#{userName},#{userPassword},#{time},#{ip})
+        </insert>
+
+        <delete id="deleteUserByName" parameterType="com.sunyinuo.windcraftbackend.model.User">
+                delete from user where userName = #{userName}
+        </delete>
+</mapper>

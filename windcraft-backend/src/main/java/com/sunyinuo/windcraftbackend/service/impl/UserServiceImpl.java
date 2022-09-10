@@ -5,6 +5,7 @@ import com.sunyinuo.windcraftbackend.model.User;
 import com.sunyinuo.windcraftbackend.service.UserService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -14,11 +15,8 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final UserMapper userMapper;
-
-    public UserServiceImpl(UserMapper userMapper) {
-        this.userMapper = userMapper;
-    }
+    @Resource
+    private UserMapper userMapper;
 
     /**
      * 获取所有用户

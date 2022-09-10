@@ -5,6 +5,7 @@ import com.sunyinuo.windcraftbackend.model.Ban;
 import com.sunyinuo.windcraftbackend.service.BanService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -14,19 +15,16 @@ import java.util.List;
 @Service
 public class BanServiceImpl implements BanService {
 
-    private final BanMapper banMapper;
-
-    public BanServiceImpl(BanMapper banMapper) {
-        this.banMapper = banMapper;
-    }
+    @Resource
+    private BanMapper banMapper;
 
     /**
-     * 获取所有用户
+     * 获取所有
      * @return 实体类列表
      */
     @Override
-    public List<Ban> getUserList() {
-        return banMapper.getUserList();
+    public List<Ban> getBanList() {
+        return banMapper.getBanList();
     }
 
     /**
@@ -36,8 +34,8 @@ public class BanServiceImpl implements BanService {
      * @return 实体类
      */
     @Override
-    public Ban getUserById(String id) {
-        return banMapper.getUserById(id);
+    public Ban getBanById(int id) {
+        return banMapper.getBanById(id);
     }
 
     /**
@@ -47,8 +45,8 @@ public class BanServiceImpl implements BanService {
      * @return 实体类列表
      */
     @Override
-    public List<Ban> getUserBySource(String source) {
-        return banMapper.getUserBySource(source);
+    public List<Ban> getBanBySource(String source) {
+        return banMapper.getBanBySource(source);
     }
 
     /**
@@ -58,8 +56,8 @@ public class BanServiceImpl implements BanService {
      * @return 实体类列表
      */
     @Override
-    public List<Ban> getUserByReason(String reason) {
-        return banMapper.getUserByReason(reason);
+    public List<Ban> getBanByReason(String reason) {
+        return banMapper.getBanByReason(reason);
     }
 
     /**
@@ -69,8 +67,8 @@ public class BanServiceImpl implements BanService {
      * @return 实体类列表
      */
     @Override
-    public List<Ban> getUserByBanTime(String banTime) {
-        return banMapper.getUserByBanTime(banTime);
+    public List<Ban> getBanByBanTime(String banTime) {
+        return banMapper.getBanByBanTime(banTime);
     }
 
     /**
@@ -80,8 +78,8 @@ public class BanServiceImpl implements BanService {
      * @return 实体类列表
      */
     @Override
-    public List<Ban> getUserByUnBanTime(String unBanTime) {
-        return banMapper.getUserByUnBanTime(unBanTime);
+    public List<Ban> getBanByUnBanTime(String unBanTime) {
+        return banMapper.getBanByUnBanTime(unBanTime);
     }
 
     /**
@@ -91,8 +89,8 @@ public class BanServiceImpl implements BanService {
      * @return 实体类列表
      */
     @Override
-    public List<Ban> getUserByBanType(String banType) {
-        return banMapper.getUserByBanType(banType);
+    public List<Ban> getBanByBanType(String banType) {
+        return banMapper.getBanByBanType(banType);
     }
 
     /**
@@ -102,8 +100,8 @@ public class BanServiceImpl implements BanService {
      * @return 实体类列表
      */
     @Override
-    public List<Ban> getUserByName(String name) {
-        return banMapper.getUserByName(name);
+    public List<Ban> getBanByName(String name) {
+        return banMapper.getBanByName(name);
     }
 
     /**
@@ -113,8 +111,8 @@ public class BanServiceImpl implements BanService {
      * @return 是否成功
      */
     @Override
-    public int addUser(Ban ban) {
-       return banMapper.addUser(ban);
+    public int addBan(Ban ban) {
+       return banMapper.addBan(ban);
     }
 
     /**
@@ -124,7 +122,7 @@ public class BanServiceImpl implements BanService {
      * @return 是否成功
      */
     @Override
-    public int deleteUserByName(String name) {
-        return banMapper.deleteUserByName(name);
+    public int deleteBanByName(String name) {
+        return banMapper.deleteBanByName(name);
     }
 }

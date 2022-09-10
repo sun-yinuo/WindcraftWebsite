@@ -1,10 +1,7 @@
 package com.sunyinuo.windcraftbackend.mapper;
 
 import com.sunyinuo.windcraftbackend.model.User;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -18,7 +15,6 @@ public interface UserMapper {
      * 获取所有用户
      * @return 用户实体类List
      */
-    @Select("select * from user")
     List<User> getUserList();
 
 
@@ -27,7 +23,6 @@ public interface UserMapper {
      * @param id id
      * @return 用户实体类
      */
-    @Select("select * from user where id = #{id}")
     User getUserById(int id);
 
     /**
@@ -35,7 +30,6 @@ public interface UserMapper {
      * @param userName 用户名
      * @return 用户实体类
      */
-    @Select("select * from user where userName = #{userName}")
     User getUserByName(String userName);
 
     /**
@@ -43,7 +37,6 @@ public interface UserMapper {
      * @param userPassword 密码
      * @return 用户实体类
      */
-    @Select("select * from user where userPassword = #{userPassword}")
     List<User> getUserByPassword(String userPassword);
 
     /**
@@ -51,7 +44,6 @@ public interface UserMapper {
      * @param time 时间
      * @return 用户实体类
      */
-    @Select("select * from user where time = #{time}")
     List<User> getUserByTime(long time);
 
     /**
@@ -59,7 +51,6 @@ public interface UserMapper {
      * @param ip ip
      * @return 用户实体类
      */
-    @Select("select * from user where ip = #{ip}")
     List<User> getUserByIp(String ip);
 
     /**
@@ -67,7 +58,6 @@ public interface UserMapper {
      * @param user 用户实体类
      * @return 是否成功
      */
-    @Insert("insert into user(userName, userPassword, time, ip) value (#{userName},#{userPassword},#{time},#{ip})")
     int addUser(User user);
 
     /**
@@ -75,6 +65,5 @@ public interface UserMapper {
      * @param userName 用户名
      * @return 是否成功
      */
-    @Delete("delete from user where userName = #{userName}")
     int deleteUserByName(String userName);
 }

@@ -24,6 +24,6 @@ public class GetBanListServiceImpl implements GetBanListService {
      */
     @Override
     public List<Ban> getBanList() {
-        return banService.getUserList();
+        return banService.getBanList();
     }
 }

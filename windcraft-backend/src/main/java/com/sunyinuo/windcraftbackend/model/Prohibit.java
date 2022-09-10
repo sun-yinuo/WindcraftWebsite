@@ -7,10 +7,11 @@ import lombok.NoArgsConstructor;
 /**
  * @author sunyinuo
  */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Ban {
+public class Prohibit {
     /**id**/
     private int id;
     /**来源**/
@@ -21,8 +22,7 @@ public class Ban {
     private String banTime;
     /**解封时间**/
     private String unBanTime;
-    /**封禁类型**/
-    private String banType;
-    /**玩家名称**/
+    /**玩家name**/
     private String name;
+
 }

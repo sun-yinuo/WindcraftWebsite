@@ -1,8 +1,8 @@
-package com.sunyinuo.windcraftbackend.service.impl;
+package com.sunyinuo.windcraftbackend.service.db.impl;
 
 import com.sunyinuo.windcraftbackend.mapper.BanMapper;
 import com.sunyinuo.windcraftbackend.model.Ban;
-import com.sunyinuo.windcraftbackend.service.BanService;
+import com.sunyinuo.windcraftbackend.service.db.BanService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

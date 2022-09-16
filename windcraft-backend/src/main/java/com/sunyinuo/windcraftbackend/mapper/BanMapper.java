@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 /**
- * Ban表mapper层
+ * Ban表mapper
  * @author sunyinuo
  */
 @Mapper

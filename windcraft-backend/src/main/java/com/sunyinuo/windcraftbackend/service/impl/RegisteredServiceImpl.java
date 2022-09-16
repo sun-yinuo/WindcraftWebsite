@@ -2,6 +2,7 @@ package com.sunyinuo.windcraftbackend.service.impl;
 
 import com.sunyinuo.windcraftbackend.model.User;
 import com.sunyinuo.windcraftbackend.service.RegisteredService;
+import com.sunyinuo.windcraftbackend.service.db.impl.UserServiceImpl;
 import com.sunyinuo.windcraftbackend.utils.regex.PasswordRegex;
 import com.sunyinuo.windcraftbackend.utils.regex.SqlRegex;
 import com.sunyinuo.windcraftbackend.utils.response.RegisteredResponse;

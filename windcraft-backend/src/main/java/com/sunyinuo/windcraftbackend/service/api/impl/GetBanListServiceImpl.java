@@ -1,7 +1,8 @@
-package com.sunyinuo.windcraftbackend.service.impl;
+package com.sunyinuo.windcraftbackend.service.api.impl;
 
 import com.sunyinuo.windcraftbackend.model.Ban;
-import com.sunyinuo.windcraftbackend.service.GetBanListService;
+import com.sunyinuo.windcraftbackend.service.api.GetBanListService;
+import com.sunyinuo.windcraftbackend.service.db.impl.BanServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

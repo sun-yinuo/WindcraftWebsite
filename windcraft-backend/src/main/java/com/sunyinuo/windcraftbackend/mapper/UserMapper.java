@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 /**
- * User表mapper层
+ * User表mapper
  * @author sunyinuo
  */
 @Mapper

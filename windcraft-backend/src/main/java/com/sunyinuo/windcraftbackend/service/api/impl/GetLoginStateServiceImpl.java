@@ -1,6 +1,6 @@
-package com.sunyinuo.windcraftbackend.service.impl;
+package com.sunyinuo.windcraftbackend.service.api.impl;
 
-import com.sunyinuo.windcraftbackend.service.GetLoginStateService;
+import com.sunyinuo.windcraftbackend.service.api.GetLoginStateService;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,7 @@
 package com.sunyinuo.windcraftbackend.service.impl;
 
 import com.sunyinuo.windcraftbackend.model.User;
+import com.sunyinuo.windcraftbackend.service.db.impl.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,19 +1,21 @@
 package com.sunyinuo.windcraftbackend.mapper;
 
-import com.sunyinuo.windcraftbackend.model.Prohibit;
+import com.sunyinuo.windcraftbackend.model.Warning;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 /**
- * Prohibit表mapper
+ * warning表mapper
  * @author sunyinuo
  */
 @Mapper
-public interface ProhibitMapper {
+public interface WarningMapper {
+
     /**
      * 获取所有
      * @return 实体类列表
      */
-    List<Prohibit> getProhibitList();
+    List<Warning> getWarningList();
+
 }

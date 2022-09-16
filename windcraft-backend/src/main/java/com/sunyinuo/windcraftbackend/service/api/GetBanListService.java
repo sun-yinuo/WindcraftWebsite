@@ -1,4 +1,4 @@
-package com.sunyinuo.windcraftbackend.service;
+package com.sunyinuo.windcraftbackend.service.api;
 
 import com.sunyinuo.windcraftbackend.model.Ban;
 

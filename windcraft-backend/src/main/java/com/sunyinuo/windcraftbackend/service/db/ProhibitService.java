@@ -1,4 +1,4 @@
-package com.sunyinuo.windcraftbackend.service;
+package com.sunyinuo.windcraftbackend.service.db;
 
 import com.sunyinuo.windcraftbackend.model.Prohibit;
 import org.apache.ibatis.annotations.Mapper;

@@ -1,8 +1,12 @@
 package com.sunyinuo.windcraftbackend.controller;
 
 import com.sunyinuo.windcraftbackend.model.Ban;
-import com.sunyinuo.windcraftbackend.service.impl.GetBanListServiceImpl;
-import com.sunyinuo.windcraftbackend.service.impl.GetLoginStateServiceImpl;
+import com.sunyinuo.windcraftbackend.model.Prohibit;
+import com.sunyinuo.windcraftbackend.model.Warning;
+import com.sunyinuo.windcraftbackend.service.api.impl.GetBanListServiceImpl;
+import com.sunyinuo.windcraftbackend.service.api.impl.GetLoginStateServiceImpl;
+import com.sunyinuo.windcraftbackend.service.api.impl.GetProhibitListServiceImpl;
+import com.sunyinuo.windcraftbackend.service.api.impl.GetWaringListServiceImpl;
 import com.sunyinuo.windcraftbackend.utils.ip.GetIp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -27,16 +31,27 @@ public class ApiController {
 
     private final GetBanListServiceImpl getBanListService;
     private final GetLoginStateServiceImpl getLoginStateService;
+    private final GetProhibitListServiceImpl getProhibitListService;
+    private final GetWaringListServiceImpl getWaringListService;
 
-
-    public ApiController(GetBanListServiceImpl getBanListService, GetLoginStateServiceImpl getLoginStateService) {
+    public ApiController(GetBanListServiceImpl getBanListService, GetLoginStateServiceImpl getLoginStateService, GetProhibitListServiceImpl getProhibitListService, GetWaringListServiceImpl getWaringListService) {
         this.getBanListService = getBanListService;
         this.getLoginStateService = getLoginStateService;
+        this.getProhibitListService = getProhibitListService;
+        this.getWaringListService = getWaringListService;
     }
 
     @GetMapping("/getBanList")
-    public List<Ban> getBanList(){
+    public List<Ban> getBanList(HttpServletRequest request){
+        log.info("ip:{}", GetIp.getIpAddress(request));
         return getBanListService.getBanList();
+    }
+
+    @GetMapping("/getProhibitList")
+    public List<Prohibit> getProhibitList(HttpServletRequest request){
+        log.info("ip:{}", GetIp.getIpAddress(request));
+
+        return getProhibitListService.getProhibitList();
     }
 
     @GetMapping("/getLoginState")
@@ -45,6 +60,13 @@ public class ApiController {
         log.info("ip:{}", ip);
 
         return getLoginStateService.getLoginState(ip);
+    }
+
+    @GetMapping("/getWaringList")
+    public List<Warning> getWaringList(HttpServletRequest request){
+        log.info("ip:{}", GetIp.getIpAddress(request));
+
+        return getWaringListService.getWaringList();
     }
 
 }

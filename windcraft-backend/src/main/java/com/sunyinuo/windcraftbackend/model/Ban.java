@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * ban实体类
  * @author sunyinuo
  */
 @Data

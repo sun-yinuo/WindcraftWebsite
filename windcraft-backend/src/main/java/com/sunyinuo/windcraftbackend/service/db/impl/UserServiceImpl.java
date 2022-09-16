@@ -1,8 +1,8 @@
-package com.sunyinuo.windcraftbackend.service.impl;
+package com.sunyinuo.windcraftbackend.service.db.impl;
 
 import com.sunyinuo.windcraftbackend.mapper.UserMapper;
 import com.sunyinuo.windcraftbackend.model.User;
-import com.sunyinuo.windcraftbackend.service.UserService;
+import com.sunyinuo.windcraftbackend.service.db.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

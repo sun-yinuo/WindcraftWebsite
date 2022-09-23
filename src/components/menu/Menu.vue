@@ -14,7 +14,7 @@
     <!--op申请-->
     <MenuItem name="7">OP申请</MenuItem>
     <!--外挂举报-->
-    <MenuItem name="8">外挂举报</MenuItem>
+    <MenuItem name="8" @click="gotoReportPage">外挂举报</MenuItem>
     <!--成员动态-->
     <MenuItem name="9">成员动态</MenuItem>
     <!--小黑屋-->
@@ -22,7 +22,7 @@
     <!--消息-->
     <MenuItem name="11">消息</MenuItem>
     <!--搜索框-->
-    <Input v-model="value" placeholder="随便搜搜呗(≧∇≦)ﾉ" style="width: 400px; margin: 10px" />
+    <Input placeholder="随便搜搜呗(≧∇≦)ﾉ" style="width: 400px; margin: 10px" />
     <!--搜索按钮-->
     <Button type="primary" icon="ios-search" style="margin: 10px">Search</Button>
 
@@ -50,6 +50,9 @@ export default{
     },
     gotoBanPage(){
       return router.push("/ban")
+    },
+    gotoReportPage(){
+      return router.push("/report")
     }
   }
 }

@@ -1,6 +1,7 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
-import Course from '/src/components/Course/Course'
-import Ban from '/src/components/Ban/Ban'
+import Course from '/src/components/course/Course'
+import Ban from '/src/components/ban/Ban'
+import Report from '/src/components/report/report'
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -12,6 +13,9 @@ const router = createRouter({
         {
             path: "/ban",
             component: Ban,
+        },{
+            path: "/report",
+            component: Report,
         }
     ],
 })

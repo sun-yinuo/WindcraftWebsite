@@ -4,8 +4,8 @@
   <router-view></router-view>
 </template>
 <script>
-import Menu from './components/Menu/Menu';
-import Login from './components/LoginRegistered/LoginAndRegistered'
+import Menu from './components/menu/Menu';
+import Login from './components/loginRegistered/LoginAndRegistered'
 
 export default {
   //控件导入

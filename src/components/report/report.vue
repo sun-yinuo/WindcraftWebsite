@@ -38,7 +38,7 @@
       <Upload
           multiple
           type="drag"
-          action="">
+          action="http://127.0.0.1:9091/api/fileUpload">
         <div style="padding: 20px 0">
           <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
           <p>上传图片以帮助管理员加快审核</p>

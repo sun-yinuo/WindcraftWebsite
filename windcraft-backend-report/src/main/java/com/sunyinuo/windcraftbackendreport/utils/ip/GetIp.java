@@ -1,4 +1,4 @@
-package com.sunyinuo.windcraftbackend.utils.ip;
+package com.sunyinuo.windcraftbackendreport.utils.ip;
 
 import lombok.extern.slf4j.Slf4j;
 

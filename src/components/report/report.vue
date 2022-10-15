@@ -36,6 +36,7 @@
 
     <FormItem>
       <Upload
+          :data="this.formItem"
           multiple
           type="drag"
           action="http://127.0.0.1:9091/api/fileUpload">
@@ -45,9 +46,8 @@
         </div>
       </Upload>
     </FormItem>
-
     <FormItem>
-      <Button type="primary" @click="handleSubmit">提交</Button>
+      <Button type="primary" @click="upload">提交</Button>
       <Button style="margin-left: 8px">取消</Button>
     </FormItem>
   </Form>
@@ -55,6 +55,8 @@
 
 
 <script>
+import request from "@/utils/request";
+
 export default {
   data () {
     return {
@@ -70,7 +72,7 @@ export default {
         //地点
         place: '',
         //时间
-        time: '',
+        date: '',
       },
     }
   },
@@ -78,8 +80,20 @@ export default {
     handleSubmit(){
       //获取表单提交时间
       this.getData()
-      //表单信息
-      console.log(this.formItem)
+      //传递
+      request.post("http://127.0.0.1:9091/report",this.formItem).then(res =>{
+        switch (res){
+          case 200:
+            this.$Message.success('举报成功');
+            break;
+          case 500:
+            this.$Message.error('举报失败');
+            break;
+          case 400:
+            this.$Message.warning('含有空值');
+            break;
+        }
+      })
     },
 
     /**
@@ -89,11 +103,16 @@ export default {
       let date = new Date();
       let d = (date.getFullYear()) + '-' + (date.getMonth()) + '-' + (date.getDate()) + ' ' + (date.getHours()) + ":" +(date.getMinutes()) + ':' + (date.getSeconds());
       this.formItem.date = new Date(d).getTime();
-    }
+    },
 
+    /**
+     * 上传方法
+     */
+    upload(){
+      this.handleSubmit();
+      console.log("ok")
+    },
   }
 }
 
 </script>
-
-

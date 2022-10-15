@@ -15,14 +15,15 @@ import org.springframework.util.StopWatch;
 @Component
 @Aspect
 @Slf4j
-public class FileUploadControllerProxy {
+public class ApiControllerProxy {
+
     @Pointcut("execution(* com.sunyinuo.windcraftbackendreport.service.api.impl.FileUploadServiceImpl.fileUpload(..))")
     private void fileUploadPoint(){}
 
     private final StopWatch fileUploadStopWatch  = new StopWatch("fileUpload");
 
     /**
-     * 当跑出异常时触发
+     * 当抛出异常时触发
      * @param e 异常
      */
     @AfterThrowing(throwing = "e", pointcut = "fileUploadPoint()")

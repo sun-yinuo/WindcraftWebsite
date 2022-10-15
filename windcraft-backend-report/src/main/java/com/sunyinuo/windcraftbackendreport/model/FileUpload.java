@@ -29,5 +29,8 @@ public class FileUpload {
     private String contentType;
     /** 文件大小 */
     private long size;
-
+    /**ip:用于表单与图片配套**/
+    private String ip;
+    /**被举报玩家:用于表单与图片配套**/
+    private String reportedPlayer;
 }

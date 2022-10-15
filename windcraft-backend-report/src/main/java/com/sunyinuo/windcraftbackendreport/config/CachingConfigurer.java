@@ -1,4 +1,4 @@
-package com.sunyinuo.windcraftbackend.config;
+package com.sunyinuo.windcraftbackendreport.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
@@ -87,7 +87,7 @@ public class CachingConfigurer extends CachingConfigurerSupport {
         // 针对不同cacheName，设置不同的过期时间
         Map<String, RedisCacheConfiguration> initialCacheConfiguration = new HashMap<String, RedisCacheConfiguration>();
         //登陆状态缓存:过期时间7days
-        initialCacheConfiguration.put("loginStateCache", RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofDays(7)));
+        initialCacheConfiguration.put("reportMassageStateCache", RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofDays(10)));
         return initialCacheConfiguration;
     }
 }

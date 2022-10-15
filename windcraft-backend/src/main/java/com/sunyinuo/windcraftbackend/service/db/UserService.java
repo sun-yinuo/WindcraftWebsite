@@ -2,6 +2,7 @@ package com.sunyinuo.windcraftbackend.service.db;
 
 
 import com.sunyinuo.windcraftbackend.model.User;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
  *
  * @author sunyinuo
  */
+@Mapper
 public interface UserService {
     /**
      * 获取所有用户

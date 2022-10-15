@@ -1,12 +1,14 @@
 package com.sunyinuo.windcraftbackend.service.db;
 
 import com.sunyinuo.windcraftbackend.model.Ban;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 /**
  * @author sunyinuo
  */
+@Mapper
 public interface BanService {
 
     /**

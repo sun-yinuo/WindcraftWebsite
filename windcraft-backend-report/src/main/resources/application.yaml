@@ -11,11 +11,6 @@ spring:
     # mongodb
     mongodb:
       uri: mongodb://127.0.0.1:27017/reportPicture
-  #redis
-  redis:
-    database: 0
-    host: 127.0.0.1
-    port: 7000
   #RabbitMq
   rabbitmq:
     host: 127.0.0.1

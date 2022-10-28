@@ -1,5 +1,6 @@
 package com.sunyinuo.windcraftbackendreport.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.sunyinuo.windcraftbackendreport.config.RabbitmqConfig;
 import com.sunyinuo.windcraftbackendreport.model.FileUpload;
 import com.sunyinuo.windcraftbackendreport.model.FromReportMassage;
@@ -73,7 +74,7 @@ public class ReportServiceImpl implements ReportService {
 
             log.info("massage:{}", reportMassage);
 
-            rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE_TOPICS_INFORM,"inform.report",reportMassage.toString());
+            rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE_TOPICS_INFORM,"inform.report", JSONObject.toJSONString(reportMassage));
         }catch (Exception e){
             log.error("reportError:",e);
             return ReportResponse.CODE_500;

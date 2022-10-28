@@ -1,10 +1,6 @@
 package com.sunyinuo.windcraftbackendreport.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.Exchange;
-import org.springframework.amqp.core.ExchangeBuilder;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,10 +13,8 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitmqConfig {
 
     public static final String QUEUE_INFORM_REPORT = "queue_inform_report";
-    public static final String QUEUE_INFORM_REPORT_PICTURE = "queue_inform_reportPicture";
     public static final String EXCHANGE_TOPICS_INFORM="exchange_topics_inform";
     public static final String ROUTING_KEY_REPORT="inform.#.report.#";
-    public static final String ROUTING_KEY_REPORT_PICTURE="inform.#.reportPicture.#";
 
     /**
      * 声明交换机
@@ -40,16 +34,6 @@ public class RabbitmqConfig {
     public Queue queueInformEmail(){
         return new Queue(QUEUE_INFORM_REPORT);
     }
-
-    /**
-     * 声明QUEUE_INFORM_REPORT_PICTURE队列
-     * @return 队列
-     */
-    @Bean(QUEUE_INFORM_REPORT_PICTURE)
-    public Queue queueInformSms(){
-        return new Queue(QUEUE_INFORM_REPORT_PICTURE);
-    }
-
     /**
      * ROUTING_KEY_REPORT绑定交换机，指定routingKey
      * @param queue 队列
@@ -60,18 +44,6 @@ public class RabbitmqConfig {
     public Binding bindingQueueInformEmail(@Qualifier(QUEUE_INFORM_REPORT) Queue queue,
                                            @Qualifier(EXCHANGE_TOPICS_INFORM) Exchange exchange){
         return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY_REPORT).noargs();
-    }
-
-    /**
-     * ROUTING_KEY_REPORT_PICTURE队列绑定交换机，指定routingKey
-     * @param queue 队列
-     * @param exchange 交换机
-     * @return 绑定
-     */
-    @Bean
-    public Binding bindingRoutingKeySms(@Qualifier(QUEUE_INFORM_REPORT_PICTURE) Queue queue,
-                                        @Qualifier(EXCHANGE_TOPICS_INFORM) Exchange exchange){
-        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY_REPORT_PICTURE).noargs();
     }
 
 }

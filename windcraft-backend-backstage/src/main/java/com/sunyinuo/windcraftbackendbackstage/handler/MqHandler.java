@@ -1,9 +1,10 @@
 package com.sunyinuo.windcraftbackendbackstage.handler;
 
-import com.rabbitmq.client.Channel;
 import com.sunyinuo.windcraftbackendbackstage.config.RabbitmqConfig;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,17 +12,24 @@ import org.springframework.stereotype.Component;
  * @author sunyinuo
  */
 @Component
+@Slf4j
 public class MqHandler {
+
+    RedisTemplate<Object,Object> redisTemplate;
+
+    public MqHandler(RedisTemplate<Object, Object> redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
+
 
     /**
      * 监听email队列
-     * @param msg 消息
      * @param message 消息体
-     * @param channel 新到
      */
-    @RabbitListener(queues = {RabbitmqConfig.QUEUE_INFORM_EMAIL})
-    public void receiveEmail(Object msg, Message message, Channel channel){
-        System.out.println("listener1"+msg);
+    @RabbitListener(queues = {RabbitmqConfig.QUEUE_INFORM_REPORT})
+    public void receiveEmail(Message message){
+        redisTemplate.opsForValue().set(new String(message.getBody()),"reportCache");
+        log.info("backstageMQHandler存入消息至redis");
     }
 
 }

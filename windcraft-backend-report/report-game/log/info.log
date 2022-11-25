@@ -1,0 +1,102 @@
+2022-11-26 05:15:12.695 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 4486 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-11-26 05:15:12.704 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to 1 default profile: "default"
+2022-11-26 05:15:14.301 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-9091"]
+2022-11-26 05:15:14.301 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-11-26 05:15:14.302 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-26 05:15:14.478 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-11-26 05:15:14.786 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-11-26 05:15:14.867 [32mINFO [m[cluster-ClusterId{value='63813062282306152c7ba504', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:7}] to 127.0.0.1:27017
+2022-11-26 05:15:14.867 [32mINFO [m[cluster-rtt-ClusterId{value='63813062282306152c7ba504', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:8}] to 127.0.0.1:27017
+2022-11-26 05:15:14.868 [32mINFO [m[cluster-ClusterId{value='63813062282306152c7ba504', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=58891167}
+2022-11-26 05:15:16.007 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-9091"]
+2022-11-26 05:15:16.083 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 4.038 seconds (JVM running for 6.164)
+2022-11-26 05:15:16.651 [32mINFO [m[RMI TCP Connection(5)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-26 05:15:16.975 [32mINFO [m[RMI TCP Connection(4)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:9}] to 127.0.0.1:27017
+2022-11-26 05:16:53.473 [32mINFO [m[http-nio-9091-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
+2022-11-26 05:16:53.600 [32mINFO [m[http-nio-9091-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=638130c5282306152c7ba505, name=Windcraft2022.jpg, createdTime=2022-11-26T05:16:53.489, content=org.bson.types.Binary@a4b69f43, contentType=image/jpeg, size=28956, ip=127.0.0.1, reportedPlayer=aaa)
+2022-11-26 05:16:53.602 [32mINFO [m[http-nio-9091-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 123146750 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+123146750  100%  
+
+2022-11-26 05:16:53.602 [32mINFO [m[http-nio-9091-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
+
+2022-11-26 05:16:55.814 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-11-26 05:16:56.099 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaa, reportPlayer=aaaaaa, qqCode=12345678, function=asdadewfewfaw, place=ffa, date=1666732615000, ip=127.0.0.1), fileUpload=FileUpload(id=638130c5282306152c7ba505, name=Windcraft2022.jpg, createdTime=2022-11-26T05:16:53.489, content=org.bson.types.Binary@a4b69f43, contentType=image/jpeg, size=28956, ip=127.0.0.1, reportedPlayer=aaa), pictureUrl=[http://127.0.0.1:9091/api/getFile/6359ce09d94a344ca1031f6e, http://127.0.0.1:9091/api/getFile/638130c5282306152c7ba505])
+2022-11-26 05:16:56.188 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:200
+2022-11-26 05:16:56.189 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 373550208 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+373550208  100%  
+
+2022-11-26 05:16:56.189 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
+2022-11-26 05:17:11.566 [32mINFO [m[http-nio-9091-exec-7] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-11-26 05:17:11.587 [32mINFO [m[http-nio-9091-exec-7] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaa, reportPlayer=aaaaaa, qqCode=12345678, function=asdadewfewfaw, place=ffa, date=1666732631000, ip=127.0.0.1), fileUpload=FileUpload(id=638130c5282306152c7ba505, name=Windcraft2022.jpg, createdTime=2022-11-26T05:16:53.489, content=org.bson.types.Binary@a4b69f43, contentType=image/jpeg, size=28956, ip=127.0.0.1, reportedPlayer=aaa), pictureUrl=[http://127.0.0.1:9091/api/getFile/6359ce09d94a344ca1031f6e, http://127.0.0.1:9091/api/getFile/638130c5282306152c7ba505])
+2022-11-26 05:17:11.594 [32mINFO [m[http-nio-9091-exec-7] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:200
+2022-11-26 05:17:11.597 [32mINFO [m[http-nio-9091-exec-7] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 396985791 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+373550208  094%  
+023435583  006%  
+
+2022-11-26 05:17:11.597 [32mINFO [m[http-nio-9091-exec-7] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
+2022-11-26 05:24:32.810 [32mINFO [m[http-nio-9091-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
+2022-11-26 05:24:32.854 [32mINFO [m[http-nio-9091-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63813290282306152c7ba506, name=Windcraft2022.jpg, createdTime=2022-11-26T05:24:32.813, content=org.bson.types.Binary@a4b69f43, contentType=image/jpeg, size=28956, ip=127.0.0.1, reportedPlayer=aaa)
+2022-11-26 05:24:32.857 [32mINFO [m[http-nio-9091-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 164252084 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+123146750  075%  
+041105334  025%  
+
+2022-11-26 05:24:32.857 [32mINFO [m[http-nio-9091-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
+
+2022-11-26 05:24:34.843 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-11-26 05:24:34.876 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaa, reportPlayer=aaaaaa, qqCode=12345678, function=asdadewfewfaw, place=ffa, date=1666733074000, ip=127.0.0.1), fileUpload=FileUpload(id=63813290282306152c7ba506, name=Windcraft2022.jpg, createdTime=2022-11-26T05:24:32.813, content=org.bson.types.Binary@a4b69f43, contentType=image/jpeg, size=28956, ip=127.0.0.1, reportedPlayer=aaa), pictureUrl=[http://127.0.0.1:9091/api/getFile/63813290282306152c7ba506])
+2022-11-26 05:24:34.893 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:200
+2022-11-26 05:24:34.894 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 445005624 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+373550208  084%  
+023435583  005%  
+048019833  011%  
+
+2022-11-26 05:24:34.894 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
+2022-11-26 06:07:07.726 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 16111 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-11-26 06:07:07.749 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to 1 default profile: "default"
+2022-11-26 06:07:09.597 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-9091"]
+2022-11-26 06:07:09.598 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-11-26 06:07:09.598 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-26 06:07:09.774 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-11-26 06:07:10.131 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-11-26 06:07:10.223 [32mINFO [m[cluster-rtt-ClusterId{value='63813c8e8d2f225b11fdd8db', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:42}] to 127.0.0.1:27017
+2022-11-26 06:07:10.223 [32mINFO [m[cluster-ClusterId{value='63813c8e8d2f225b11fdd8db', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:43}] to 127.0.0.1:27017
+2022-11-26 06:07:10.225 [32mINFO [m[cluster-ClusterId{value='63813c8e8d2f225b11fdd8db', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=68649959}
+2022-11-26 06:07:11.282 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-9091"]
+2022-11-26 06:07:11.342 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 4.577 seconds (JVM running for 5.494)
+2022-11-26 06:07:11.964 [32mINFO [m[RMI TCP Connection(1)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-26 06:07:12.251 [32mINFO [m[RMI TCP Connection(3)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:44}] to 127.0.0.1:27017
+2022-11-26 06:08:25.898 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
+2022-11-26 06:08:26.086 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63813cda8d2f225b11fdd8dc, name=截屏2022-11-26 上午5.56.14.png, createdTime=2022-11-26T06:08:25.914, content=org.bson.types.Binary@24b0f3d4, contentType=image/png, size=665904, ip=127.0.0.1, reportedPlayer=qqq)
+2022-11-26 06:08:26.091 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 184820583 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+184820583  100%  
+
+2022-11-26 06:08:26.091 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
+
+2022-11-26 06:08:28.193 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-11-26 06:08:28.284 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=qqq, reportPlayer=qqqqqq, qqCode=123456678, function=fly, place=原版生存, date=1666735708000, ip=127.0.0.1), fileUpload=FileUpload(id=63813cda8d2f225b11fdd8dc, name=截屏2022-11-26 上午5.56.14.png, createdTime=2022-11-26T06:08:25.914, content=org.bson.types.Binary@24b0f3d4, contentType=image/png, size=665904, ip=127.0.0.1, reportedPlayer=qqq), pictureUrl=[http://127.0.0.1:9091/api/getFile/63813cda8d2f225b11fdd8dc])
+2022-11-26 06:08:28.385 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:200
+2022-11-26 06:08:28.387 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 190182708 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+190182708  100%  
+
+2022-11-26 06:08:28.387 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束

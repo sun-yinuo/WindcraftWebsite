@@ -1,0 +1,34 @@
+2022-11-26 06:07:07.726 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 16111 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-11-26 06:07:07.749 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to 1 default profile: "default"
+2022-11-26 06:07:09.597 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-9091"]
+2022-11-26 06:07:09.598 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-11-26 06:07:09.598 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-26 06:07:09.774 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-11-26 06:07:10.131 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-11-26 06:07:10.223 [32mINFO [m[cluster-rtt-ClusterId{value='63813c8e8d2f225b11fdd8db', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:42}] to 127.0.0.1:27017
+2022-11-26 06:07:10.223 [32mINFO [m[cluster-ClusterId{value='63813c8e8d2f225b11fdd8db', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:43}] to 127.0.0.1:27017
+2022-11-26 06:07:10.225 [32mINFO [m[cluster-ClusterId{value='63813c8e8d2f225b11fdd8db', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=68649959}
+2022-11-26 06:07:11.282 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-9091"]
+2022-11-26 06:07:11.342 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 4.577 seconds (JVM running for 5.494)
+2022-11-26 06:07:11.964 [32mINFO [m[RMI TCP Connection(1)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-26 06:07:12.251 [32mINFO [m[RMI TCP Connection(3)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:44}] to 127.0.0.1:27017
+2022-11-26 06:08:25.898 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
+2022-11-26 06:08:26.086 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63813cda8d2f225b11fdd8dc, name=截屏2022-11-26 上午5.56.14.png, createdTime=2022-11-26T06:08:25.914, content=org.bson.types.Binary@24b0f3d4, contentType=image/png, size=665904, ip=127.0.0.1, reportedPlayer=qqq)
+2022-11-26 06:08:26.091 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 184820583 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+184820583  100%  
+
+2022-11-26 06:08:26.091 [32mINFO [m[http-nio-9091-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
+
+2022-11-26 06:08:28.193 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-11-26 06:08:28.284 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=qqq, reportPlayer=qqqqqq, qqCode=123456678, function=fly, place=原版生存, date=1666735708000, ip=127.0.0.1), fileUpload=FileUpload(id=63813cda8d2f225b11fdd8dc, name=截屏2022-11-26 上午5.56.14.png, createdTime=2022-11-26T06:08:25.914, content=org.bson.types.Binary@24b0f3d4, contentType=image/png, size=665904, ip=127.0.0.1, reportedPlayer=qqq), pictureUrl=[http://127.0.0.1:9091/api/getFile/63813cda8d2f225b11fdd8dc])
+2022-11-26 06:08:28.385 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:200
+2022-11-26 06:08:28.387 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 190182708 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+190182708  100%  
+
+2022-11-26 06:08:28.387 [32mINFO [m[http-nio-9091-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束

@@ -1,14 +1,22 @@
 # WindCraft
 
-#### 介绍
-用于存放windcraft网站源码的仓库
-
-#### 软件架构
+## 介绍
+本项目是一个基于Springboot+Vue的平台
 ##### 前端
-- vue
+- vue 3
+- [ViewDesign](https://www.iviewui.com/) 
 #### 后端
-- SprinBoot
-- MyBatis
-- mysql
+- SpringBoot
+#### 存储中间件
 - redis
+- MongoDB
+#### 中间件
+- RabbitMQ
 #### 参与贡献
+- (Martin-开发)QQ:2192519304
+- (JewelLament-产品)QQ:1179952931
+- (nanian-产品)QQ:2748840788
+- (lkctrl-测试)QQ:3224644132
+- (ovo233-测试)QQ:2136366751
+
+## 如何启动?

@@ -1,0 +1,24 @@
+2022-12-01 14:16:05.275 [32mINFO [m[main] [36mcom.sunyinuo.bancrud.BanCrudApplication[m : Starting BanCrudApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 25292 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-ban/ban-crud/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-12-01 14:16:05.286 [32mINFO [m[main] [36mcom.sunyinuo.bancrud.BanCrudApplication[m : No active profile set, falling back to default profiles: default
+2022-12-01 14:16:07.633 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-2000"]
+2022-12-01 14:16:07.634 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-12-01 14:16:07.634 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-01 14:16:07.695 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-12-01 14:16:08.132 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
+2022-12-01 14:16:08.819 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
+2022-12-01 14:16:08.823 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
+2022-12-01 14:16:08.823 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
+2022-12-01 14:16:11.986 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-2000"]
+2022-12-01 14:16:12.045 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP ban-crud 192.168.0.101:2000 register finished
+2022-12-01 14:16:12.082 [32mINFO [m[main] [36mcom.sunyinuo.bancrud.BanCrudApplication[m : Started BanCrudApplication in 7.517 seconds (JVM running for 9.092)
+2022-12-01 14:16:12.761 [32mINFO [m[RMI TCP Connection(8)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-01 14:22:29.716 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-01 14:22:29.716 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-01 14:22:29.783 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-01 14:22:29.842 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-01 14:22:32.915 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
+2022-12-01 14:22:33.261 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
+2022-12-01 14:22:37.495 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource start closing ....
+2022-12-01 14:22:37.534 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown initiated...
+2022-12-01 14:22:37.631 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown completed.
+2022-12-01 14:22:37.632 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource all closed success,bye

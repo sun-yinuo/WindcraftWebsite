@@ -1,0 +1,24 @@
+2022-12-01 14:19:10.873 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Starting UserSigninApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 26334 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-user/user-signin/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-12-01 14:19:10.899 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : No active profile set, falling back to default profiles: default
+2022-12-01 14:19:13.387 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-3001"]
+2022-12-01 14:19:13.387 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-12-01 14:19:13.387 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-01 14:19:13.451 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-12-01 14:19:14.019 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
+2022-12-01 14:19:14.490 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
+2022-12-01 14:19:14.492 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
+2022-12-01 14:19:14.492 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
+2022-12-01 14:19:16.258 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-3001"]
+2022-12-01 14:19:16.350 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP user-signin 192.168.0.101:3001 register finished
+2022-12-01 14:19:16.394 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Started UserSigninApplication in 6.511 seconds (JVM running for 8.735)
+2022-12-01 14:19:17.086 [32mINFO [m[RMI TCP Connection(3)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-01 14:22:32.586 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-01 14:22:32.586 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-01 14:22:33.201 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-01 14:22:33.220 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-01 14:22:33.816 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
+2022-12-01 14:22:34.306 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
+2022-12-01 14:22:40.812 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource start closing ....
+2022-12-01 14:22:40.822 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown initiated...
+2022-12-01 14:22:40.905 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown completed.
+2022-12-01 14:22:40.906 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource all closed success,bye

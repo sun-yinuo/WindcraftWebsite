@@ -1,0 +1,9 @@
+server:
+  port: 5001
+spring:
+  application:
+    name: report-website
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848

@@ -1,0 +1,10 @@
+server:
+  port: 1203
+
+spring:
+  application:
+    name: management-massge-personal
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848

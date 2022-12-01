@@ -1,5 +1,5 @@
 server:
-  port: 9091
+  port: 5000
 
 spring:
   servlet:
@@ -18,3 +18,9 @@ spring:
     username: root
     password: root
     virtualHost: /
+  application:
+    name: report-game
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848

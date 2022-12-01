@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author sunyinuo
  */
 @RestController
-@CrossOrigin(origins = "*",maxAge = 3600)
+@RequestMapping("/usersignin/")
 @Component
 @Slf4j
 public class LoginController {

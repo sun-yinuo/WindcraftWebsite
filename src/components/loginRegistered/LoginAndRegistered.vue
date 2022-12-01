@@ -91,7 +91,7 @@ export default {
 
     //----------判断是否需要弹出登陆框----------
     getLoginState(){
-      request.get("/api/getLoginState").then(res =>{
+      request.get("/usersignin/api/getLoginState").then(res =>{
         console.log(res)
         if (res === true){
           this.loginModal = false;
@@ -112,7 +112,7 @@ export default {
     loginHandleSubmit (valid ,{ username, password }) {
       if (valid){
         //向后端传参{username,password}
-        request.post("/login",{username,password}).then(res =>{
+        request.post("/usersignin/login",{username,password}).then(res =>{
           this.loginCallBackSwitch(res);
         })
       }
@@ -142,7 +142,7 @@ export default {
     registeredHandleSubmit (valid, { username, password }) {
       if (valid) {
         //向后端传参{username,password}
-        request.post("/registered",{username,password}).then(res =>{
+        request.post("/usersignin/registered",{username,password}).then(res =>{
           this.registeredCallBackSwitch(res);
         })
       }

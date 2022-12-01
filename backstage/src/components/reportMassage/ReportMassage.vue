@@ -29,7 +29,7 @@
     },
     methods: {
       getReportList() {
-        request.get("http://localhost:9092/api/getReportMassage").then(res => {
+        request.get("/auditreportgame/api/getReportMassage").then(res => {
           this.reportMassage = res
         })
       },

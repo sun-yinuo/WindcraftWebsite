@@ -5,7 +5,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.sunyinuo.auditreportgame.model.ReportMassage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,8 +18,7 @@ import java.util.Set;
  * @author sunyinuo
  */
 @RestController
-@RequestMapping("/api")
-@CrossOrigin(origins = "*",maxAge = 3600)
+@RequestMapping("/auditreportgame/api")
 @Slf4j
 public class ApiController {
     RedisTemplate<Object,Object> redisTemplate;

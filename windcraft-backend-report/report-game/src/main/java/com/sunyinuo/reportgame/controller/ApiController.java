@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author sunyinuo
  */
 @RestController
-@RequestMapping("/api")
-@CrossOrigin(origins = "*",maxAge = 3600)
+@RequestMapping("/reportgame/api")
 public class ApiController {
 
     private final FileUploadServiceImpl fileUploadService;

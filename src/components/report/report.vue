@@ -39,7 +39,7 @@
           :data="this.formItem"
           multiple
           type="drag"
-          action="http://127.0.0.1:9091/api/fileUpload">
+          action="http://127.0.0.1:9000/reportgame/api/fileUpload">
         <div style="padding: 20px 0">
           <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
           <p>上传图片以帮助管理员加快审核</p>
@@ -81,7 +81,7 @@ export default {
       //获取表单提交时间
       this.getData()
       //传递
-      request.post("http://127.0.0.1:9091/report",this.formItem).then(res =>{
+      request.post("/reportgame/report",this.formItem).then(res =>{
         switch (res){
           case 200:
             this.$Message.success('举报成功');

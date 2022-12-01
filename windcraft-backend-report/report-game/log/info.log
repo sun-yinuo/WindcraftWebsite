@@ -1,22 +1,84 @@
-2022-12-01 14:17:34.333 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 25802 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2022-12-01 14:17:34.367 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to default profiles: default
-2022-12-01 14:17:36.789 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-5000"]
-2022-12-01 14:17:36.790 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2022-12-01 14:17:36.790 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-12-01 14:17:36.869 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2022-12-01 14:17:37.455 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-12-01 14:17:37.630 [32mINFO [m[cluster-rtt-ClusterId{value='63884701dbce7d41a446e5f7', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:10}] to 127.0.0.1:27017
-2022-12-01 14:17:37.630 [32mINFO [m[cluster-ClusterId{value='63884701dbce7d41a446e5f7', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:11}] to 127.0.0.1:27017
-2022-12-01 14:17:37.632 [32mINFO [m[cluster-ClusterId{value='63884701dbce7d41a446e5f7', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=106215041}
-2022-12-01 14:17:39.797 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-5000"]
-2022-12-01 14:17:39.862 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP report-game 192.168.0.101:5000 register finished
-2022-12-01 14:17:39.891 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 6.416 seconds (JVM running for 7.54)
-2022-12-01 14:17:40.202 [32mINFO [m[RMI TCP Connection(3)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-01 14:17:40.644 [32mINFO [m[RMI TCP Connection(1)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:12}] to 127.0.0.1:27017
-2022-12-01 14:22:31.040 [33mWARN [m[Thread-22] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2022-12-01 14:22:31.040 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-12-01 14:22:31.306 [33mWARN [m[Thread-22] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2022-12-01 14:22:31.415 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
-2022-12-01 14:22:33.118 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
-2022-12-01 14:22:33.270 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
-2022-12-01 14:22:42.520 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:12}] to 127.0.0.1:27017 because the pool has been closed.
+2022-12-02 00:02:39.516 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-12-02 00:02:39.683 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=dsfgdhf, reportPlayer=asdfcdgvhbfjn, qqCode=32435646576, function=dfsvtgrtbhrty, place=原版生存, date=1667318559000, ip=127.0.0.1), fileUpload=FileUpload(id=6388cf13ac2f457b970d9e41, name=截屏2022-12-01 下午11.47.00.png, createdTime=2022-12-01T23:58:11.406, content=org.bson.types.Binary@55c760fe, contentType=image/png, size=499467, ip=127.0.0.1, reportedPlayer=dsfgdhf), pictureUrl=[http://127.0.0.1:9091/api/getFile/6388cf13ac2f457b970d9e41])
+2022-12-02 00:02:39.748 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:200
+2022-12-02 00:02:39.753 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 366701166 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+195702708  053%  
+170998458  047%  
+
+2022-12-02 00:02:39.753 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
+2022-12-02 00:09:33.948 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-02 00:09:33.948 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-02 00:09:34.037 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-02 00:09:34.081 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-02 00:09:34.286 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
+2022-12-02 00:09:34.316 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
+2022-12-02 00:09:40.608 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:6}] to 127.0.0.1:27017 because the pool has been closed.
+2022-12-02 00:09:58.927 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 42995 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-12-02 00:09:58.939 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to default profiles: default
+2022-12-02 00:10:01.461 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-5000"]
+2022-12-02 00:10:01.462 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-12-02 00:10:01.462 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-02 00:10:01.527 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-12-02 00:10:01.998 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-12-02 00:10:02.130 [32mINFO [m[cluster-rtt-ClusterId{value='6388d1d9b4446d1fa7384ce9', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:14}] to 127.0.0.1:27017
+2022-12-02 00:10:02.131 [32mINFO [m[cluster-ClusterId{value='6388d1d9b4446d1fa7384ce9', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:13}] to 127.0.0.1:27017
+2022-12-02 00:10:02.133 [32mINFO [m[cluster-ClusterId{value='6388d1d9b4446d1fa7384ce9', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=77055500}
+2022-12-02 00:10:04.099 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-5000"]
+2022-12-02 00:10:04.173 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP report-game 192.168.0.101:5000 register finished
+2022-12-02 00:10:04.201 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 6.014 seconds (JVM running for 7.032)
+2022-12-02 00:10:04.430 [32mINFO [m[RMI TCP Connection(5)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 00:10:04.881 [32mINFO [m[RMI TCP Connection(4)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:15}] to 127.0.0.1:27017
+2022-12-02 00:10:31.056 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
+2022-12-02 00:10:31.227 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=6388d1f7b4446d1fa7384cea, name=截屏2022-12-01 下午11.47.00.png, createdTime=2022-12-02T00:10:31.072, content=org.bson.types.Binary@55c760fe, contentType=image/png, size=499467, ip=127.0.0.1, reportedPlayer=dsfgdhf)
+2022-12-02 00:10:31.230 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 169773208 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+169773208  100%  
+
+2022-12-02 00:10:31.231 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
+
+2022-12-02 00:10:40.316 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-12-02 00:10:40.435 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=dsfgdhf, reportPlayer=asdfcdgvhbfjn, qqCode=32435646576, function=dfsvtgrtbhrty, place=原版生存, date=1667319040000, ip=127.0.0.1), fileUpload=FileUpload(id=6388d1f7b4446d1fa7384cea, name=截屏2022-12-01 下午11.47.00.png, createdTime=2022-12-02T00:10:31.072, content=org.bson.types.Binary@55c760fe, contentType=image/png, size=499467, ip=127.0.0.1, reportedPlayer=dsfgdhf), pictureUrl=[http://127.0.0.1:9000/reportgame/api/getFile/6388cf13ac2f457b970d9e41, http://127.0.0.1:9000/reportgame/api/getFile/6388d1f7b4446d1fa7384cea])
+2022-12-02 00:10:40.573 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:200
+2022-12-02 00:10:40.575 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 254456458 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+254456458  100%  
+
+2022-12-02 00:10:40.576 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
+2022-12-02 00:11:14.151 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
+2022-12-02 00:11:14.217 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=6388d222b4446d1fa7384ceb, name=截屏2022-12-01 下午9.58.10.png, createdTime=2022-12-02T00:11:14.152, content=org.bson.types.Binary@cc2fd8b6, contentType=image/png, size=926243, ip=127.0.0.1, reportedPlayer=dsfgdhfvdfvdfvvdvd)
+2022-12-02 00:11:14.224 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 234698333 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+169773208  072%  
+064925125  028%  
+
+2022-12-02 00:11:14.224 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
+
+2022-12-02 00:11:18.597 [32mINFO [m[http-nio-5000-exec-5] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-12-02 00:11:18.612 [32mINFO [m[http-nio-5000-exec-5] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=dsfgdhfvdfvdfvvdvd, reportPlayer=asdfcdg, qqCode=32435646576, function=dfsvtgrtbhrty, place=原版生存, date=1667319078000, ip=127.0.0.1), fileUpload=FileUpload(id=6388d222b4446d1fa7384ceb, name=截屏2022-12-01 下午9.58.10.png, createdTime=2022-12-02T00:11:14.152, content=org.bson.types.Binary@cc2fd8b6, contentType=image/png, size=926243, ip=127.0.0.1, reportedPlayer=dsfgdhfvdfvdfvvdvd), pictureUrl=[http://127.0.0.1:9000/reportgame/api/getFile/6388d222b4446d1fa7384ceb])
+2022-12-02 00:11:18.639 [32mINFO [m[http-nio-5000-exec-5] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:200
+2022-12-02 00:11:18.640 [32mINFO [m[http-nio-5000-exec-5] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 295688416 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+254456458  086%  
+041231958  014%  
+
+2022-12-02 00:11:18.640 [32mINFO [m[http-nio-5000-exec-5] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
+2022-12-02 00:11:21.269 [32mINFO [m[http-nio-5000-exec-7] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:4, serverValue:16}] to 127.0.0.1:27017
+2022-12-02 00:12:36.166 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-02 00:12:36.166 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-02 00:12:36.174 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-02 00:12:36.188 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-02 00:12:36.496 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
+2022-12-02 00:12:36.595 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
+2022-12-02 00:12:45.767 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:15}] to 127.0.0.1:27017 because the pool has been closed.
+2022-12-02 00:12:45.769 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:4, serverValue:16}] to 127.0.0.1:27017 because the pool has been closed.

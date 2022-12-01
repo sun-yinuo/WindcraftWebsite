@@ -67,7 +67,7 @@ public class ReportServiceImpl implements ReportService {
 
             for (FileUpload file : files) {
                 reportMassage.setFileUpload(file);
-                url.add("http://127.0.0.1:9091/api/getFile/" + file.getId());
+                url.add("http://127.0.0.1:9000/reportgame/api/getFile/" + file.getId());
                 reportMassage.setPictureUrl(url);
             }
             reportMassage.setFromReportMassage(fromReportMassage);

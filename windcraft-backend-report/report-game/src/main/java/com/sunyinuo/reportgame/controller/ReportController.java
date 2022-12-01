@@ -4,10 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.sunyinuo.reportgame.model.FromReportMassage;
 import com.sunyinuo.reportgame.service.impl.ReportServiceImpl;
 import com.sunyinuo.reportgame.utils.ip.GetIp;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author sunyinuo
  */
 @RestController
-@CrossOrigin(origins = "*",maxAge = 3600)
+@RequestMapping("/reportgame/")
 public class ReportController {
     public final ReportServiceImpl reportService;
 

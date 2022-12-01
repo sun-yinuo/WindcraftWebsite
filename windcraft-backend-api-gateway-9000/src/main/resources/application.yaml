@@ -1,0 +1,54 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: windcraft-backend-api-gateway-9000
+  cloud:
+    #GateWay
+    gateway:
+      # 全局的跨域处理
+      globalcors:
+        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
+        corsConfigurations:
+          '[/**]': # 哪些访问地址做跨域处理
+            allowedOrigins: # 允许哪些网站的跨域请求
+              - "http://localhost:8081"
+              - "http://localhost:8080"
+            allowedMethods: # 允许的跨域ajax的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedHeaders: "*" # 允许在请求中携带的头信息
+            allowCredentials: true # 是否允许携带cookie
+            maxAge: 360000  # 这次跨域检测的有效期
+      routes:
+        #用户模块route
+        - id: user-signin
+          uri: http://localhost:3001
+          predicates:
+            - Path=/usersignin/**
+            - Method=GET,POST
+        #banCRUD模块route
+        - id: ban-crud
+          uri: http://localhost:2000
+          predicates:
+            - Path=/bancrud/**
+            - Method=GET,POST
+        #report-game模块route
+        - id: report-game
+          uri: http://localhost:5000
+          predicates:
+            - Path=/reportgame/**
+            - Method=GET,POST
+        #audit-report-game模块route
+        - id: audit-report-game
+          uri: http://localhost:1100
+          predicates:
+            - Path=/auditreportgame/**
+            - Method=GET,POST
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848

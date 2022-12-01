@@ -69,19 +69,19 @@ export default {
   },
   methods: {
     getBanList(){
-      request.get("http://127.0.0.1:9090/api/getBanList").then(res =>{
+      request.get("/bancrud/api/getBanList").then(res =>{
         this.banList = res
         console.log(this.banList);
       })
     },
     getProhibitList(){
-      request.get("http://127.0.0.1:9090/api/getProhibitList").then(res => {
+      request.get("/bancrud/api/getProhibitList").then(res => {
         this.prohibitList = res;
         console.log(this.prohibitList);
       })
     },
     getWaringList(){
-      request.get("http://127.0.0.1:9090/api/getWaringList").then(res => {
+      request.get("/bancrud/api/getWaringList").then(res => {
         this.waringList = res;
         console.log(this.waringList);
       })

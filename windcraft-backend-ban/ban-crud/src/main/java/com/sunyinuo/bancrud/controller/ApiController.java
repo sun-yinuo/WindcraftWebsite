@@ -9,7 +9,6 @@ import com.sunyinuo.bancrud.service.api.impl.GetWaringListServiceImpl;
 import com.sunyinuo.bancrud.utils.ip.GetIp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,8 +21,7 @@ import java.util.List;
  * @author sunyinuo
  */
 @RestController
-@RequestMapping("/api")
-@CrossOrigin(origins = "*",maxAge = 3600)
+@RequestMapping("/bancrud/api")
 @Component
 @Slf4j
 public class ApiController {

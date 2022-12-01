@@ -25,6 +25,7 @@
 
         <module>backstage-management</module>
         <module>backstage-audit</module>
+        <module>../windcraft-backend-api-gateway-9000</module>
     </modules>
 
     <properties>

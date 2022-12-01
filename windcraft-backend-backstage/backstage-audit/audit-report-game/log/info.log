@@ -1,66 +1,48 @@
-2022-12-01 13:18:43.908 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Starting AuditReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 11435 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-backstage/backstage-audit/audit-report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2022-12-01 13:18:43.929 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : No active profile set, falling back to default profiles: default
-2022-12-01 13:18:45.922 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-1100"]
-2022-12-01 13:18:45.923 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2022-12-01 13:18:45.923 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-12-01 13:18:46.002 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2022-12-01 13:18:47.669 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-12-01 13:18:47.815 [32mINFO [m[cluster-ClusterId{value='63883937f72fdb6926b22d8e', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
-2022-12-01 13:18:47.814 [32mINFO [m[cluster-rtt-ClusterId{value='63883937f72fdb6926b22d8e', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
-2022-12-01 13:18:47.816 [32mINFO [m[cluster-ClusterId{value='63883937f72fdb6926b22d8e', description='null'}-localhost:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=83350792}
-2022-12-01 13:18:48.947 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-1100"]
-2022-12-01 13:18:49.047 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP audit-report-game 192.168.0.101:1100 register finished
-2022-12-01 13:18:49.384 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Started AuditReportGameApplication in 6.283 seconds (JVM running for 7.115)
-2022-12-01 13:18:49.917 [32mINFO [m[RMI TCP Connection(3)-192.168.0.101] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-01 13:18:50.077 [32mINFO [m[RMI TCP Connection(2)-192.168.0.101] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:3}] to localhost:27017
-2022-12-01 13:19:30.760 [33mWARN [m[Thread-10] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-12-01 13:19:30.766 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2022-12-01 13:19:30.838 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2022-12-01 13:19:30.839 [33mWARN [m[Thread-10] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
-2022-12-01 13:19:31.629 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:3}] to localhost:27017 because the pool has been closed.
-2022-12-01 13:19:31.656 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
-2022-12-01 13:19:31.676 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
-2022-12-01 13:19:53.587 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Starting AuditReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 11756 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-backstage/backstage-audit/audit-report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2022-12-01 13:19:53.597 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : No active profile set, falling back to default profiles: default
-2022-12-01 13:19:55.397 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-1100"]
-2022-12-01 13:19:55.397 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2022-12-01 13:19:55.397 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-12-01 13:19:55.451 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2022-12-01 13:19:56.714 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-12-01 13:19:56.835 [32mINFO [m[cluster-ClusterId{value='6388397cb7bf8f34cd9a5a62', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017
-2022-12-01 13:19:56.835 [32mINFO [m[cluster-rtt-ClusterId{value='6388397cb7bf8f34cd9a5a62', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:4}] to localhost:27017
-2022-12-01 13:19:56.837 [32mINFO [m[cluster-ClusterId{value='6388397cb7bf8f34cd9a5a62', description='null'}-localhost:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=76635083}
-2022-12-01 13:19:57.635 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-1100"]
-2022-12-01 13:19:57.681 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP audit-report-game 192.168.0.101:1100 register finished
-2022-12-01 13:19:57.825 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Started AuditReportGameApplication in 4.969 seconds (JVM running for 5.798)
-2022-12-01 13:19:58.146 [32mINFO [m[RMI TCP Connection(2)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-01 13:19:58.226 [32mINFO [m[RMI TCP Connection(1)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:6}] to localhost:27017
-2022-12-01 13:44:30.595 [33mWARN [m[Thread-9] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-12-01 13:44:30.595 [33mWARN [m[Thread-18] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2022-12-01 13:44:30.711 [33mWARN [m[Thread-18] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2022-12-01 13:44:30.756 [33mWARN [m[Thread-9] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
-2022-12-01 13:44:32.860 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:6}] to localhost:27017 because the pool has been closed.
-2022-12-01 13:44:32.888 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
-2022-12-01 13:44:32.903 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
-2022-12-01 14:15:55.629 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Starting AuditReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 25250 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-backstage/backstage-audit/audit-report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2022-12-01 14:15:55.640 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : No active profile set, falling back to default profiles: default
-2022-12-01 14:15:57.430 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-1100"]
-2022-12-01 14:15:57.430 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2022-12-01 14:15:57.431 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-12-01 14:15:57.497 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2022-12-01 14:15:59.135 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-12-01 14:15:59.349 [32mINFO [m[cluster-ClusterId{value='6388469f1d3f246f03b199ac', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
-2022-12-01 14:15:59.349 [32mINFO [m[cluster-rtt-ClusterId{value='6388469f1d3f246f03b199ac', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:7}] to localhost:27017
-2022-12-01 14:15:59.351 [32mINFO [m[cluster-ClusterId{value='6388469f1d3f246f03b199ac', description='null'}-localhost:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=114736208}
-2022-12-01 14:16:00.709 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-1100"]
-2022-12-01 14:16:00.818 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP audit-report-game 192.168.0.101:1100 register finished
-2022-12-01 14:16:01.032 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Started AuditReportGameApplication in 6.272 seconds (JVM running for 7.534)
-2022-12-01 14:16:01.750 [32mINFO [m[RMI TCP Connection(4)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-01 14:16:01.862 [32mINFO [m[RMI TCP Connection(5)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:9}] to localhost:27017
-2022-12-01 14:22:29.577 [33mWARN [m[Thread-11] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-12-01 14:22:29.577 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2022-12-01 14:22:29.601 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2022-12-01 14:22:29.615 [33mWARN [m[Thread-11] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
-2022-12-01 14:22:33.643 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:9}] to localhost:27017 because the pool has been closed.
-2022-12-01 14:22:33.787 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
-2022-12-01 14:22:34.131 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
+2022-12-02 00:01:26.450 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Starting AuditReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 40966 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-backstage/backstage-audit/audit-report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-12-02 00:01:26.474 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : No active profile set, falling back to default profiles: default
+2022-12-02 00:01:29.571 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-1100"]
+2022-12-02 00:01:29.571 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-12-02 00:01:29.572 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-02 00:01:29.660 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-12-02 00:01:31.192 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-12-02 00:01:31.299 [32mINFO [m[cluster-ClusterId{value='6388cfdbda1a5b38424dd41a', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:7}] to localhost:27017
+2022-12-02 00:01:31.299 [32mINFO [m[cluster-rtt-ClusterId{value='6388cfdbda1a5b38424dd41a', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:8}] to localhost:27017
+2022-12-02 00:01:31.301 [32mINFO [m[cluster-ClusterId{value='6388cfdbda1a5b38424dd41a', description='null'}-localhost:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=58216959}
+2022-12-02 00:01:32.289 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-1100"]
+2022-12-02 00:01:32.396 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP audit-report-game 192.168.0.101:1100 register finished
+2022-12-02 00:01:32.621 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Started AuditReportGameApplication in 6.943 seconds (JVM running for 8.23)
+2022-12-02 00:01:32.993 [32mINFO [m[RMI TCP Connection(4)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 00:01:33.348 [32mINFO [m[RMI TCP Connection(3)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:9}] to localhost:27017
+2022-12-02 00:01:35.570 [32mINFO [m[org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] [36mcom.sunyinuo.auditreportgame.handler.MqHandler[m : backstageMQHandler存入消息至redis
+2022-12-02 00:02:39.828 [32mINFO [m[org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] [36mcom.sunyinuo.auditreportgame.handler.MqHandler[m : backstageMQHandler存入消息至redis
+2022-12-02 00:09:26.495 [33mWARN [m[Thread-22] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-02 00:09:26.494 [33mWARN [m[Thread-12] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-02 00:09:26.607 [33mWARN [m[Thread-22] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-02 00:09:26.631 [33mWARN [m[Thread-12] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-02 00:09:27.438 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:9}] to localhost:27017 because the pool has been closed.
+2022-12-02 00:09:27.462 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
+2022-12-02 00:09:27.526 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
+2022-12-02 00:09:46.167 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Starting AuditReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 42945 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-backstage/backstage-audit/audit-report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-12-02 00:09:46.178 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : No active profile set, falling back to default profiles: default
+2022-12-02 00:09:48.301 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-1100"]
+2022-12-02 00:09:48.304 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-12-02 00:09:48.305 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-02 00:09:48.383 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-12-02 00:09:50.299 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-12-02 00:09:50.482 [32mINFO [m[cluster-rtt-ClusterId{value='6388d1ce40cbf003b15b60bc', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:10}] to localhost:27017
+2022-12-02 00:09:50.482 [32mINFO [m[cluster-ClusterId{value='6388d1ce40cbf003b15b60bc', description='null'}-localhost:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:11}] to localhost:27017
+2022-12-02 00:09:50.484 [32mINFO [m[cluster-ClusterId{value='6388d1ce40cbf003b15b60bc', description='null'}-localhost:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=103932667}
+2022-12-02 00:09:54.336 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-1100"]
+2022-12-02 00:09:54.524 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP audit-report-game 192.168.0.101:1100 register finished
+2022-12-02 00:09:54.872 [32mINFO [m[main] [36mcom.sunyinuo.auditreportgame.AuditReportGameApplication[m : Started AuditReportGameApplication in 9.591 seconds (JVM running for 11.042)
+2022-12-02 00:09:55.155 [32mINFO [m[RMI TCP Connection(8)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-02 00:09:55.254 [32mINFO [m[RMI TCP Connection(9)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:12}] to localhost:27017
+2022-12-02 00:10:40.683 [32mINFO [m[org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] [36mcom.sunyinuo.auditreportgame.handler.MqHandler[m : backstageMQHandler存入消息至redis
+2022-12-02 00:11:18.679 [32mINFO [m[org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] [36mcom.sunyinuo.auditreportgame.handler.MqHandler[m : backstageMQHandler存入消息至redis
+2022-12-02 00:12:36.247 [33mWARN [m[Thread-22] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-02 00:12:36.247 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-02 00:12:36.256 [33mWARN [m[Thread-22] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-02 00:12:36.266 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-02 00:12:37.223 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:12}] to localhost:27017 because the pool has been closed.
+2022-12-02 00:12:37.255 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
+2022-12-02 00:12:37.276 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.

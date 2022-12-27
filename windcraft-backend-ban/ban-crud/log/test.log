@@ -1,57 +1,57 @@
-2022-12-01 23:53:21.687 [32mINFO [m[main] [36mcom.sunyinuo.bancrud.BanCrudApplication[m : Starting BanCrudApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 39017 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-ban/ban-crud/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2022-12-01 23:53:21.696 [32mINFO [m[main] [36mcom.sunyinuo.bancrud.BanCrudApplication[m : No active profile set, falling back to default profiles: default
-2022-12-01 23:53:25.714 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-2000"]
-2022-12-01 23:53:25.715 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2022-12-01 23:53:25.715 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-12-01 23:53:25.831 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2022-12-01 23:53:26.292 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
-2022-12-01 23:53:26.727 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
-2022-12-01 23:53:26.728 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
-2022-12-01 23:53:26.729 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
-2022-12-01 23:53:28.777 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-2000"]
-2022-12-01 23:53:28.836 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP ban-crud 192.168.0.101:2000 register finished
-2022-12-01 23:53:28.888 [32mINFO [m[main] [36mcom.sunyinuo.bancrud.BanCrudApplication[m : Started BanCrudApplication in 7.959 seconds (JVM running for 9.36)
-2022-12-01 23:53:29.648 [32mINFO [m[RMI TCP Connection(4)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-01 23:53:50.563 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : GetBanList开始执行
-2022-12-01 23:53:50.563 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : getWaringList开始执行
-2022-12-01 23:53:50.563 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : getProhibitList开始执行
-2022-12-01 23:53:50.586 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.controller.ApiController[m : ip:127.0.0.1
-2022-12-01 23:53:50.586 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.controller.ApiController[m : ip:127.0.0.1
-2022-12-01 23:53:50.586 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.controller.ApiController[m : ip:127.0.0.1
-2022-12-01 23:53:50.742 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : time:StopWatch 'getWaringList': running time = 176821583 ns
+2022-12-20 22:16:36.382 [32mINFO [m[main] [36mcom.sunyinuo.bancrud.BanCrudApplication[m : Starting BanCrudApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 66461 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-ban/ban-crud/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-12-20 22:16:36.391 [32mINFO [m[main] [36mcom.sunyinuo.bancrud.BanCrudApplication[m : No active profile set, falling back to default profiles: default
+2022-12-20 22:16:38.285 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-2000"]
+2022-12-20 22:16:38.285 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-12-20 22:16:38.286 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-20 22:16:38.360 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-12-20 22:16:38.740 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
+2022-12-20 22:16:39.176 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
+2022-12-20 22:16:39.177 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
+2022-12-20 22:16:39.178 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
+2022-12-20 22:16:41.299 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-2000"]
+2022-12-20 22:16:41.480 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP ban-crud 192.168.0.109:2000 register finished
+2022-12-20 22:16:41.548 [32mINFO [m[main] [36mcom.sunyinuo.bancrud.BanCrudApplication[m : Started BanCrudApplication in 5.727 seconds (JVM running for 6.901)
+2022-12-20 22:16:42.246 [32mINFO [m[RMI TCP Connection(4)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-20 22:41:03.821 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : getProhibitList开始执行
+2022-12-20 22:41:03.821 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : GetBanList开始执行
+2022-12-20 22:41:03.821 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : getWaringList开始执行
+2022-12-20 22:41:03.856 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.controller.ApiController[m : ip:127.0.0.1
+2022-12-20 22:41:03.856 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.controller.ApiController[m : ip:127.0.0.1
+2022-12-20 22:41:03.856 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.controller.ApiController[m : ip:127.0.0.1
+2022-12-20 22:41:03.951 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : time:StopWatch 'getWaringList': running time = 124003250 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-176821583  100%  
+124003250  100%  
 
-2022-12-01 23:53:50.742 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : return:[Ban(id=3, source=1, reason=2, banTime=3, unBanTime=4, banType=5, name=6), Ban(id=4, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=5, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=6, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=7, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=8, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=9, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=10, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=11, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=12, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=13, source=1, reason=1, banTime=1, unBanTime=222, banType=222, name=222)]
-2022-12-01 23:53:50.744 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : time:StopWatch 'getProhibitList': running time = 176602792 ns
+2022-12-20 22:41:03.950 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : return:[Ban(id=3, source=1, reason=2, banTime=3, unBanTime=4, banType=5, name=6), Ban(id=4, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=5, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=6, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=7, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=8, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=9, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=10, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=11, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=12, source=1, reason=1, banTime=1, unBanTime=1, banType=1, name=1), Ban(id=13, source=1, reason=1, banTime=1, unBanTime=222, banType=222, name=222)]
+2022-12-20 22:41:03.951 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : time:StopWatch 'getProhibitList': running time = 123174458 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-176602792  100%  
+123174458  100%  
 
-2022-12-01 23:53:50.745 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : return:[Warning(id=1, source=1, reason=1, time=1, name=1)]
-2022-12-01 23:53:50.745 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : return:[Prohibit(id=1, source=1, reason=2, banTime=3, unBanTime=4, name=5)]
-2022-12-01 23:53:50.745 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : time:StopWatch 'getBanList': running time = 176579583 ns
+2022-12-20 22:41:03.952 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : return:[Warning(id=1, source=1, reason=1, time=1, name=1)]
+2022-12-20 22:41:03.952 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : return:[Prohibit(id=1, source=1, reason=2, banTime=3, unBanTime=4, name=5)]
+2022-12-20 22:41:03.952 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : time:StopWatch 'getBanList': running time = 124316041 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-176579583  100%  
+124316041  100%  
 
-2022-12-01 23:53:50.745 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : getWaringList结束 
+2022-12-20 22:41:03.952 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : getProhibitList结束 
 
-2022-12-01 23:53:50.745 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : getProhibitList结束 
+2022-12-20 22:41:03.953 [32mINFO [m[http-nio-2000-exec-3] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : GetBanList方法结束
 
-2022-12-01 23:53:50.745 [32mINFO [m[http-nio-2000-exec-1] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : GetBanList方法结束
+2022-12-20 22:41:03.952 [32mINFO [m[http-nio-2000-exec-2] [36mcom.sunyinuo.bancrud.aop.log.ApiControllerProxy[m : getWaringList结束 
 
-2022-12-02 00:12:36.271 [33mWARN [m[Thread-25] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2022-12-02 00:12:36.271 [33mWARN [m[Thread-16] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-12-02 00:12:36.571 [33mWARN [m[Thread-16] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
-2022-12-02 00:12:36.567 [33mWARN [m[Thread-25] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2022-12-02 00:12:36.967 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
-2022-12-02 00:12:36.997 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
-2022-12-02 00:12:45.841 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource start closing ....
-2022-12-02 00:12:45.845 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown initiated...
-2022-12-02 00:12:45.873 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown completed.
-2022-12-02 00:12:45.874 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource all closed success,bye
+2022-12-20 23:12:41.337 [33mWARN [m[Thread-11] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-20 23:12:41.337 [33mWARN [m[Thread-21] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-20 23:12:41.372 [33mWARN [m[Thread-21] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-20 23:12:41.405 [33mWARN [m[Thread-11] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-20 23:12:42.416 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
+2022-12-20 23:12:42.539 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
+2022-12-20 23:12:49.181 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource start closing ....
+2022-12-20 23:12:49.204 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown initiated...
+2022-12-20 23:12:49.257 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown completed.
+2022-12-20 23:12:49.261 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource all closed success,bye

@@ -6,6 +6,7 @@ import com.sunyinuo.usersignin.utils.ip.GetIp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
+import result.Result;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -31,7 +32,7 @@ public class RegisteredController {
      * @return code
      */
     @PostMapping("/registered")
-    public Integer registered(@RequestBody JSONObject jsonParam, HttpServletRequest request){
+    public Result registered(@RequestBody JSONObject jsonParam, HttpServletRequest request){
         String userName = (String) jsonParam.get("username");
         String userPassword = (String) jsonParam.get("password");
         String ip = GetIp.getIpAddress(request);

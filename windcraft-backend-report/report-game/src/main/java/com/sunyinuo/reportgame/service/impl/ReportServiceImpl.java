@@ -6,7 +6,6 @@ import com.sunyinuo.reportgame.model.FileUpload;
 import com.sunyinuo.reportgame.model.FromReportMassage;
 import com.sunyinuo.reportgame.model.ReportMassage;
 import com.sunyinuo.reportgame.service.ReportService;
-import com.sunyinuo.reportgame.utils.response.ReportResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +13,9 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
+import result.Result;
+import result.ResultEnum;
+import result.ResultUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +46,7 @@ public class ReportServiceImpl implements ReportService {
      * @return 是否成功
      */
     @Override
-    public Integer report(String ip, String reportedPlayer, FromReportMassage fromReportMassage) {
+    public Result report(String ip, String reportedPlayer, FromReportMassage fromReportMassage) {
 
         //因为框架所限null为""
         if (fromReportMassage.getReportPlayer().equals(NULL)
@@ -53,7 +55,7 @@ public class ReportServiceImpl implements ReportService {
                 || fromReportMassage.getFunction() .equals(NULL)
                 || fromReportMassage.getPlace() .equals(NULL)){
 
-            return ReportResponse.CODE_400;
+            return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(),"喂，你还有东西没填呢！🤬");
         }
 
         try {
@@ -77,9 +79,9 @@ public class ReportServiceImpl implements ReportService {
             rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE_TOPICS_INFORM,"inform.report", JSONObject.toJSONString(reportMassage));
         }catch (Exception e){
             log.error("reportError:",e);
-            return ReportResponse.CODE_500;
+            return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(),"emmm,我们的程序员写的代码似乎出了点问题呢🙃");
         }
 
-        return ReportResponse.CODE_200;
+        return ResultUtil.result(ResultEnum.SUCCESS.getCode(),"举报成功了，让那些挂狗去死吧(双手叉腰😏");
     }
 }

@@ -5,8 +5,10 @@ import com.sunyinuo.usersignin.service.RegisteredService;
 import com.sunyinuo.usersignin.service.db.impl.UserServiceImpl;
 import com.sunyinuo.usersignin.utils.regex.PasswordRegex;
 import com.sunyinuo.usersignin.utils.regex.SqlRegex;
-import com.sunyinuo.usersignin.utils.response.RegisteredResponse;
 import org.springframework.stereotype.Service;
+import result.Result;
+import result.ResultEnum;
+import result.ResultUtil;
 
 
 /**
@@ -30,17 +32,17 @@ public class RegisteredServiceImpl implements RegisteredService {
      * @return code
      */
     @Override
-    public Integer registered(String userName, String userPassword, String ip) {
+    public Result registered(String userName, String userPassword, String ip) {
         User userListByName = userService.getUserByName(userName);
 
         //sql注入检查部分
         if (SqlRegex.sqlRegex(userName) || SqlRegex.sqlRegex(userPassword)){
-            return RegisteredResponse.CODE_710;
+            return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(), "你是tm真行,给我tm玩这出,你以为我没防啊?");
         }
 
         //用户名或密码不合规
         if (PasswordRegex.passwordRegex(userPassword)){
-            return RegisteredResponse.CODE_770;
+            return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(), "用户名或密码不符合规范");
         }
 
         //用户名重复
@@ -55,16 +57,16 @@ public class RegisteredServiceImpl implements RegisteredService {
                 user.setIp(ip);
 
                 if (userService.addUser(user) == 1){
-                    return RegisteredResponse.CODE_700;
+                    return ResultUtil.result(ResultEnum.SUCCESS.getCode(), "注册成功");
                 }
                 if (userService.addUser(user) == 0){
-                    return RegisteredResponse.CODE_500;
+                    return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(), "注册失败,服务器异常");
                 }
             }
         }
 
         if (userListByName != null){
-            return RegisteredResponse.CODE_750;
+            return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(), "用户名重复");
         }
 
         return null;

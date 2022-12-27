@@ -1,8 +1,12 @@
-2022-12-02 00:09:33.948 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-12-02 00:09:33.948 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2022-12-02 00:09:34.037 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2022-12-02 00:09:34.081 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
-2022-12-02 00:12:36.166 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2022-12-02 00:12:36.166 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-12-02 00:12:36.174 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2022-12-02 00:12:36.188 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-27 21:19:51.267 [33mWARN [m[Thread-17] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-27 21:19:51.270 [33mWARN [m[Thread-26] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-27 21:19:51.408 [33mWARN [m[Thread-26] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-27 21:19:51.468 [33mWARN [m[Thread-17] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-27 21:20:22.763 [33mWARN [m[Thread-27] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-27 21:20:22.763 [33mWARN [m[Thread-18] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-27 21:20:22.774 [33mWARN [m[Thread-27] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-27 21:20:22.801 [33mWARN [m[Thread-18] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2022-12-27 21:34:10.454 [33mWARN [m[Thread-11] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-27 21:34:10.454 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2022-12-27 21:34:10.472 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2022-12-27 21:34:10.493 [33mWARN [m[Thread-11] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end

@@ -113,24 +113,20 @@ export default {
       if (valid){
         //向后端传参{username,password}
         request.post("/usersignin/login",{username,password}).then(res =>{
+          console.log(res)
           this.loginCallBackSwitch(res);
         })
       }
     },
     loginCallBackSwitch(res){
-      switch (res) {
+      switch (res.code) {
         //成功
-        case 600:
+        case 200:
           this.notice("登陆","登陆成功");
           this.loginModal = false;
           break;
-        //用户名或密码错误
-        case 610:
-          this.notice("登陆","用户名或密码错误");
-          break;
-        //sql注入
-        case 710:
-          this.notice("登陆","你是tm真行,给我tm玩这出,你以为我没防啊?")
+        default:
+          this.notice("登陆",res.msg)
           break;
       }
     },
@@ -148,32 +144,19 @@ export default {
       }
     },
     registeredCallBackSwitch(res){
-      switch (res) {
+      switch (res.code) {
         //成功
-        case 700:
+        case 200:
           this.notice("注册","注册成功")
           //跳转到登陆页
           this.registeredModal = false;
           this.loginModal = true;
           break;
-        //sql注入
-        case 710:
-          this.notice("注册","你是tm真行,给我tm玩这出,你以为我没防啊?")
-          break;
-        //注册时用户名或密码不符合规范
-        case 770:
-          this.notice("注册","用户名或密码不符合规范")
-          break;
-        //用户名重复
-        case 750:
-          this.notice("注册","用户名重复")
-          break;
-        //注册失败
-        case 500:
-          this.notice("注册","注册失败")
+        default:
+          this.notice("注册",res.msg)
           break;
       }
-    },
+    }
   },
 
   computed:{

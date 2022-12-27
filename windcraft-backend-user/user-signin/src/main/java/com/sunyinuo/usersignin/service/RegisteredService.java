@@ -1,5 +1,7 @@
 package com.sunyinuo.usersignin.service;
 
+import result.Result;
+
 /**
  * 注册业务逻辑层
  * @author sunyinuo
@@ -10,7 +12,7 @@ public interface RegisteredService {
      * @param userName 用户名
      * @param userPassword 密码
      * @param ip HttpServletRequest
-     * @return code
+     * @return 包装
      */
-    Integer registered (String userName, String userPassword, String ip);
+    Result registered (String userName, String userPassword, String ip);
  }

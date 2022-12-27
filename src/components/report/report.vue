@@ -82,15 +82,13 @@ export default {
       this.getData()
       //传递
       request.post("/reportgame/report",this.formItem).then(res =>{
-        switch (res){
+        console.log(res)
+        switch (res.code){
           case 200:
-            this.$Message.success('举报成功');
+            this.$Message.success(res.msg);
             break;
-          case 500:
-            this.$Message.error('举报失败');
-            break;
-          case 400:
-            this.$Message.warning('含有空值');
+          default:
+            this.$Message.warning(res.msg);
             break;
         }
       })
@@ -110,7 +108,6 @@ export default {
      */
     upload(){
       this.handleSubmit();
-      console.log("ok")
     },
   }
 }

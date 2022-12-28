@@ -8,7 +8,7 @@
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp被举报人:{{report.fromReportMassage.reportedPlayer}}
       </h5>
       <template #extra>
-        <img :src="report.pictureUrl.slice(0,1)" style="width: 280px">
+        <img :src=getReportPictureUrl(0,report.pictureUrl) style="width: 280px">
       </template>
     </ListItem>
   </List>
@@ -28,11 +28,26 @@
       this.getReportList();
     },
     methods: {
+      /**
+       * 获取举报信息列表
+       */
       getReportList() {
         request.get("/auditreportgame/api/getReportMassage").then(res => {
           this.reportMassage = res
         })
       },
+      /**
+       * 根据索引获取图片url
+       * @param index 索引
+       * @param pictureUrlList 图片list
+       */
+      getReportPictureUrl(index,pictureUrlList){
+        if (pictureUrlList == null){
+          return "";
+        }else {
+          pictureUrlList.slice(0,1);
+        }
+      }
     }
   }
 </script>

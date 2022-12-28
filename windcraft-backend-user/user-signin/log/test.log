@@ -1,77 +1,25 @@
-2022-12-27 20:31:13.831 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Starting UserSigninApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 18986 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-user/user-signin/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2022-12-27 20:31:13.840 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : No active profile set, falling back to default profiles: default
-2022-12-27 20:31:16.533 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-3001"]
-2022-12-27 20:31:16.533 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2022-12-27 20:31:16.534 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-12-27 20:31:16.620 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2022-12-27 20:31:17.124 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
-2022-12-27 20:31:17.522 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
-2022-12-27 20:31:17.523 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
-2022-12-27 20:31:17.524 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
-2022-12-27 20:31:19.510 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-3001"]
-2022-12-27 20:31:19.589 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP user-signin 192.168.0.109:3001 register finished
-2022-12-27 20:31:19.618 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Started UserSigninApplication in 6.573 seconds (JVM running for 7.867)
-2022-12-27 20:31:19.771 [32mINFO [m[RMI TCP Connection(2)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-27 20:31:28.358 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法开始执行
-2022-12-27 20:31:28.360 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:{password=AAAAAAAA111122222AAAAAAaaa, username=哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈}
-2022-12-27 20:31:28.361 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:org.apache.catalina.connector.RequestFacade@615b51ed
-2022-12-27 20:31:28.380 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.LoginController[m : ip:127.0.0.1
-2022-12-27 20:31:28.548 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : return:Result(code=200, msg=登录成功, data=null)
-2022-12-27 20:31:28.549 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : time:StopWatch 'login': running time = 188113709 ns
+2022-12-28 19:33:04.118 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Starting UserSigninApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 10173 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-user/user-signin/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-12-28 19:33:04.146 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : No active profile set, falling back to default profiles: default
+2022-12-28 19:33:09.372 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-3001"]
+2022-12-28 19:33:09.374 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-12-28 19:33:09.374 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-28 19:33:09.454 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-12-28 19:33:10.856 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
+2022-12-28 19:33:11.995 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
+2022-12-28 19:33:11.996 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
+2022-12-28 19:33:11.997 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
+2022-12-28 19:33:15.961 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-3001"]
+2022-12-28 19:33:16.063 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP user-signin 192.168.0.109:3001 register finished
+2022-12-28 19:33:16.122 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Started UserSigninApplication in 12.802 seconds (JVM running for 13.909)
+2022-12-28 19:33:16.851 [32mINFO [m[RMI TCP Connection(6)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-28 19:33:43.017 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2022-12-28 19:33:43.044 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2022-12-28 19:33:43.070 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 49544167 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-188113709  100%  
+049544167  100%  
 
-2022-12-27 20:31:28.549 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法结束
+2022-12-28 19:33:43.070 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2022-12-28 19:33:43.070 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2022-12-27 20:32:52.880 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2022-12-27 20:32:52.907 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2022-12-27 20:32:52.948 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 64041375 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-064041375  100%  
-
-2022-12-27 20:32:52.948 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
-2022-12-27 20:32:52.948 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
-
-2022-12-27 20:33:10.873 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法开始执行
-2022-12-27 20:33:10.875 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:{password=AAAAAAAA111122222AAAAAAaaa, username=哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈}
-2022-12-27 20:33:10.876 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:org.apache.catalina.connector.RequestFacade@615b51ed
-2022-12-27 20:33:10.876 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.controller.LoginController[m : ip:127.0.0.1
-2022-12-27 20:33:10.932 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : return:Result(code=403, msg=用户名或密码错误, data=null)
-2022-12-27 20:33:10.935 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : time:StopWatch 'login': running time = 246421459 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-188113709  076%  
-058307750  024%  
-
-2022-12-27 20:33:10.936 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法结束
-
-2022-12-27 20:33:24.385 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法开始执行
-2022-12-27 20:33:24.388 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:{password=AAAAAAAA111122222AAAAAAaaa, username=哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈}
-2022-12-27 20:33:24.388 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:org.apache.catalina.connector.RequestFacade@615b51ed
-2022-12-27 20:33:24.389 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.LoginController[m : ip:127.0.0.1
-2022-12-27 20:33:24.419 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : return:Result(code=200, msg=登录成功, data=null)
-2022-12-27 20:33:24.421 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : time:StopWatch 'login': running time = 278394584 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-188113709  068%  
-058307750  021%  
-031973125  011%  
-
-2022-12-27 20:33:24.421 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法结束
-
-2022-12-27 20:51:12.912 [33mWARN [m[Thread-24] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2022-12-27 20:51:12.913 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-12-27 20:51:12.948 [33mWARN [m[Thread-24] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2022-12-27 20:51:12.957 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
-2022-12-27 20:51:13.327 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
-2022-12-27 20:51:13.347 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
-2022-12-27 20:51:20.564 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource start closing ....
-2022-12-27 20:51:20.570 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown initiated...
-2022-12-27 20:51:20.599 [32mINFO [m[SpringContextShutdownHook] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Shutdown completed.
-2022-12-27 20:51:20.599 [32mINFO [m[SpringContextShutdownHook] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource all closed success,bye

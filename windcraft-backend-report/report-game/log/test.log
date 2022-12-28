@@ -1,156 +1,57 @@
-2022-12-27 21:20:38.219 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 30102 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2022-12-27 21:20:38.231 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to default profiles: default
-2022-12-27 21:20:40.171 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-5000"]
-2022-12-27 21:20:40.171 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2022-12-27 21:20:40.172 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-12-27 21:20:40.228 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2022-12-27 21:20:40.666 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-12-27 21:20:40.708 [32mINFO [m[cluster-ClusterId{value='63aaf128a1b69d44557cda80', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:12}] to 127.0.0.1:27017
-2022-12-27 21:20:40.708 [32mINFO [m[cluster-rtt-ClusterId{value='63aaf128a1b69d44557cda80', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:13}] to 127.0.0.1:27017
-2022-12-27 21:20:40.709 [32mINFO [m[cluster-ClusterId{value='63aaf128a1b69d44557cda80', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=16814625}
-2022-12-27 21:20:42.292 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-5000"]
-2022-12-27 21:20:42.339 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP report-game 192.168.0.109:5000 register finished
-2022-12-27 21:20:42.373 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 4.889 seconds (JVM running for 5.755)
-2022-12-27 21:20:42.885 [32mINFO [m[RMI TCP Connection(3)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-27 21:20:43.466 [32mINFO [m[RMI TCP Connection(2)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:14}] to 127.0.0.1:27017
-2022-12-27 21:20:58.536 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
-2022-12-27 21:20:58.709 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63aaf13aa1b69d44557cda81, name=原神圣遗物评分.png, createdTime=2022-12-27T21:20:58.551, content=org.bson.types.Binary@804c5042, contentType=image/png, size=722582, ip=127.0.0.1, reportedPlayer=aa)
-2022-12-27 21:20:58.712 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 170870792 ns
+2022-12-28 19:32:26.628 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 10027 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2022-12-28 19:32:26.652 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to default profiles: default
+2022-12-28 19:32:28.911 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-5000"]
+2022-12-28 19:32:28.912 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2022-12-28 19:32:28.912 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-12-28 19:32:28.977 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2022-12-28 19:32:29.560 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-12-28 19:32:29.730 [32mINFO [m[cluster-ClusterId{value='63ac294dcd4cf85098872c7c', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:1}] to 127.0.0.1:27017
+2022-12-28 19:32:29.731 [32mINFO [m[cluster-rtt-ClusterId{value='63ac294dcd4cf85098872c7c', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:2}] to 127.0.0.1:27017
+2022-12-28 19:32:29.746 [32mINFO [m[cluster-ClusterId{value='63ac294dcd4cf85098872c7c', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=97634250}
+2022-12-28 19:32:33.355 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-5000"]
+2022-12-28 19:32:33.487 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP report-game 192.168.0.109:5000 register finished
+2022-12-28 19:32:33.538 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 7.817 seconds (JVM running for 9.479)
+2022-12-28 19:32:34.792 [32mINFO [m[RMI TCP Connection(5)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-28 19:32:37.191 [32mINFO [m[RMI TCP Connection(6)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:3}] to 127.0.0.1:27017
+2022-12-28 19:34:35.674 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-12-28 19:34:35.841 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaa, reportPlayer=aaa, qqCode=aaa, function=aaa, place=原版生存, date=1669635275000, ip=127.0.0.1), fileUpload=null, pictureUrl=null)
+2022-12-28 19:34:35.915 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=200, msg=举报成功了，让那些挂狗去死吧(双手叉腰😏, data=null)
+2022-12-28 19:34:35.917 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 238995666 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-170870792  100%  
+238995666  100%  
 
-2022-12-27 21:20:58.712 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
-
-2022-12-27 21:21:00.997 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
-2022-12-27 21:21:01.116 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aa, reportPlayer=aa, qqCode=aaa, function=swds, place=原版生存, date=1669555260000, ip=127.0.0.1), fileUpload=FileUpload(id=63aaf13aa1b69d44557cda81, name=原神圣遗物评分.png, createdTime=2022-12-27T21:20:58.551, content=org.bson.types.Binary@804c5042, contentType=image/png, size=722582, ip=127.0.0.1, reportedPlayer=aa), pictureUrl=[http://127.0.0.1:9000/reportgame/api/getFile/63aaf13aa1b69d44557cda81])
-2022-12-27 21:21:01.229 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=200, msg=举报成功了，让那些挂狗去死吧(双手叉腰😏, data=null)
-2022-12-27 21:21:01.232 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 231134250 ns
+2022-12-28 19:34:35.917 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
+2022-12-28 19:35:55.165 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
+2022-12-28 19:35:55.427 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63ac2a1bcd4cf85098872c7d, name=神经网络.png, createdTime=2022-12-28T19:35:55.181, content=org.bson.types.Binary@15cf6b9f, contentType=image/png, size=1156212, ip=127.0.0.1, reportedPlayer=)
+2022-12-28 19:35:55.433 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 259840375 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-231134250  100%  
+259840375  100%  
 
-2022-12-27 21:21:01.232 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
-2022-12-27 21:21:51.036 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
-2022-12-27 21:21:51.075 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63aaf16fa1b69d44557cda82, name=神经网路函数.png, createdTime=2022-12-27T21:21:51.039, content=org.bson.types.Binary@bb0f3dd0, contentType=image/png, size=1358766, ip=127.0.0.1, reportedPlayer=aaaa)
-2022-12-27 21:21:51.082 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 207554000 ns
+2022-12-28 19:35:55.433 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
+
+2022-12-28 19:35:57.732 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-12-28 19:35:57.733 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=403, msg=喂，你还有东西没填呢！🤬, data=null)
+2022-12-28 19:35:57.734 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 239026957 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-170870792  082%  
-036683208  018%  
+238995666  100%  
+000031291  000%  
 
-2022-12-27 21:21:51.082 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
-
-2022-12-27 21:21:53.069 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
-2022-12-27 21:21:53.085 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaaa, reportPlayer=aaaaa, qqCode=aaaaaaaaaa, function=aaaaaaaaaaaaa, place=ffa, date=1669555313000, ip=127.0.0.1), fileUpload=FileUpload(id=63aaf16fa1b69d44557cda82, name=神经网路函数.png, createdTime=2022-12-27T21:21:51.039, content=org.bson.types.Binary@bb0f3dd0, contentType=image/png, size=1358766, ip=127.0.0.1, reportedPlayer=aaaa), pictureUrl=[http://127.0.0.1:9000/reportgame/api/getFile/63aaf16fa1b69d44557cda82])
-2022-12-27 21:21:53.127 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=200, msg=举报成功了，让那些挂狗去死吧(双手叉腰😏, data=null)
-2022-12-27 21:21:53.127 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 287251917 ns
+2022-12-28 19:35:57.735 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
+2022-12-28 19:36:14.251 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
+2022-12-28 19:36:14.268 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaaaaaa, reportPlayer=aaa, qqCode=aaa, function=aaa, place=原版生存, date=1669635374000, ip=127.0.0.1), fileUpload=null, pictureUrl=null)
+2022-12-28 19:36:14.271 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=200, msg=举报成功了，让那些挂狗去死吧(双手叉腰😏, data=null)
+2022-12-28 19:36:14.273 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 257137207 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-231134250  080%  
-056117667  020%  
+238995666  093%  
+000031291  000%  
+018110250  007%  
 
-2022-12-27 21:21:53.128 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
-2022-12-27 21:21:57.884 [32mINFO [m[http-nio-5000-exec-5] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
-2022-12-27 21:21:57.885 [32mINFO [m[http-nio-5000-exec-5] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=403, msg=喂，你还有东西没填呢！🤬, data=null)
-2022-12-27 21:21:57.888 [32mINFO [m[http-nio-5000-exec-5] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 287384876 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-231134250  080%  
-056117667  020%  
-000132959  000%  
-
-2022-12-27 21:21:57.889 [32mINFO [m[http-nio-5000-exec-5] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
-2022-12-27 21:24:44.922 [32mINFO [m[http-nio-5000-exec-7] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
-2022-12-27 21:24:44.986 [32mINFO [m[http-nio-5000-exec-7] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63aaf21ca1b69d44557cda83, name=神经网络.png, createdTime=2022-12-27T21:24:44.926, content=org.bson.types.Binary@15cf6b9f, contentType=image/png, size=1156212, ip=127.0.0.1, reportedPlayer=)
-2022-12-27 21:24:44.991 [32mINFO [m[http-nio-5000-exec-7] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 267635833 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-170870792  064%  
-036683208  014%  
-060081833  022%  
-
-2022-12-27 21:24:44.991 [32mINFO [m[http-nio-5000-exec-7] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
-
-2022-12-27 21:24:53.290 [32mINFO [m[http-nio-5000-exec-8] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
-2022-12-27 21:24:53.356 [32mINFO [m[http-nio-5000-exec-8] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63aaf225a1b69d44557cda84, name=截屏2022-05-22 上午9.20.25.png, createdTime=2022-12-27T21:24:53.291, content=org.bson.types.Binary@1f91cbf9, contentType=image/png, size=4012157, ip=127.0.0.1, reportedPlayer=aaaaaaa)
-2022-12-27 21:24:53.369 [32mINFO [m[http-nio-5000-exec-8] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 333110458 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-170870792  051%  
-036683208  011%  
-060081833  018%  
-065474625  020%  
-
-2022-12-27 21:24:53.369 [32mINFO [m[http-nio-5000-exec-8] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
-
-2022-12-27 21:24:55.468 [32mINFO [m[http-nio-5000-exec-9] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
-2022-12-27 21:24:55.497 [32mINFO [m[http-nio-5000-exec-9] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaaaaaa, reportPlayer=aaaaa, qqCode=aaaaaaaaaa, function=aaaaaaaaaaaaa, place=ffa, date=1669555495000, ip=127.0.0.1), fileUpload=FileUpload(id=63aaf225a1b69d44557cda84, name=截屏2022-05-22 上午9.20.25.png, createdTime=2022-12-27T21:24:53.291, content=org.bson.types.Binary@1f91cbf9, contentType=image/png, size=4012157, ip=127.0.0.1, reportedPlayer=aaaaaaa), pictureUrl=[http://127.0.0.1:9000/reportgame/api/getFile/63aaf225a1b69d44557cda84])
-2022-12-27 21:24:55.707 [32mINFO [m[http-nio-5000-exec-9] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=200, msg=举报成功了，让那些挂狗去死吧(双手叉腰😏, data=null)
-2022-12-27 21:24:55.709 [32mINFO [m[http-nio-5000-exec-9] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 522837876 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-231134250  044%  
-056117667  011%  
-000132959  000%  
-235453000  045%  
-
-2022-12-27 21:24:55.709 [32mINFO [m[http-nio-5000-exec-9] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
-2022-12-27 21:25:15.827 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
-2022-12-27 21:25:15.886 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63aaf23ba1b69d44557cda85, name=截屏2022-05-22 上午9.20.25.png, createdTime=2022-12-27T21:25:15.829, content=org.bson.types.Binary@1f91cbf9, contentType=image/png, size=4012157, ip=127.0.0.1, reportedPlayer=)
-2022-12-27 21:25:15.899 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 389627166 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-170870792  044%  
-036683208  009%  
-060081833  015%  
-065474625  017%  
-056516708  015%  
-
-2022-12-27 21:25:15.899 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
-
-2022-12-27 21:25:20.314 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
-2022-12-27 21:25:20.320 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaaaaaaaa, reportPlayer=aaaaa, qqCode=aaaaaaaaaa, function=aaaaaaaaaaaaa, place=ffa, date=1669555520000, ip=127.0.0.1), fileUpload=null, pictureUrl=null)
-2022-12-27 21:25:20.323 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=200, msg=举报成功了，让那些挂狗去死吧(双手叉腰😏, data=null)
-2022-12-27 21:25:20.324 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 529800293 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-231134250  044%  
-056117667  011%  
-000132959  000%  
-235453000  044%  
-006962417  001%  
-
-2022-12-27 21:25:20.324 [32mINFO [m[http-nio-5000-exec-2] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
-2022-12-27 21:25:38.917 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
-2022-12-27 21:25:38.926 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaaaaaaaa, reportPlayer=aaaaa, qqCode=aaaaaaaaaa, function=aaaaaaaaaaaaa, place=ffa, date=1669555538000, ip=127.0.0.1), fileUpload=null, pictureUrl=null)
-2022-12-27 21:25:38.928 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=200, msg=举报成功了，让那些挂狗去死吧(双手叉腰😏, data=null)
-2022-12-27 21:25:38.929 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 538218501 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-231134250  043%  
-056117667  010%  
-000132959  000%  
-235453000  044%  
-006962417  001%  
-008418208  002%  
-
-2022-12-27 21:25:38.929 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
-2022-12-27 21:34:10.454 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2022-12-27 21:34:10.454 [33mWARN [m[Thread-11] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-12-27 21:34:10.472 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2022-12-27 21:34:10.493 [33mWARN [m[Thread-11] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
-2022-12-27 21:34:10.824 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
-2022-12-27 21:34:10.842 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
-2022-12-27 21:34:19.802 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:14}] to 127.0.0.1:27017 because the pool has been closed.
+2022-12-28 19:36:14.273 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束

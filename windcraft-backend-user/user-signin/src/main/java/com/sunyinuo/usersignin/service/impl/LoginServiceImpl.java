@@ -4,25 +4,27 @@ import com.sunyinuo.usersignin.model.User;
 import com.sunyinuo.usersignin.service.LoginService;
 import com.sunyinuo.usersignin.service.db.impl.UserServiceImpl;
 import com.sunyinuo.usersignin.utils.regex.SqlRegex;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CachePut;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import result.Result;
 import result.ResultEnum;
 import result.ResultUtil;
+
+import java.util.HashMap;
 
 /**
  * 登陆业务逻辑层实现类
  * @author sunyinuo
  */
 @Service
-@CacheConfig(cacheNames = "loginStateCache")
 public class LoginServiceImpl implements LoginService {
+    private final   HashMap<String,Object> userInfo = new HashMap<>();
+    private final   RedisTemplate<Object,Object> redisTemplate;
+    private final   UserServiceImpl userService;
 
-    private final UserServiceImpl userService;
-
-    public LoginServiceImpl(UserServiceImpl userService) {
+    public LoginServiceImpl(UserServiceImpl userService, RedisTemplate<Object, Object> redisTemplate) {
         this.userService = userService;
+        this.redisTemplate = redisTemplate;
     }
 
     /**
@@ -32,7 +34,6 @@ public class LoginServiceImpl implements LoginService {
      * @return code
      */
     @Override
-    @CachePut(condition = "#result.code == 200",value = "loginStateCache", key = "#ip")
     public Result login(String userName, String userPassword, String ip) {
         User userList = userService.getUserByName(userName);
 
@@ -44,6 +45,10 @@ public class LoginServiceImpl implements LoginService {
         if (userList != null){
             //登陆成功
             if (userName.equals(userList.getUserName()) && userPassword.equals(userList.getUserPassword())) {
+                userInfo.put("userName",userList.getUserName());
+                userInfo.put("userIp",userList.getIp());
+                userInfo.put("userId",userList.getIp());
+                redisTemplate.opsForValue().set(userList.getIp(),userInfo.toString());
                 return ResultUtil.result(ResultEnum.SUCCESS.getCode(),"登录成功");
             }
             if (!userPassword.equals(userList.getUserPassword())){

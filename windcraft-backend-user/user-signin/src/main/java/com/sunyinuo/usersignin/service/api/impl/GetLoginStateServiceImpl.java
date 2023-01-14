@@ -16,8 +16,6 @@ public class GetLoginStateServiceImpl implements GetLoginStateService {
         this.redisTemplate = redisTemplate;
     }
 
-    private static final String PREFIX = "loginStateCache";
-    private static final String SEPARATION = "::";
 
     /**
      * 获取所有登陆成功用户的缓存信息
@@ -26,6 +24,6 @@ public class GetLoginStateServiceImpl implements GetLoginStateService {
      */
     @Override
     public boolean getLoginState(String ip) {
-        return Boolean.TRUE.equals(redisTemplate.hasKey(PREFIX + SEPARATION + ip));
+        return Boolean.TRUE.equals(redisTemplate.hasKey(ip));
     }
 }

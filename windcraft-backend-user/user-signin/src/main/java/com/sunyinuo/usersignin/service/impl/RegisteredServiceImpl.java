@@ -10,6 +10,8 @@ import result.Result;
 import result.ResultEnum;
 import result.ResultUtil;
 
+import java.util.List;
+
 
 /**
  * 登陆业务逻辑层实现类
@@ -34,6 +36,7 @@ public class RegisteredServiceImpl implements RegisteredService {
     @Override
     public Result registered(String userName, String userPassword, String ip) {
         User userListByName = userService.getUserByName(userName);
+        List<User> userListByIp = userService.getUserByIp(ip);
 
         //sql注入检查部分
         if (SqlRegex.sqlRegex(userName) || SqlRegex.sqlRegex(userPassword)){
@@ -43,6 +46,10 @@ public class RegisteredServiceImpl implements RegisteredService {
         //用户名或密码不合规
         if (PasswordRegex.passwordRegex(userPassword)){
             return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(), "用户名或密码不符合规范");
+        }
+
+        if (userListByIp != null){
+            return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(),"别想开小号🤬");
         }
 
         //用户名重复

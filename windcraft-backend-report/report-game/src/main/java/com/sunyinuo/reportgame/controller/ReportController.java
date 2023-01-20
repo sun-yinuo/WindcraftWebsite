@@ -4,7 +4,10 @@ import com.alibaba.fastjson.JSONObject;
 import com.sunyinuo.reportgame.model.FromReportMassage;
 import com.sunyinuo.reportgame.service.impl.ReportServiceImpl;
 import com.sunyinuo.reportgame.utils.ip.GetIp;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import result.Result;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,10 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/reportgame/")
 public class ReportController {
-
-    //TODO (1)举报时，先上传图片后填写被举报人时出现bug ====> 「{获取被举报人->null}=>{填写被举报人->...}=>{后台获取图片->null}==>[前段获取图片list第一位->null;此时，ERROR产生]」
-    //TODO (2)举报时，未上传图片时出现bug             ====> 「{后台获取图片->null}==>[前段获取图片list第一位->null;此时，ERROR产生]」
-
     public final ReportServiceImpl reportService;
 
     public ReportController(ReportServiceImpl reportService) {

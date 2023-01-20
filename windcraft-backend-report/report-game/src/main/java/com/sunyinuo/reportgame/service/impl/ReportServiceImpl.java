@@ -13,11 +13,15 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 import result.Result;
 import result.ResultEnum;
 import result.ResultUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -29,13 +33,15 @@ import java.util.List;
 public class ReportServiceImpl implements ReportService {
 
     private final RabbitTemplate rabbitTemplate;
+    public final RestTemplate restTemplate;
     private final MongoTemplate mongoTemplate;
     private static final String NULL = "";
 
     @Autowired
-    public ReportServiceImpl(RabbitTemplate rabbitTemplate, MongoTemplate mongoTemplate) {
-        this.rabbitTemplate = rabbitTemplate;
+    public ReportServiceImpl(MongoTemplate mongoTemplate, RestTemplate restTemplate, RabbitTemplate rabbitTemplate) {
         this.mongoTemplate = mongoTemplate;
+        this.restTemplate = restTemplate;
+        this.rabbitTemplate = rabbitTemplate;
     }
 
     /**
@@ -66,13 +72,36 @@ public class ReportServiceImpl implements ReportService {
             ReportMassage reportMassage = new ReportMassage();
             List<String> url = new ArrayList<>();
 
-
+            //设置图片链接
             for (FileUpload file : files) {
-                reportMassage.setFileUpload(file);
                 url.add("http://127.0.0.1:9000/reportgame/api/getFile/" + file.getId());
                 reportMassage.setPictureUrl(url);
             }
             reportMassage.setFromReportMassage(fromReportMassage);
+
+            //设置用户信息
+            MultiValueMap<String, Object> postBody = new LinkedMultiValueMap<>();
+            postBody.add("ip",ip);
+            String userLoginCatchValue = restTemplate.postForObject("http://user-signin//usersignin/api/service/getUserLoginCatchValue/",postBody,String.class);
+            if (userLoginCatchValue != null){
+                @SuppressWarnings("AlibabaCollectionInitShouldAssignCapacity")
+                HashMap<String,Object> map = new HashMap<>();
+                //去除双括号
+                userLoginCatchValue = userLoginCatchValue.replaceAll("[{}]","");
+                //去除toString产生的空格
+                userLoginCatchValue = userLoginCatchValue.replaceAll(" ","");
+                //拆分两个key,value
+                String[] allKeyValueList = userLoginCatchValue.split(",");
+                for (String allKeyValue : allKeyValueList) {
+                    String[] keyValue = allKeyValue.split("=");
+                    map.put(keyValue[0],keyValue[1]);
+                }
+                //填充
+                reportMassage.setUserId((String) map.get("userId"));
+                reportMassage.setUserName((String) map.get("userName"));
+            }else {
+                return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(),"请先登陆🤬");
+            }
 
             log.info("massage:{}", reportMassage);
 

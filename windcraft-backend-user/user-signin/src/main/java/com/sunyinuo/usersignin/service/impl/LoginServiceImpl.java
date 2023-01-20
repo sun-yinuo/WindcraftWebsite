@@ -46,8 +46,7 @@ public class LoginServiceImpl implements LoginService {
             //登陆成功
             if (userName.equals(userList.getUserName()) && userPassword.equals(userList.getUserPassword())) {
                 userInfo.put("userName",userList.getUserName());
-                userInfo.put("userIp",userList.getIp());
-                userInfo.put("userId",userList.getIp());
+                userInfo.put("userId",userList.getId());
                 redisTemplate.opsForValue().set(userList.getIp(),userInfo.toString());
                 return ResultUtil.result(ResultEnum.SUCCESS.getCode(),"登录成功");
             }

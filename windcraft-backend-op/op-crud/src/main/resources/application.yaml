@@ -1,0 +1,21 @@
+server:
+  port: 8002
+# 数据源
+spring:
+  datasource:
+    dynamic:
+      primary: mysql-development
+      strict: false #不严格匹配数据源
+      datasource:
+        #开发数据源-暂时不契合生产环境数据库的多库
+        mysql-development:
+          url: jdbc:mysql://localhost:3306/windcraft
+          username: root
+          password: MysqlSunyinuo15332#
+          driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: op-crud
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848

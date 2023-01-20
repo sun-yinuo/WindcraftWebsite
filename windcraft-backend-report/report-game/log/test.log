@@ -1,57 +1,16 @@
-2022-12-28 19:32:26.628 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 10027 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2022-12-28 19:32:26.652 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to default profiles: default
-2022-12-28 19:32:28.911 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-5000"]
-2022-12-28 19:32:28.912 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2022-12-28 19:32:28.912 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-12-28 19:32:28.977 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2022-12-28 19:32:29.560 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-12-28 19:32:29.730 [32mINFO [m[cluster-ClusterId{value='63ac294dcd4cf85098872c7c', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:1}] to 127.0.0.1:27017
-2022-12-28 19:32:29.731 [32mINFO [m[cluster-rtt-ClusterId{value='63ac294dcd4cf85098872c7c', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:2}] to 127.0.0.1:27017
-2022-12-28 19:32:29.746 [32mINFO [m[cluster-ClusterId{value='63ac294dcd4cf85098872c7c', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=97634250}
-2022-12-28 19:32:33.355 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-5000"]
-2022-12-28 19:32:33.487 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP report-game 192.168.0.109:5000 register finished
-2022-12-28 19:32:33.538 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 7.817 seconds (JVM running for 9.479)
-2022-12-28 19:32:34.792 [32mINFO [m[RMI TCP Connection(5)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-28 19:32:37.191 [32mINFO [m[RMI TCP Connection(6)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:3}] to 127.0.0.1:27017
-2022-12-28 19:34:35.674 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
-2022-12-28 19:34:35.841 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaa, reportPlayer=aaa, qqCode=aaa, function=aaa, place=原版生存, date=1669635275000, ip=127.0.0.1), fileUpload=null, pictureUrl=null)
-2022-12-28 19:34:35.915 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=200, msg=举报成功了，让那些挂狗去死吧(双手叉腰😏, data=null)
-2022-12-28 19:34:35.917 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 238995666 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-238995666  100%  
-
-2022-12-28 19:34:35.917 [32mINFO [m[http-nio-5000-exec-1] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
-2022-12-28 19:35:55.165 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法开始执行
-2022-12-28 19:35:55.427 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : return:FileUpload(id=63ac2a1bcd4cf85098872c7d, name=神经网络.png, createdTime=2022-12-28T19:35:55.181, content=org.bson.types.Binary@15cf6b9f, contentType=image/png, size=1156212, ip=127.0.0.1, reportedPlayer=)
-2022-12-28 19:35:55.433 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : time:StopWatch 'fileUpload': running time = 259840375 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-259840375  100%  
-
-2022-12-28 19:35:55.433 [32mINFO [m[http-nio-5000-exec-3] [36mcom.sunyinuo.reportgame.aop.log.ApiControllerProxy[m : fileUpload方法结束
-
-2022-12-28 19:35:57.732 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
-2022-12-28 19:35:57.733 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=403, msg=喂，你还有东西没填呢！🤬, data=null)
-2022-12-28 19:35:57.734 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 239026957 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-238995666  100%  
-000031291  000%  
-
-2022-12-28 19:35:57.735 [32mINFO [m[http-nio-5000-exec-4] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
-2022-12-28 19:36:14.251 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法开始执行
-2022-12-28 19:36:14.268 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.service.impl.ReportServiceImpl[m : massage:ReportMassage(fromReportMassage=FromReportMassage(reportedPlayer=aaaaaaa, reportPlayer=aaa, qqCode=aaa, function=aaa, place=原版生存, date=1669635374000, ip=127.0.0.1), fileUpload=null, pictureUrl=null)
-2022-12-28 19:36:14.271 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : return:Result(code=200, msg=举报成功了，让那些挂狗去死吧(双手叉腰😏, data=null)
-2022-12-28 19:36:14.273 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : time:StopWatch 'report': running time = 257137207 ns
----------------------------------------------
-ns         %     Task name
----------------------------------------------
-238995666  093%  
-000031291  000%  
-018110250  007%  
-
-2022-12-28 19:36:14.273 [32mINFO [m[http-nio-5000-exec-6] [36mcom.sunyinuo.reportgame.aop.log.ReportServiceProxy[m : report方法结束
+2023-01-20 20:47:27.696 [32mINFO [m[background-preinit] [36morg.hibernate.validator.internal.util.Version[m : HV000001: Hibernate Validator 6.1.7.Final
+2023-01-20 20:47:27.835 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 5805 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2023-01-20 20:47:27.928 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to default profiles: default
+2023-01-20 20:47:30.301 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-5000"]
+2023-01-20 20:47:30.302 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2023-01-20 20:47:30.302 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-01-20 20:47:30.360 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2023-01-20 20:47:30.690 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2023-01-20 20:47:30.803 [32mINFO [m[cluster-ClusterId{value='63ca8d62b38c96644ac23cb1', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:8}] to 127.0.0.1:27017
+2023-01-20 20:47:30.803 [32mINFO [m[cluster-rtt-ClusterId{value='63ca8d62b38c96644ac23cb1', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:9}] to 127.0.0.1:27017
+2023-01-20 20:47:30.812 [32mINFO [m[cluster-ClusterId{value='63ca8d62b38c96644ac23cb1', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=69111500}
+2023-01-20 20:47:33.231 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-5000"]
+2023-01-20 20:47:33.280 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP report-game 192.168.0.109:5000 register finished
+2023-01-20 20:47:33.310 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 6.213 seconds (JVM running for 7.476)
+2023-01-20 20:47:33.758 [32mINFO [m[RMI TCP Connection(4)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-20 20:47:34.542 [32mINFO [m[RMI TCP Connection(5)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:10}] to 127.0.0.1:27017

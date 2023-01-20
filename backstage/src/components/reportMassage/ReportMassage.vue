@@ -45,7 +45,7 @@
         if (pictureUrlList == null){
           return "";
         }else {
-          pictureUrlList.slice(0,1);
+          return pictureUrlList.slice(0,1);
         }
       }
     }

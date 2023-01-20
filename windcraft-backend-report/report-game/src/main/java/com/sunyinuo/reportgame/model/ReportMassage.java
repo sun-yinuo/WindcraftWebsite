@@ -18,4 +18,7 @@ public class ReportMassage {
     private FileUpload fileUpload;
     private List<String> pictureUrl;
 
+    private String userName;
+    private String userId;
+
 }

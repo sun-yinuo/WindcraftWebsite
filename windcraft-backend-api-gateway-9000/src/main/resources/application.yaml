@@ -49,6 +49,12 @@ spring:
           predicates:
             - Path=/auditreportgame/**
             - Method=GET,POST
+        #op-crud模块route
+        - id: op-crud
+          uri: http://localhost:8002
+          predicates:
+            - Path=/opcrud/**
+            - Method=GET,POST
     nacos:
       config:
         server-addr: 127.0.0.1:8848

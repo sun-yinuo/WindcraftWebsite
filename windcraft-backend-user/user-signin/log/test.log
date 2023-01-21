@@ -1,700 +1,2718 @@
-2023-01-20 22:31:05.753 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Starting UserSigninApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 29583 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-user/user-signin/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2023-01-20 22:31:05.790 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : No active profile set, falling back to default profiles: default
-2023-01-20 22:31:08.566 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-3001"]
-2023-01-20 22:31:08.567 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2023-01-20 22:31:08.568 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2023-01-20 22:31:08.656 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2023-01-20 22:31:09.312 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
-2023-01-20 22:31:09.806 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
-2023-01-20 22:31:09.808 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
-2023-01-20 22:31:09.809 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
-2023-01-20 22:31:13.835 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-3001"]
-2023-01-20 22:31:14.547 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP user-signin 192.168.0.109:3001 register finished
-2023-01-20 22:31:14.692 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Started UserSigninApplication in 9.886 seconds (JVM running for 11.438)
-2023-01-20 22:31:15.052 [32mINFO [m[RMI TCP Connection(5)-192.168.0.109] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20 22:31:19.408 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:31:19.439 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:31:19.537 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 127065583 ns
+2023-01-21 19:46:52.418 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Starting UserSigninApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 38116 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-user/user-signin/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2023-01-21 19:46:52.433 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : No active profile set, falling back to default profiles: default
+2023-01-21 19:47:01.024 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-3001"]
+2023-01-21 19:47:01.025 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2023-01-21 19:47:01.025 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-01-21 19:47:01.134 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2023-01-21 19:47:02.218 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
+2023-01-21 19:47:03.042 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
+2023-01-21 19:47:03.049 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
+2023-01-21 19:47:03.049 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
+2023-01-21 19:47:05.694 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-3001"]
+2023-01-21 19:47:05.762 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP user-signin 192.168.0.109:3001 register finished
+2023-01-21 19:47:05.805 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Started UserSigninApplication in 14.334 seconds (JVM running for 15.821)
+2023-01-21 19:47:06.346 [32mINFO [m[RMI TCP Connection(13)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-21 19:48:02.036 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:48:02.057 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:48:02.151 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 103555875 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  100%  
+103555875  100%  
 
-2023-01-20 22:31:19.538 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:31:19.538 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:48:02.152 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:48:02.152 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 22:33:51.177 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:33:51.183 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:33:51.270 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 212390624 ns
+2023-01-21 19:48:02.279 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:48:02.280 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:48:02.289 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 111508791 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  060%  
-085325041  040%  
+103555875  093%  
+007952916  007%  
 
-2023-01-20 22:33:51.271 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:33:51.271 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:48:02.289 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:48:02.289 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 22:33:58.641 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:33:58.644 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:33:58.653 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 221603749 ns
+2023-01-21 19:48:02.316 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:48:02.317 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:48:02.321 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 115087333 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  057%  
-085325041  039%  
-009213125  004%  
+103555875  090%  
+007952916  007%  
+003578542  003%  
 
-2023-01-20 22:33:58.653 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:33:58.653 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:48:02.325 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:48:02.325 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 22:35:23.541 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:35:23.545 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:35:23.702 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 377779874 ns
+2023-01-21 19:48:07.268 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法开始执行
+2023-01-21 19:48:07.270 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:{password=a, username=a}
+2023-01-21 19:48:07.270 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:org.apache.catalina.connector.RequestFacade@3336cbc7
+2023-01-21 19:48:07.283 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.controller.LoginController[m : ip:127.0.0.1
+2023-01-21 19:48:07.396 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : return:Result(code=200, msg=登录成功, data=null)
+2023-01-21 19:48:07.396 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : time:StopWatch 'login': running time = 126642583 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  034%  
-085325041  023%  
-009213125  002%  
-156176125  041%  
+126642583  100%  
 
-2023-01-20 22:35:23.704 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:35:23.705 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:48:07.397 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法结束
 
-2023-01-20 22:35:36.328 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:35:36.337 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:35:36.374 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 413005040 ns
+2023-01-21 19:48:17.248 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:48:17.251 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:48:17.259 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 122910000 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  031%  
-085325041  021%  
-009213125  002%  
-156176125  038%  
-035225166  009%  
+103555875  084%  
+007952916  006%  
+003578542  003%  
+007822667  006%  
 
-2023-01-20 22:35:36.375 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:35:36.375 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:48:17.260 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:48:17.260 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 22:36:50.408 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:36:50.412 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:36:50.428 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 428217332 ns
+2023-01-21 19:49:13.402 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:49:13.404 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:49:13.414 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 131911709 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  030%  
-085325041  020%  
-009213125  002%  
-156176125  036%  
-035225166  008%  
-015212292  004%  
+103555875  079%  
+007952916  006%  
+003578542  003%  
+007822667  006%  
+009001709  007%  
 
-2023-01-20 22:36:50.429 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:36:50.430 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:49:13.414 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:49:13.414 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 22:38:23.566 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:38:23.575 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:38:23.688 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 543561791 ns
+2023-01-21 19:51:12.184 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:51:12.187 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:51:12.207 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 152054543 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  023%  
-085325041  016%  
-009213125  002%  
-156176125  029%  
-035225166  006%  
-015212292  003%  
-115344459  021%  
+103555875  068%  
+007952916  005%  
+003578542  002%  
+007822667  005%  
+009001709  006%  
+020142834  013%  
 
-2023-01-20 22:38:23.689 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:38:23.689 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:51:12.207 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:51:12.207 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 22:39:36.055 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:39:36.060 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:39:36.150 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 631727874 ns
+2023-01-21 19:56:11.068 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:56:11.075 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:56:11.095 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 171718668 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  020%  
-085325041  014%  
-009213125  001%  
-156176125  025%  
-035225166  006%  
-015212292  002%  
-115344459  018%  
-088166083  014%  
+103555875  060%  
+007952916  005%  
+003578542  002%  
+007822667  005%  
+009001709  005%  
+020142834  012%  
+019664125  011%  
 
-2023-01-20 22:39:36.150 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:39:36.150 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:56:11.097 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:56:11.098 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 22:41:35.782 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:41:35.789 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:41:35.829 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 670656999 ns
+2023-01-21 19:56:13.709 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法开始执行
+2023-01-21 19:56:13.710 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:{password=a, username=a}
+2023-01-21 19:56:13.710 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:org.apache.catalina.connector.RequestFacade@3336cbc7
+2023-01-21 19:56:13.712 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.LoginController[m : ip:127.0.0.1
+2023-01-21 19:56:13.822 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : return:Result(code=200, msg=登录成功, data=null)
+2023-01-21 19:56:13.822 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : time:StopWatch 'login': running time = 238873874 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  019%  
-085325041  013%  
-009213125  001%  
-156176125  023%  
-035225166  005%  
-015212292  002%  
-115344459  017%  
-088166083  013%  
-038929125  006%  
+126642583  053%  
+112231291  047%  
 
-2023-01-20 22:41:35.830 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:41:35.830 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:56:13.823 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法结束
 
-2023-01-20 22:53:45.895 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:53:45.904 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:53:45.975 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 739736291 ns
+2023-01-21 19:56:24.606 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:56:24.609 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:56:24.619 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 181712293 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  017%  
-085325041  012%  
-009213125  001%  
-156176125  021%  
-035225166  005%  
-015212292  002%  
-115344459  016%  
-088166083  012%  
-038929125  005%  
-069079292  009%  
+103555875  057%  
+007952916  004%  
+003578542  002%  
+007822667  004%  
+009001709  005%  
+020142834  011%  
+019664125  011%  
+009993625  005%  
 
-2023-01-20 22:53:45.975 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:53:45.975 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:56:24.619 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:56:24.620 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 22:55:28.696 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:55:28.700 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:55:28.754 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 791399375 ns
+2023-01-21 19:56:27.976 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:56:27.981 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:56:28.034 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 234088168 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  016%  
-085325041  011%  
-009213125  001%  
-156176125  020%  
-035225166  004%  
-015212292  002%  
-115344459  015%  
-088166083  011%  
-038929125  005%  
-069079292  009%  
-051663084  007%  
+103555875  044%  
+007952916  003%  
+003578542  002%  
+007822667  003%  
+009001709  004%  
+020142834  009%  
+019664125  008%  
+009993625  004%  
+052375875  022%  
 
-2023-01-20 22:55:28.755 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:55:28.755 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:56:28.034 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:56:28.034 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 22:57:27.821 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 22:57:27.824 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 22:57:27.912 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 876985875 ns
+2023-01-21 19:59:06.267 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:06.274 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:06.293 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 252282543 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  014%  
-085325041  010%  
-009213125  001%  
-156176125  018%  
-035225166  004%  
-015212292  002%  
-115344459  013%  
-088166083  010%  
-038929125  004%  
-069079292  008%  
-051663084  006%  
-085586500  010%  
+103555875  041%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  004%  
+020142834  008%  
+019664125  008%  
+009993625  004%  
+052375875  021%  
+018194375  007%  
 
-2023-01-20 22:57:27.912 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 22:57:27.912 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:06.293 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:06.293 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:04:00.823 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:04:00.829 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:04:00.900 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 945321125 ns
+2023-01-21 19:59:06.503 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:06.514 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:06.519 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 256791793 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  013%  
-085325041  009%  
-009213125  001%  
-156176125  017%  
-035225166  004%  
-015212292  002%  
-115344459  012%  
-088166083  009%  
-038929125  004%  
-069079292  007%  
-051663084  005%  
-085586500  009%  
-068335250  007%  
+103555875  040%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  004%  
+020142834  008%  
+019664125  008%  
+009993625  004%  
+052375875  020%  
+018194375  007%  
+004509250  002%  
 
-2023-01-20 23:04:00.901 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:04:00.902 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:06.521 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:06.521 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:04:15.236 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:04:15.239 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:04:15.274 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 978553125 ns
+2023-01-21 19:59:06.701 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:06.703 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:06.712 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 261468002 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  013%  
-085325041  009%  
-009213125  001%  
-156176125  016%  
-035225166  004%  
-015212292  002%  
-115344459  012%  
-088166083  009%  
-038929125  004%  
-069079292  007%  
-051663084  005%  
-085586500  009%  
-068335250  007%  
-033232000  003%  
+103555875  040%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  008%  
+019664125  008%  
+009993625  004%  
+052375875  020%  
+018194375  007%  
+004509250  002%  
+004676209  002%  
 
-2023-01-20 23:04:15.278 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:04:15.279 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:06.712 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:06.712 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:04:29.524 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:04:29.526 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:04:29.568 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1018536917 ns
+2023-01-21 19:59:07.115 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:07.116 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:07.123 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 266285961 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  012%  
-085325041  008%  
-009213125  001%  
-156176125  015%  
-035225166  003%  
-015212292  001%  
-115344459  011%  
-088166083  009%  
-038929125  004%  
-069079292  007%  
-051663084  005%  
-085586500  008%  
-068335250  007%  
-033232000  003%  
-039983792  004%  
+103555875  039%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  008%  
+019664125  007%  
+009993625  004%  
+052375875  020%  
+018194375  007%  
+004509250  002%  
+004676209  002%  
+004817959  002%  
 
-2023-01-20 23:04:29.568 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:04:29.568 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:07.124 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:07.124 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:06:07.964 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:06:07.969 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:06:08.006 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1056241750 ns
+2023-01-21 19:59:07.279 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:07.281 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:07.290 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 272731086 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  012%  
-085325041  008%  
-009213125  001%  
-156176125  015%  
-035225166  003%  
-015212292  001%  
-115344459  011%  
-088166083  008%  
-038929125  004%  
-069079292  007%  
-051663084  005%  
-085586500  008%  
-068335250  006%  
-033232000  003%  
-039983792  004%  
-037704833  004%  
+103555875  038%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  007%  
+019664125  007%  
+009993625  004%  
+052375875  019%  
+018194375  007%  
+004509250  002%  
+004676209  002%  
+004817959  002%  
+006445125  002%  
 
-2023-01-20 23:06:08.007 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:06:08.007 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:07.290 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:07.290 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:06:48.676 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:06:48.688 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:06:48.706 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1071452709 ns
+2023-01-21 19:59:07.463 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:07.465 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:07.475 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 279477128 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  012%  
-085325041  008%  
-009213125  001%  
-156176125  015%  
-035225166  003%  
-015212292  001%  
-115344459  011%  
-088166083  008%  
-038929125  004%  
-069079292  006%  
-051663084  005%  
-085586500  008%  
-068335250  006%  
-033232000  003%  
-039983792  004%  
-037704833  004%  
-015210959  001%  
+103555875  037%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  007%  
+019664125  007%  
+009993625  004%  
+052375875  019%  
+018194375  007%  
+004509250  002%  
+004676209  002%  
+004817959  002%  
+006445125  002%  
+006746042  002%  
 
-2023-01-20 23:06:48.707 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:06:48.707 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:07.477 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:07.477 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:08:51.400 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:08:51.405 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:08:51.428 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1093194293 ns
+2023-01-21 19:59:07.818 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:07.820 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:07.827 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 284496711 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  012%  
-085325041  008%  
-009213125  001%  
-156176125  014%  
-035225166  003%  
-015212292  001%  
-115344459  011%  
-088166083  008%  
-038929125  004%  
-069079292  006%  
-051663084  005%  
-085586500  008%  
-068335250  006%  
-033232000  003%  
-039983792  004%  
-037704833  003%  
-015210959  001%  
-021741584  002%  
+103555875  036%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  007%  
+019664125  007%  
+009993625  004%  
+052375875  018%  
+018194375  006%  
+004509250  002%  
+004676209  002%  
+004817959  002%  
+006445125  002%  
+006746042  002%  
+005019583  002%  
 
-2023-01-20 23:08:51.428 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:08:51.428 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:07.827 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:07.828 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:11:20.332 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:11:20.343 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:11:20.383 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1131702918 ns
+2023-01-21 19:59:07.936 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:07.937 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:07.949 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 290374877 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  011%  
-085325041  008%  
-009213125  001%  
-156176125  014%  
-035225166  003%  
-015212292  001%  
-115344459  010%  
-088166083  008%  
-038929125  003%  
-069079292  006%  
-051663084  005%  
-085586500  008%  
-068335250  006%  
-033232000  003%  
-039983792  004%  
-037704833  003%  
-015210959  001%  
-021741584  002%  
-038508625  003%  
+103555875  036%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  007%  
+019664125  007%  
+009993625  003%  
+052375875  018%  
+018194375  006%  
+004509250  002%  
+004676209  002%  
+004817959  002%  
+006445125  002%  
+006746042  002%  
+005019583  002%  
+005878166  002%  
 
-2023-01-20 23:11:20.383 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:11:20.383 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:07.949 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:07.949 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:20:34.188 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:20:34.195 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:20:34.260 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1194835251 ns
+2023-01-21 19:59:08.098 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:08.099 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:08.103 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 293691668 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  011%  
-085325041  007%  
-009213125  001%  
-156176125  013%  
-035225166  003%  
-015212292  001%  
-115344459  010%  
-088166083  007%  
-038929125  003%  
-069079292  006%  
-051663084  004%  
-085586500  007%  
-068335250  006%  
-033232000  003%  
-039983792  003%  
-037704833  003%  
-015210959  001%  
-021741584  002%  
-038508625  003%  
-063132333  005%  
+103555875  035%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  007%  
+019664125  007%  
+009993625  003%  
+052375875  018%  
+018194375  006%  
+004509250  002%  
+004676209  002%  
+004817959  002%  
+006445125  002%  
+006746042  002%  
+005019583  002%  
+005878166  002%  
+003316791  001%  
 
-2023-01-20 23:20:34.260 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:20:34.260 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:08.103 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:08.104 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:42:25.007 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:42:25.059 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:42:25.142 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1269525584 ns
+2023-01-21 19:59:08.487 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:08.490 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:08.494 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 299981168 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  010%  
-085325041  007%  
-009213125  001%  
-156176125  012%  
-035225166  003%  
-015212292  001%  
-115344459  009%  
-088166083  007%  
-038929125  003%  
-069079292  005%  
-051663084  004%  
-085586500  007%  
-068335250  005%  
-033232000  003%  
-039983792  003%  
-037704833  003%  
-015210959  001%  
-021741584  002%  
-038508625  003%  
-063132333  005%  
-074690333  006%  
+103555875  035%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  007%  
+019664125  007%  
+009993625  003%  
+052375875  017%  
+018194375  006%  
+004509250  002%  
+004676209  002%  
+004817959  002%  
+006445125  002%  
+006746042  002%  
+005019583  002%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
 
-2023-01-20 23:42:25.143 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:42:25.143 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:08.500 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:08.501 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:45:51.237 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:45:51.249 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:45:51.356 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1375481417 ns
+2023-01-21 19:59:08.643 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:08.645 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:08.651 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 302832293 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  009%  
-085325041  006%  
-009213125  001%  
-156176125  011%  
-035225166  003%  
-015212292  001%  
-115344459  008%  
-088166083  006%  
-038929125  003%  
-069079292  005%  
-051663084  004%  
-085586500  006%  
-068335250  005%  
-033232000  002%  
-039983792  003%  
-037704833  003%  
-015210959  001%  
-021741584  002%  
-038508625  003%  
-063132333  005%  
-074690333  005%  
-105955833  008%  
+103555875  034%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  007%  
+019664125  006%  
+009993625  003%  
+052375875  017%  
+018194375  006%  
+004509250  001%  
+004676209  002%  
+004817959  002%  
+006445125  002%  
+006746042  002%  
+005019583  002%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
 
-2023-01-20 23:45:51.356 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:45:51.356 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:08.652 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:08.652 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:50:27.218 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:50:27.223 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:50:27.306 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1455240417 ns
+2023-01-21 19:59:08.805 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:08.806 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:08.814 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 307679209 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  009%  
-085325041  006%  
-009213125  001%  
-156176125  011%  
-035225166  002%  
-015212292  001%  
-115344459  008%  
-088166083  006%  
-038929125  003%  
-069079292  005%  
-051663084  004%  
-085586500  006%  
-068335250  005%  
-033232000  002%  
-039983792  003%  
-037704833  003%  
-015210959  001%  
-021741584  001%  
-038508625  003%  
-063132333  004%  
-074690333  005%  
-105955833  007%  
-079759000  005%  
+103555875  034%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  007%  
+019664125  006%  
+009993625  003%  
+052375875  017%  
+018194375  006%  
+004509250  001%  
+004676209  002%  
+004817959  002%  
+006445125  002%  
+006746042  002%  
+005019583  002%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  002%  
 
-2023-01-20 23:50:27.306 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:50:27.307 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:08.815 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:08.815 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-20 23:54:03.919 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-20 23:54:03.925 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-20 23:54:04.018 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1544304542 ns
+2023-01-21 19:59:10.099 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:10.099 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:10.106 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 312593668 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  008%  
-085325041  006%  
-009213125  001%  
-156176125  010%  
-035225166  002%  
-015212292  001%  
-115344459  007%  
-088166083  006%  
-038929125  003%  
-069079292  004%  
-051663084  003%  
-085586500  006%  
-068335250  004%  
-033232000  002%  
-039983792  003%  
-037704833  002%  
-015210959  001%  
-021741584  001%  
-038508625  002%  
-063132333  004%  
-074690333  005%  
-105955833  007%  
-079759000  005%  
-089064125  006%  
+103555875  033%  
+007952916  003%  
+003578542  001%  
+007822667  003%  
+009001709  003%  
+020142834  006%  
+019664125  006%  
+009993625  003%  
+052375875  017%  
+018194375  006%  
+004509250  001%  
+004676209  001%  
+004817959  002%  
+006445125  002%  
+006746042  002%  
+005019583  002%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  002%  
+004914459  002%  
 
-2023-01-20 23:54:04.020 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-20 23:54:04.020 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:10.106 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:10.107 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-21 00:03:54.334 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-21 00:03:54.377 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-21 00:03:54.424 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1589851542 ns
+2023-01-21 19:59:18.804 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:18.805 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:18.817 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 321606251 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  008%  
-085325041  005%  
-009213125  001%  
-156176125  010%  
-035225166  002%  
-015212292  001%  
-115344459  007%  
-088166083  006%  
-038929125  002%  
-069079292  004%  
-051663084  003%  
-085586500  005%  
-068335250  004%  
-033232000  002%  
-039983792  003%  
-037704833  002%  
-015210959  001%  
-021741584  001%  
-038508625  002%  
-063132333  004%  
-074690333  005%  
-105955833  007%  
-079759000  005%  
-089064125  006%  
-045547000  003%  
+103555875  032%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  003%  
+020142834  006%  
+019664125  006%  
+009993625  003%  
+052375875  016%  
+018194375  006%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  002%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  002%  
+004914459  002%  
+009012583  003%  
 
-2023-01-21 00:03:54.425 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-21 00:03:54.425 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:18.817 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:18.818 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-21 00:05:45.812 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-21 00:05:45.816 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-21 00:05:45.858 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1629241417 ns
+2023-01-21 19:59:29.792 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:29.795 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:29.811 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 335154584 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  008%  
-085325041  005%  
-009213125  001%  
-156176125  010%  
-035225166  002%  
-015212292  001%  
-115344459  007%  
-088166083  005%  
-038929125  002%  
-069079292  004%  
-051663084  003%  
-085586500  005%  
-068335250  004%  
-033232000  002%  
-039983792  002%  
-037704833  002%  
-015210959  001%  
-021741584  001%  
-038508625  002%  
-063132333  004%  
-074690333  005%  
-105955833  007%  
-079759000  005%  
-089064125  005%  
-045547000  003%  
-039389875  002%  
+103555875  031%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  003%  
+020142834  006%  
+019664125  006%  
+009993625  003%  
+052375875  016%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  003%  
+013548333  004%  
 
-2023-01-21 00:05:45.860 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-21 00:05:45.860 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:29.814 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:29.814 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 
-2023-01-21 00:12:02.567 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-21 00:12:02.577 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-21 00:12:02.634 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1686721667 ns
+2023-01-21 19:59:31.615 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法开始执行
+2023-01-21 19:59:31.616 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:{password=a, username=a}
+2023-01-21 19:59:31.617 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:org.apache.catalina.connector.RequestFacade@430ead75
+2023-01-21 19:59:31.618 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.controller.LoginController[m : ip:127.0.0.1
+2023-01-21 19:59:31.699 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : return:Result(code=200, msg=登录成功, data=null)
+2023-01-21 19:59:31.702 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : time:StopWatch 'login': running time = 321656624 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  008%  
-085325041  005%  
-009213125  001%  
-156176125  009%  
-035225166  002%  
-015212292  001%  
-115344459  007%  
-088166083  005%  
-038929125  002%  
-069079292  004%  
-051663084  003%  
-085586500  005%  
-068335250  004%  
-033232000  002%  
-039983792  002%  
-037704833  002%  
-015210959  001%  
-021741584  001%  
-038508625  002%  
-063132333  004%  
-074690333  004%  
-105955833  006%  
-079759000  005%  
-089064125  005%  
-045547000  003%  
-039389875  002%  
-057480250  003%  
+126642583  039%  
+112231291  035%  
+082782750  026%  
 
-2023-01-21 00:12:02.635 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-21 00:12:02.635 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:31.703 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法结束
 
-2023-01-21 00:17:49.536 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
-2023-01-21 00:17:49.557 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
-2023-01-21 00:17:49.629 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 1752790708 ns
+2023-01-21 19:59:35.070 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:35.077 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:35.084 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 341663875 ns
 ---------------------------------------------
 ns         %     Task name
 ---------------------------------------------
-127065583  007%  
-085325041  005%  
-009213125  001%  
-156176125  009%  
-035225166  002%  
-015212292  001%  
-115344459  007%  
-088166083  005%  
-038929125  002%  
-069079292  004%  
-051663084  003%  
-085586500  005%  
-068335250  004%  
-033232000  002%  
-039983792  002%  
-037704833  002%  
-015210959  001%  
-021741584  001%  
-038508625  002%  
-063132333  004%  
-074690333  004%  
-105955833  006%  
-079759000  005%  
-089064125  005%  
-045547000  003%  
-039389875  002%  
-057480250  003%  
-066069041  004%  
+103555875  030%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  003%  
+020142834  006%  
+019664125  006%  
+009993625  003%  
+052375875  015%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  003%  
+013548333  004%  
+006509291  002%  
 
-2023-01-21 00:17:49.629 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
-2023-01-21 00:17:49.629 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+2023-01-21 19:59:35.084 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:35.085 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:36.022 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:36.024 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:36.033 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 348593500 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  030%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  003%  
+020142834  006%  
+019664125  006%  
+009993625  003%  
+052375875  015%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  003%  
+013548333  004%  
+006509291  002%  
+006929625  002%  
+
+2023-01-21 19:59:36.037 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:36.039 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:37.095 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:37.096 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:37.104 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 354240417 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  029%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  003%  
+020142834  006%  
+019664125  006%  
+009993625  003%  
+052375875  015%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  003%  
+013548333  004%  
+006509291  002%  
+006929625  002%  
+005646917  002%  
+
+2023-01-21 19:59:37.105 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:37.105 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:37.662 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:37.662 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:37.674 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 359550751 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  029%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  003%  
+020142834  006%  
+019664125  005%  
+009993625  003%  
+052375875  015%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  003%  
+013548333  004%  
+006509291  002%  
+006929625  002%  
+005646917  002%  
+005310334  001%  
+
+2023-01-21 19:59:37.674 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:37.674 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:37.868 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:37.869 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:37.885 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 375117667 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  028%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  003%  
+052375875  014%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  004%  
+006509291  002%  
+006929625  002%  
+005646917  002%  
+005310334  001%  
+015566916  004%  
+
+2023-01-21 19:59:37.885 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:37.885 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:38.129 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:38.130 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:38.136 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 381834375 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  027%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  003%  
+052375875  014%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  004%  
+006509291  002%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+
+2023-01-21 19:59:38.137 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:38.137 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:38.546 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:38.546 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:38.554 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 388137459 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  027%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  003%  
+052375875  013%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  002%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  002%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  002%  
+
+2023-01-21 19:59:38.554 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:38.554 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:38.904 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:38.904 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:38.912 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 393388959 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  026%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  003%  
+052375875  013%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  002%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  002%  
+005251500  001%  
+
+2023-01-21 19:59:38.913 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:38.913 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:39.074 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:39.074 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:39.082 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 397972250 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  026%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  003%  
+052375875  013%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  002%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  002%  
+005251500  001%  
+004583291  001%  
+
+2023-01-21 19:59:39.083 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:39.083 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:39.243 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:39.244 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:39.250 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 402546250 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  026%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  002%  
+052375875  013%  
+018194375  005%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  002%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  002%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+
+2023-01-21 19:59:39.250 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 19:59:39.250 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:54.382 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:54.394 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:54.409 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 417466208 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  025%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  002%  
+052375875  013%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  002%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  002%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  002%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  004%  
+
+2023-01-21 19:59:54.409 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:54.409 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:56.469 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:56.471 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:56.478 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 421956000 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  025%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  002%  
+052375875  012%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  002%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  004%  
+004489792  001%  
+
+2023-01-21 19:59:56.479 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:56.479 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:57.327 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:57.329 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:57.333 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 426376125 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  024%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  002%  
+052375875  012%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  002%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  002%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+
+2023-01-21 19:59:57.333 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:57.333 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:57.711 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:57.711 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:57.719 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 432340084 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  024%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  005%  
+009993625  002%  
+052375875  012%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  002%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+
+2023-01-21 19:59:57.719 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:57.719 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:57.875 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:57.875 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:57.884 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 440244667 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  024%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  004%  
+009993625  002%  
+052375875  012%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+
+2023-01-21 19:59:57.885 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:57.885 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:58.051 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:58.052 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:58.057 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 443784501 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  023%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  005%  
+019664125  004%  
+009993625  002%  
+052375875  012%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  004%  
+006716708  002%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+
+2023-01-21 19:59:58.057 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:58.057 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:58.210 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:58.211 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:58.216 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 447630084 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  023%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  012%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  002%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+
+2023-01-21 19:59:58.218 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:58.219 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:58.350 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:58.350 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:58.354 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 449483459 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  023%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  012%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  002%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+
+2023-01-21 19:59:58.354 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:58.354 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:58.497 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:58.497 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:58.502 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 451913751 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  023%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  012%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  001%  
+
+2023-01-21 19:59:58.504 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:58.504 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:58.667 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:58.668 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:58.674 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 458171960 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  023%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  011%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  001%  
+006258209  001%  
+
+2023-01-21 19:59:58.674 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:58.675 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:58.823 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:58.825 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:58.830 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 461443377 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  022%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  011%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  002%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  001%  
+006258209  001%  
+003271417  001%  
+
+2023-01-21 19:59:58.831 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:58.831 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:59.002 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:59.002 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:59.005 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 463667294 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  022%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  011%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  001%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+
+2023-01-21 19:59:59.006 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:59.006 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:59.152 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:59.153 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:59.156 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 466207294 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  022%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  011%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  001%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  001%  
+
+2023-01-21 19:59:59.156 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:59.156 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:59.332 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:59.332 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:59.336 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 468764460 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  022%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  011%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  001%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  001%  
+002557166  001%  
+
+2023-01-21 19:59:59.336 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:59.336 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:59.671 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:59.671 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:59.680 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 476194544 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  022%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  011%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  001%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  001%  
+002557166  001%  
+007430084  002%  
+
+2023-01-21 19:59:59.681 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:59.681 [32mINFO [m[http-nio-3001-exec-7] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 19:59:59.819 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 19:59:59.821 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 19:59:59.826 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 481436919 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  022%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  011%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  001%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  001%  
+002557166  001%  
+007430084  002%  
+005242375  001%  
+
+2023-01-21 19:59:59.827 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 19:59:59.827 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:00:01.771 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:00:01.773 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:00:01.784 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 493647002 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  021%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  011%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  001%  
+002557166  001%  
+007430084  002%  
+005242375  001%  
+012210083  002%  
+
+2023-01-21 20:00:01.784 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 20:00:01.785 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:00:05.585 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:00:05.587 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:00:05.596 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 499324085 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  021%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  010%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  001%  
+002557166  001%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+
+2023-01-21 20:00:05.596 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 20:00:05.596 [32mINFO [m[http-nio-3001-exec-3] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:00:11.127 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:00:11.128 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:00:11.136 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 507384460 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  020%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  010%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  001%  
+002557166  001%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  002%  
+
+2023-01-21 20:00:11.136 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 20:00:11.136 [32mINFO [m[http-nio-3001-exec-5] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:00:52.948 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:00:52.949 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:00:52.959 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 516627627 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  020%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  010%  
+018194375  004%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  002%  
+009243167  002%  
+
+2023-01-21 20:00:52.959 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 20:00:52.959 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:00:53.279 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:00:53.280 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:00:53.286 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 521471835 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  020%  
+007952916  002%  
+003578542  001%  
+007822667  002%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  010%  
+018194375  003%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  002%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  002%  
+009243167  002%  
+004844208  001%  
+
+2023-01-21 20:00:53.287 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 20:00:53.287 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:02:37.548 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:02:37.550 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:02:37.558 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 529348501 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  020%  
+007952916  002%  
+003578542  001%  
+007822667  001%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  010%  
+018194375  003%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  001%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  002%  
+009243167  002%  
+004844208  001%  
+007876666  001%  
+
+2023-01-21 20:02:37.558 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 20:02:37.558 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:02:37.612 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:02:37.614 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:02:37.618 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 533039709 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  019%  
+007952916  001%  
+003578542  001%  
+007822667  001%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  010%  
+018194375  003%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  003%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  001%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  002%  
+009243167  002%  
+004844208  001%  
+007876666  001%  
+003691208  001%  
+
+2023-01-21 20:02:37.618 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 20:02:37.618 [32mINFO [m[http-nio-3001-exec-4] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:03:21.805 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:03:21.811 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:03:21.824 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 543513792 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  019%  
+007952916  001%  
+003578542  001%  
+007822667  001%  
+009001709  002%  
+020142834  004%  
+019664125  004%  
+009993625  002%  
+052375875  010%  
+018194375  003%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  002%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  001%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  001%  
+009243167  002%  
+004844208  001%  
+007876666  001%  
+003691208  001%  
+010474083  002%  
+
+2023-01-21 20:03:21.825 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 20:03:21.825 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:06:21.585 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:06:21.597 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:06:21.621 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 564033750 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  018%  
+007952916  001%  
+003578542  001%  
+007822667  001%  
+009001709  002%  
+020142834  004%  
+019664125  003%  
+009993625  002%  
+052375875  009%  
+018194375  003%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  002%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  001%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  001%  
+009243167  002%  
+004844208  001%  
+007876666  001%  
+003691208  001%  
+010474083  002%  
+020519958  004%  
+
+2023-01-21 20:06:21.622 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:false
+2023-01-21 20:06:21.622 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:06:23.503 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法开始执行
+2023-01-21 20:06:23.504 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:{password=a, username=a}
+2023-01-21 20:06:23.506 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : args:org.apache.catalina.connector.RequestFacade@430ead75
+2023-01-21 20:06:23.508 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.controller.LoginController[m : ip:127.0.0.1
+2023-01-21 20:06:23.584 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : return:Result(code=200, msg=登录成功, data=null)
+2023-01-21 20:06:23.586 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : time:StopWatch 'login': running time = 401961999 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+126642583  032%  
+112231291  028%  
+082782750  021%  
+080305375  020%  
+
+2023-01-21 20:06:23.587 [32mINFO [m[http-nio-3001-exec-10] [36mcom.sunyinuo.usersignin.aop.log.LoginControllerProxy[m : login方法结束
+
+2023-01-21 20:06:26.898 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:06:26.901 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:06:26.912 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 569659875 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  018%  
+007952916  001%  
+003578542  001%  
+007822667  001%  
+009001709  002%  
+020142834  004%  
+019664125  003%  
+009993625  002%  
+052375875  009%  
+018194375  003%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  001%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  002%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  001%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  001%  
+009243167  002%  
+004844208  001%  
+007876666  001%  
+003691208  001%  
+010474083  002%  
+020519958  004%  
+005626125  001%  
+
+2023-01-21 20:06:26.912 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 20:06:26.912 [32mINFO [m[http-nio-3001-exec-2] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:07:54.654 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:07:54.656 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:07:54.671 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 582436083 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  018%  
+007952916  001%  
+003578542  001%  
+007822667  001%  
+009001709  002%  
+020142834  003%  
+019664125  003%  
+009993625  002%  
+052375875  009%  
+018194375  003%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  000%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  002%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  001%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  001%  
+009243167  002%  
+004844208  001%  
+007876666  001%  
+003691208  001%  
+010474083  002%  
+020519958  004%  
+005626125  001%  
+012776208  002%  
+
+2023-01-21 20:07:54.672 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 20:07:54.672 [32mINFO [m[http-nio-3001-exec-6] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:07:55.080 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:07:55.083 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:07:55.097 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 596528583 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  017%  
+007952916  001%  
+003578542  001%  
+007822667  001%  
+009001709  002%  
+020142834  003%  
+019664125  003%  
+009993625  002%  
+052375875  009%  
+018194375  003%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  000%  
+004846916  001%  
+004914459  001%  
+009012583  002%  
+013548333  002%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  003%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  001%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  001%  
+009243167  002%  
+004844208  001%  
+007876666  001%  
+003691208  001%  
+010474083  002%  
+020519958  003%  
+005626125  001%  
+012776208  002%  
+014092500  002%  
+
+2023-01-21 20:07:55.098 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 20:07:55.098 [32mINFO [m[http-nio-3001-exec-9] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
+
+2023-01-21 20:11:59.072 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState开始执行
+2023-01-21 20:11:59.078 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.controller.ApiController[m : ip:127.0.0.1
+2023-01-21 20:11:59.089 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : time:StopWatch 'getLoginStat': running time = 603754750 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+103555875  017%  
+007952916  001%  
+003578542  001%  
+007822667  001%  
+009001709  001%  
+020142834  003%  
+019664125  003%  
+009993625  002%  
+052375875  009%  
+018194375  003%  
+004509250  001%  
+004676209  001%  
+004817959  001%  
+006445125  001%  
+006746042  001%  
+005019583  001%  
+005878166  001%  
+003316791  001%  
+006289500  001%  
+002851125  000%  
+004846916  001%  
+004914459  001%  
+009012583  001%  
+013548333  002%  
+006509291  001%  
+006929625  001%  
+005646917  001%  
+005310334  001%  
+015566916  003%  
+006716708  001%  
+006303084  001%  
+005251500  001%  
+004583291  001%  
+004574000  001%  
+014919958  002%  
+004489792  001%  
+004420125  001%  
+005963959  001%  
+007904583  001%  
+003539834  001%  
+003845583  001%  
+001853375  000%  
+002430292  000%  
+006258209  001%  
+003271417  001%  
+002223917  000%  
+002540000  000%  
+002557166  000%  
+007430084  001%  
+005242375  001%  
+012210083  002%  
+005677083  001%  
+008060375  001%  
+009243167  002%  
+004844208  001%  
+007876666  001%  
+003691208  001%  
+010474083  002%  
+020519958  003%  
+005626125  001%  
+012776208  002%  
+014092500  002%  
+007226167  001%  
+
+2023-01-21 20:11:59.089 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : return:true
+2023-01-21 20:11:59.089 [32mINFO [m[http-nio-3001-exec-8] [36mcom.sunyinuo.usersignin.aop.log.ApiControllerProxy[m : getLoginState结束 
 

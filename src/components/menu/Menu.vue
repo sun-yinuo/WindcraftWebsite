@@ -22,9 +22,11 @@
     <!--消息-->
     <MenuItem name="10">消息</MenuItem>
     <!--搜索框-->
-    <Input style="width: auto" placeholder="随便搜搜呗(≧∇≦)ﾉ" />
+    <Input style="width: 400px; margin: 10px" placeholder="随便搜搜呗(≧∇≦)ﾉ" />
     <!--搜索按钮-->
-    <Button type="primary" icon="ios-search"></Button>
+    <Button type="primary" icon="ios-search" style="margin: 10px"></Button>
+    <!--用户头像-->
+    <Avatar :src="userHeadPicture" @click="gotoUserConfigPage" style="margin-left: 100px;	"/>
     <!--Q:这里为什么不用input现成的search?
     A:因为合起来的话上边距会直接变为0 尝试过解决但是效果都不满意
     索性拆成两个单独的组件 刚好他俩中间的小地方可以撑下高度 就神奇的垂直置中了-->
@@ -33,13 +35,14 @@
 
 <script>
 import router from "@/router";
-
+import request from "@/utils/request";
 export default{
   /**传参**/
   data () {
     return {
       //导航栏颜色
       theme: 'light',
+      userHeadPicture: null,
     }
   },
   /**获取菜单栏选择项的id**/
@@ -58,7 +61,26 @@ export default{
     },
     gotoBanPage(){
       return router.push("/ban")
-    }
+    },
+    gotoUserConfigPage() {
+      request.get("/usersignin/api/getLoginState").then(res =>{
+        console.log(res)
+        if (res === true){
+          return router.push("/userConfig")
+        }else {
+          this.$Message.error("请先登陆🤬")
+        }
+      })
+    },
+    setUserHeadPicture(){
+      request.get("/userconfig/api/getUserHeadPicture").then(res => {
+        console.log(res);
+        this.userHeadPicture = res;
+      })
+    },
+  },
+  created() {
+    this.setUserHeadPicture();
   }
 }
 </script>

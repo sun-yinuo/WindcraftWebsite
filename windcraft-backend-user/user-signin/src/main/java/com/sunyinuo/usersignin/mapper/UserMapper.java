@@ -66,4 +66,11 @@ public interface UserMapper {
      * @return 是否成功
      */
     int deleteUserByName(String userName);
+
+    /**
+     * 根据userName更新
+     * @param user user
+     * @return 返回
+     */
+    int update(User user);
 }

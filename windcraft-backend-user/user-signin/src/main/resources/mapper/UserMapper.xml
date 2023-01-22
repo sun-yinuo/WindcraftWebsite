@@ -34,4 +34,16 @@
         <delete id="deleteUserByName" parameterType="com.sunyinuo.usersignin.model.User">
                 delete from user where userName = #{userName}
         </delete>
+
+        <update id="update">
+                update user
+                set
+                    id = #{id},
+                    time = #{time},
+                    ip = #{ip},
+                    userName = #{userName},
+                    userPassword = #{userPassword}
+                where
+                    id = #{id}
+        </update>
 </mapper>

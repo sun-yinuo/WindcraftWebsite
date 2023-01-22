@@ -1,5 +1,6 @@
 package com.sunyinuo.usersignin.controller;
 
+import com.sunyinuo.usersignin.model.User;
 import com.sunyinuo.usersignin.service.api.impl.GetLoginStateServiceImpl;
 import com.sunyinuo.usersignin.service.api.impl.GetUserLoginCatchValueImpl;
 import com.sunyinuo.usersignin.service.db.impl.UserServiceImpl;
@@ -58,5 +59,11 @@ public class ApiController {
         return redisTemplate.delete(key);
     }
 
+    @PostMapping("service/updateUserDataBase")
+    public Integer updateUserDataBase(String userName,String newUserName){
+        User user = userService.getUserByName(userName);
+        user.setUserName(newUserName);
+        return userService.update(user);
+    }
 }
 

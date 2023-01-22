@@ -1,15 +1,14 @@
-2023-01-23 04:35:47.261 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Starting UserSigninApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 13424 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-user/user-signin/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2023-01-23 04:35:47.269 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : No active profile set, falling back to default profiles: default
-2023-01-23 04:35:49.411 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-3001"]
-2023-01-23 04:35:49.412 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2023-01-23 04:35:49.412 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2023-01-23 04:35:49.470 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2023-01-23 04:35:49.975 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
-2023-01-23 04:35:50.339 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
-2023-01-23 04:35:50.340 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
-2023-01-23 04:35:50.340 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
-2023-01-23 04:35:52.089 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-3001"]
-2023-01-23 04:35:52.141 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP user-signin 192.168.0.109:3001 register finished
-2023-01-23 04:35:52.176 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Started UserSigninApplication in 5.678 seconds (JVM running for 6.594)
-2023-01-23 04:35:52.853 [32mINFO [m[RMI TCP Connection(2)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-23 04:36:02.814 [32mINFO [m[http-nio-3001-exec-1] [36mcom.sunyinuo.usersignin.service.db.impl.UserServiceImpl[m : a
+2023-01-23 05:43:14.577 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Starting UserSigninApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 28875 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-user/user-signin/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2023-01-23 05:43:14.588 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : No active profile set, falling back to default profiles: default
+2023-01-23 05:43:17.192 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-3001"]
+2023-01-23 05:43:17.193 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2023-01-23 05:43:17.193 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-01-23 05:43:17.268 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2023-01-23 05:43:18.066 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Starting...
+2023-01-23 05:43:18.599 [32mINFO [m[main] [36mcom.zaxxer.hikari.HikariDataSource[m : mysql-development - Start completed.
+2023-01-23 05:43:18.600 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource - add a datasource named [mysql-development] success
+2023-01-23 05:43:18.600 [32mINFO [m[main] [36mcom.baomidou.dynamic.datasource.DynamicRoutingDataSource[m : dynamic-datasource initial loaded [1] datasource,primary datasource named [mysql-development]
+2023-01-23 05:43:21.268 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-3001"]
+2023-01-23 05:43:21.360 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP user-signin 192.168.0.109:3001 register finished
+2023-01-23 05:43:21.397 [32mINFO [m[main] [36mcom.sunyinuo.usersignin.UserSigninApplication[m : Started UserSigninApplication in 7.665 seconds (JVM running for 9.317)
+2023-01-23 05:43:22.082 [32mINFO [m[RMI TCP Connection(6)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'

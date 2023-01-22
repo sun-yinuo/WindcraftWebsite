@@ -98,4 +98,15 @@ public class UserServiceImpl implements UserService {
     public int deleteUserByName(String userName) {
         return userMapper.deleteUserByName(userName);
     }
+
+    /**
+     * 根据userName更新
+     * @param user user
+     * @return 返回
+     */
+    @Override
+    public int update(User user) {
+        return userMapper.update(user);
+    }
+
 }

@@ -3,6 +3,7 @@ package com.sunyinuo.usersignin.service.db.impl;
 import com.sunyinuo.usersignin.mapper.UserMapper;
 import com.sunyinuo.usersignin.model.User;
 import com.sunyinuo.usersignin.service.db.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -13,6 +14,7 @@ import java.util.List;
  * @author sunyinuo
  */
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
     @Resource

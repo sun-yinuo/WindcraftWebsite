@@ -17,18 +17,17 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/userconfig/api")
 @Slf4j
-public class ApiController {
+public class HeadPictureApiController {
 
     private final FileUploadServiceImpl fileUploadService;
     private final GetFileServiceImpl getFileService;
     private final GetUserHeadPictureServiceImpl getUserHeadPictureService;
 
-    public ApiController(FileUploadServiceImpl fileUploadService, GetFileServiceImpl getFileService, GetUserHeadPictureServiceImpl getUserHeadPictureService) {
+    public HeadPictureApiController(FileUploadServiceImpl fileUploadService, GetFileServiceImpl getFileService, GetUserHeadPictureServiceImpl getUserHeadPictureService) {
         this.fileUploadService = fileUploadService;
         this.getFileService = getFileService;
         this.getUserHeadPictureService = getUserHeadPictureService;
     }
-
 
     @GetMapping("/getUserHeadPicture")
     public String getUserHeadPicture(HttpServletRequest request){
@@ -41,11 +40,6 @@ public class ApiController {
         return getFileService.getFile(id);
     }
 
-    /**
-     * 接收文件
-     * @param files 文件
-     * @return 文件信息
-     */
     @PostMapping("/fileUpload")
     public Result fileUpload(@RequestParam("file") MultipartFile[] files ,
                              HttpServletRequest request){

@@ -10,6 +10,4 @@ import App from './App.vue'
 import router from './router'
 
 const app = createApp(App)
-app.use(ViewUIPlus).use(router).mount('#app')
-app.use(ElementPlus)
-app.mount('#app')
+app.use(ViewUIPlus).use(router).use(ElementUI).mount('#app')

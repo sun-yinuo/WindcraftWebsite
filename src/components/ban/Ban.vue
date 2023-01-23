@@ -1,5 +1,6 @@
 <template>
-  <Tabs value="tabs" type="card" style="bottom: -10px">
+  <div class="demo-tabs-style2" style="margin-top: 10px">
+  <Tabs value="tabs" type="card">
     <TabPane label="封禁" name="ban">
       <Grid :col="6" :hover="true">
         <GridItem>玩家</GridItem>
@@ -49,7 +50,28 @@
       </Grid>
     </TabPane>
   </Tabs>
+  </div>
 </template>
+
+<style>
+.demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
+  border-radius: 0;
+  background: #fff;
+}
+.demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active{
+  border-top: 1px solid #3399ff;
+}
+.demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active:before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #3399ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+</style>
 
 <script>
 import request from "@/utils/request";

@@ -1,6 +1,6 @@
 <template>
-  <div class="demo-tabs-style2" style="margin-top: 10px">
-    <Tabs type="card" value="name1">
+  <div class="tabs-style1">
+    <Tabs type="card" value="name1" style="margin-top: 24px">
     <TabPane icon="md-contact" label="服主" name="servingMaster">
       <Row>
         <Col type="flex" justify="space-between" span="12" v-for="master in servingMasterList" offset='1'>
@@ -47,14 +47,14 @@
 </template>
 
 <style>
-.demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
+.tabs-style1 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
   border-radius: 0;
   background: #fff;
 }
-.demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active{
+.tabs-style1 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active{
   border-top: 1px solid #3399ff;
 }
-.demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active:before{
+.tabs-style1 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active:before{
   content: '';
   display: block;
   width: 100%;

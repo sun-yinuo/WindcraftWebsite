@@ -22,4 +22,6 @@ public class User {
     private String userName;
     /**密码**/
     private String userPassword;
+    /**简介**/
+    private String userSignature;
 }

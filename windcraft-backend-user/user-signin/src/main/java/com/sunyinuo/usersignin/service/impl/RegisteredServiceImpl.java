@@ -62,6 +62,7 @@ public class RegisteredServiceImpl implements RegisteredService {
                 user.setUserName(userName);
                 user.setUserPassword(userPassword);
                 user.setIp(ip);
+                user.setUserSignature("这个人太屑了,都不写简介");
 
                 if (userService.addUser(user) == 1){
                     return ResultUtil.result(ResultEnum.SUCCESS.getCode(), "注册成功");

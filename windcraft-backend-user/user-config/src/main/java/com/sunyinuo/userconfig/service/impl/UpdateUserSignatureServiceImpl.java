@@ -1,6 +1,6 @@
 package com.sunyinuo.userconfig.service.impl;
 
-import com.sunyinuo.userconfig.service.UpdateUserNameService;
+import com.sunyinuo.userconfig.service.UpdateUserSignatureService;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -15,26 +15,28 @@ import java.util.HashMap;
  * @author sunyinuo
  */
 @Service
-public class UpdateUserNameServiceImpl implements UpdateUserNameService {
+public class UpdateUserSignatureServiceImpl implements UpdateUserSignatureService {
 
     private final RestTemplate restTemplate;
 
-    public UpdateUserNameServiceImpl(RestTemplate restTemplate) {
+    public UpdateUserSignatureServiceImpl(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
 
     /**
-     * 更新用户名
-     * @param newUserName 新用户名
-     * @param ip          ip
-     * @return 返回
+     * 更新用户简介
+     * @param userSignature userSignature
+     * @param ip            ip
+     * @return return
      */
     @Override
-    public Result updateUserName(String newUserName, String ip) {
+    public Result updateUserSignature(String userSignature, String ip) {
+
         MultiValueMap<String, Object> postBody = new LinkedMultiValueMap<>();
         postBody.add("ip", ip);
         String userLoginCatchValue = restTemplate.postForObject("http://user-signin/usersignin/api/service/getUserLoginCatchValue/",postBody,String.class);
+
         if (userLoginCatchValue != null){
             @SuppressWarnings("AlibabaCollectionInitShouldAssignCapacity")
             HashMap<String,Object> map = new HashMap<>();
@@ -51,28 +53,21 @@ public class UpdateUserNameServiceImpl implements UpdateUserNameService {
 
             MultiValueMap<String, Object> post = new LinkedMultiValueMap<>();
             post.add("userName", loginUserName);
-            post.add("newUserName",newUserName);
-            Integer updateUserDataBase = restTemplate.postForObject("http://user-signin/usersignin/api/service/updateUserDataBaseUserName",post,Integer.class);
+            post.add("newUserSignature",userSignature);
+            Integer updateUserDataBase = restTemplate.postForObject("http://user-signin/usersignin/api/service/updateUserDataBaseUserSignature",post,Integer.class);
 
-            MultiValueMap<String, Object> post2 = new LinkedMultiValueMap<>();
-            post2.add("key", ip);
-            Boolean deleteLoginCacheByName = restTemplate.postForObject("http://user-signin/usersignin/api/service/deleteLoginCacheByName/",post2,Boolean.class);
-
-            if (updateUserDataBase != null){
-                if (updateUserDataBase >0){
-                    if (Boolean.TRUE.equals(deleteLoginCacheByName)){
-                        return ResultUtil.result(ResultEnum.SUCCESS.getCode(), "修改成功，请重新登陆");
-                    }else {
-                        return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(),"emmm,我们的程序员写的代码似乎出了点问题呢🙃");
-                    }
+            if (updateUserDataBase != null ){
+                if (updateUserDataBase > 0){
+                    return ResultUtil.result(ResultEnum.SUCCESS.getCode(), "修改成功");
                 }else {
                     return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(),"emmm,我们的程序员写的代码似乎出了点问题呢🙃");
                 }
+            }else {
+                return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(),"emmm,我们的程序员写的代码似乎出了点问题呢🙃");
             }
 
         }else {
-            return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(), "没登陆你改用户名干啥捏？🤔");
+            return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(), "没登陆你改简介干啥捏？🤔");
         }
-        return null;
     }
 }

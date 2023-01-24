@@ -59,11 +59,18 @@ public class ApiController {
         return redisTemplate.delete(key);
     }
 
-    @PostMapping("service/updateUserDataBase")
-    public Integer updateUserDataBase(String userName,String newUserName){
+    @PostMapping("service/updateUserDataBaseUserName")
+    public Integer updateUserDataBaseUserName(String userName,String newUserName){
         User user = userService.getUserByName(userName);
         user.setUserName(newUserName);
         return userService.update(user);
     }
+
+    @PostMapping("service/updateUserDataBaseUserSignature")
+     public Integer updateUserDataBaseUserSignature(String userName,String newUserSignature){
+         User user = userService.getUserByName(userName);
+         user.setUserSignature(newUserSignature);
+         return userService.update(user);
+     }
 }
 

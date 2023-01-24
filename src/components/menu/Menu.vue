@@ -22,11 +22,11 @@
     <!--消息-->
     <MenuItem name="10">消息</MenuItem>
     <!--搜索框-->
-    <Input style="width: 400px; margin: 10px" placeholder="随便搜搜呗(≧∇≦)ﾉ" />
+    <Input style="width: 10%; margin: 10px" placeholder="随便搜搜呗(≧∇≦)ﾉ" />
     <!--搜索按钮-->
-    <Button type="primary" icon="ios-search" style="margin: 10px"></Button>
+    <Button type="primary" icon="ios-search"></Button>
     <!--用户头像-->
-    <Avatar :src="userHeadPicture" @click="gotoUserConfigPage" style="margin-left: 100px;	"/>
+    <Avatar :src="userHeadPicture" @click="gotoUserConfigPage" style="margin-left: 3%;	"/>
     <!--Q:这里为什么不用input现成的search?
     A:因为合起来的话上边距会直接变为0 尝试过解决但是效果都不满意
     索性拆成两个单独的组件 刚好他俩中间的小地方可以撑下高度 就神奇的垂直置中了-->

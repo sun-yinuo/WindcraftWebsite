@@ -1,20 +1,24 @@
 # WindCraft
 
 ## 介绍
-本项目是一个基于Springboot+Vue的平台
+本项目是一个基于SpringCloud+Nacos+Vue3的平台
 ##### 前端
-- vue 3
+- Vue3
 - [ViewDesign](https://www.iviewui.com/) 
 #### 后端
-- SpringBoot
+- SpringCloud
+- Nacos
 #### 存储中间件
 - redis
 - MongoDB
-#### 中间件
+#### 消息中间件
 - RabbitMQ
-#### 参与贡献
-- (Martin - 开发)QQ:2192519304
-- (lkctrl - 开发)QQ:3224644132
+#### 存储
+- mysql8.0
+#### 参与贡献(排名不分先后)
+- (Martin - 后端开发)QQ:2192519304
+- (lkctrl - 前端开发)QQ:3224644132
+- (星辰 - 机器人开发)QQ:1410613164
 - (ovo233 - 测试)QQ:2136366751
 - (AVeR_ - 测试)QQ:3278766816
 - (JewelLament - 产品)QQ:1179952931
@@ -26,11 +30,6 @@
 [后端] 启动四个redis<br>
 [后端] 启动rabbitMQ<br>
 [后端] 启动MySQL<br>
-[后端] 启动MongodDB<br>
+[后端] 启动MongoDB<br>
 [后端] 启动nacos<br>
-
-e.g. redis 端口默认分别是6379、7000、7001、7002，可自定义。
-  MySQL 默认需要"windcraft"数据库，可自定义。注意要改一下用户名和密码。
-  nacos 执行nacos官网下载包自带的startup脚本即可，建议是standalone模式，可自定义。
-
 ### 二、启动

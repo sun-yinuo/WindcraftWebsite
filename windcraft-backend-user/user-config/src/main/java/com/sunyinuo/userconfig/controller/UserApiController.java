@@ -1,14 +1,12 @@
 package com.sunyinuo.userconfig.controller;
 
+import com.sunyinuo.userconfig.service.impl.GetLoginUserNameServiceImpl;
 import com.sunyinuo.userconfig.service.impl.UpdateUserNameServiceImpl;
 import com.sunyinuo.userconfig.service.impl.UpdateUserSignatureServiceImpl;
 import com.sunyinuo.userconfig.service.impl.UserLogOutServiceImpl;
 import com.sunyinuo.userconfig.utils.ip.GetIp;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import result.Result;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,11 +21,13 @@ public class UserApiController {
     private final UserLogOutServiceImpl userLogOutService;
     private final UpdateUserNameServiceImpl updateUserNameService;
     private final UpdateUserSignatureServiceImpl updateUserSignatureService;
+    private final GetLoginUserNameServiceImpl getLoginUserNameService;
 
-    public UserApiController(UserLogOutServiceImpl userLogOutService, UpdateUserNameServiceImpl updateUserNameService, UpdateUserSignatureServiceImpl updateUserSignatureService) {
+    public UserApiController(UserLogOutServiceImpl userLogOutService, UpdateUserNameServiceImpl updateUserNameService, UpdateUserSignatureServiceImpl updateUserSignatureService, GetLoginUserNameServiceImpl getLoginUserNameService) {
         this.userLogOutService = userLogOutService;
         this.updateUserNameService = updateUserNameService;
         this.updateUserSignatureService = updateUserSignatureService;
+        this.getLoginUserNameService = getLoginUserNameService;
     }
 
 
@@ -47,6 +47,12 @@ public class UserApiController {
     public Result updateUserSignature(@RequestParam("userSignature") String userSignature,HttpServletRequest request){
         String ip = GetIp.getIpAddress(request);
         return updateUserSignatureService.updateUserSignature(userSignature,ip);
+    }
+
+    @GetMapping("/getLoginUserName")
+    private String getLoginUserName(HttpServletRequest request){
+        String ip = GetIp.getIpAddress(request);
+        return getLoginUserNameService.getLoginUserName(ip);
     }
 
 }

@@ -22,7 +22,7 @@
     <!--消息-->
     <MenuItem name="10">消息</MenuItem>
     <!--搜索框-->
-    <Input style="width: 10%; margin: 10px" placeholder="随便搜搜呗(≧∇≦)ﾉ" />
+    <Input style="width: 20%; margin: 10px" placeholder="随便搜搜呗(≧∇≦)ﾉ" />
     <!--搜索按钮-->
     <Button type="primary" icon="ios-search"></Button>
     <!--用户头像-->

@@ -5,6 +5,8 @@ import com.sunyinuo.userconfig.service.FileUploadService;
 import lombok.SneakyThrows;
 import org.bson.types.Binary;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -61,6 +63,9 @@ public class FileUploadServiceImpl implements FileUploadService {
                 String[] keyValue = allKeyValue.split("=");
                 map.put(keyValue[0], keyValue[1]);
             }
+
+            Query query = Query.query(Criteria.where("userName").is(map.get("userName")));
+            mongoTemplate.remove(query, FileUpload.class);
 
             //文件名
             fileUpload.setName(file.getOriginalFilename());

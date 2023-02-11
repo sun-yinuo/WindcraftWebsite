@@ -4,6 +4,7 @@
   <router-view></router-view>
 </template>
 <script>
+
 import Menu from './components/menu/Menu';
 import Login from './components/loginRegistered/LoginAndRegistered'
 

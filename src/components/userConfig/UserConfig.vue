@@ -1,31 +1,39 @@
 ﻿<template>
-  <div class="userCourseImage"></div>
+  <div class="userCourseImage">
     <div class="userHeadImage">
       <img :src="userHeadPicture" class="userHeadImage">
     </div>
     <div class="userName">
-      <h1>{{userName}}</h1>
+       <h1>11{{userName}}22</h1>
+    </div>
   </div>
-  <div style="margin: auto">
-      <Button type="primary" icon="ios-create-outline">编辑个人资料</Button>
-      <Button type="error" icon="ios-alert-outline">注销账户</Button>
-  </div>
+  <card dis-hover style="margin: 24px">
+    <tabs>
+      <TabPane label="用户信息" name="tab1">
+
+      </TabPane>
+      <TabPane label="用户设置" name="tab2">
+      </TabPane>
+      <TabPane label="账户设置" name="tab3">
+      </TabPane>
+    </tabs>
+  </card>
 </template>
 
 <style>
 .userCourseImage{
-  margin-bottom: 10px;
-  width: auto;height: 250px;
+  width: auto;height: 200px;
   background: url("/src/assets/CoursePage/image-4.jpg");
 }
 .userHeadImage{
   margin: auto;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: fill;
 }
 .userName{
+  color: white;
   width: auto;
   text-align: center
 }
@@ -33,7 +41,6 @@
 
 <script>
 import request from "@/utils/request";
-
 
 export default {
   data(){

@@ -73,7 +73,7 @@ export default{
       })
     },
     setUserHeadPicture(){
-      request.get("/userconfig/api/getUserHeadPicture").then(res => {
+      request.get("/userconfig/api/userHeadGetUserHeadPicture").then(res => {
         console.log(res);
         this.userHeadPicture = res;
       })

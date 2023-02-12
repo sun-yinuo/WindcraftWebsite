@@ -40,6 +40,7 @@ export default {
     return{
       userName: null,
       userHeadPicture: "",
+      userCoverPicture: "",
     }
   },
   methods :{

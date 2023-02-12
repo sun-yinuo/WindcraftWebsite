@@ -1,7 +1,7 @@
-package com.sunyinuo.userconfig.service.impl;
+package com.sunyinuo.userconfigappendusercover.service.impl;
 
-import com.sunyinuo.userconfig.model.FileUpload;
-import com.sunyinuo.userconfig.service.GetFileService;
+import com.sunyinuo.userconfigappendusercover.model.FileUpload;
+import com.sunyinuo.userconfigappendusercover.service.UserCoverGetFileService;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
@@ -9,23 +9,24 @@ import org.springframework.stereotype.Service;
  * @author sunyinuo
  */
 @Service
-public class GetFileServiceImpl implements GetFileService {
+public class UserCoverGetFileServiceImpl implements UserCoverGetFileService {
 
     private final MongoTemplate mongoTemplate;
-
-    public GetFileServiceImpl(MongoTemplate mongoTemplate) {
+    public UserCoverGetFileServiceImpl( MongoTemplate mongoTemplate) {
         this.mongoTemplate = mongoTemplate;
     }
 
+
     /**
      * 根据id获取图片
+     *
      * @param id id
      * @return 图片Byte
      */
     @Override
-    public byte[] getFile(String id) {
+    public byte[] userCoverGetFile(String id) {
         byte[] data = null;
-        FileUpload file = mongoTemplate.findById(id, FileUpload.class);
+        FileUpload file = mongoTemplate.findById(id,FileUpload.class);
         if (file != null) {
             data = file.getContent().getData();
         }

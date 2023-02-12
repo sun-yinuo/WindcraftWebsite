@@ -63,6 +63,12 @@ spring:
           predicates:
             - Path=/userconfig/**
             - Method=GET,POST
+        #user-config-append-user-cover模块route
+        - id: user-config-append-user-cover
+          uri: http://localhost:3002
+          predicates:
+            - Path=/userconfigappendusercover/**
+            - Method=GET,POST
     nacos:
       config:
         server-addr: 127.0.0.1:8848

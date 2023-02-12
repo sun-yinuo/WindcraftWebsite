@@ -12,6 +12,7 @@
     <modules>
         <module>user-config</module>
         <module>user-signin</module>
+        <module>user-config-append-user-cover</module>
     </modules>
 
     <properties>

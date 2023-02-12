@@ -50,9 +50,11 @@ public class UserApiController {
     }
 
     @GetMapping("/getLoginUserName")
-    private String getLoginUserName(HttpServletRequest request){
+    public String getLoginUserName(HttpServletRequest request){
         String ip = GetIp.getIpAddress(request);
         return getLoginUserNameService.getLoginUserName(ip);
     }
+
+
 
 }

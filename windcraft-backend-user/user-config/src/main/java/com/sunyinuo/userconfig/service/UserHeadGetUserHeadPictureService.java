@@ -3,7 +3,7 @@ package com.sunyinuo.userconfig.service;
 /**
  * @author sunyinuo
  */
-public interface GetUserHeadPictureService {
+public interface UserHeadGetUserHeadPictureService {
 
     /**
      * 根据ip获取用户头像

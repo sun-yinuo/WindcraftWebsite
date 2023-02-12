@@ -1,7 +1,7 @@
 package com.sunyinuo.userconfig.service.impl;
 
 import com.sunyinuo.userconfig.model.FileUpload;
-import com.sunyinuo.userconfig.service.GetUserHeadPictureService;
+import com.sunyinuo.userconfig.service.UserHeadGetUserHeadPictureService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -19,12 +19,12 @@ import java.util.List;
  */
 @Service
 @Slf4j
-public class GetUserHeadPictureServiceImpl implements GetUserHeadPictureService {
+public class UserHeadGetUserHeadPictureServiceImpl implements UserHeadGetUserHeadPictureService {
 
     private final MongoTemplate mongoTemplate;
     private final RestTemplate restTemplate;
 
-    public GetUserHeadPictureServiceImpl(MongoTemplate mongoTemplate, RestTemplate restTemplate) {
+    public UserHeadGetUserHeadPictureServiceImpl(MongoTemplate mongoTemplate, RestTemplate restTemplate) {
         this.mongoTemplate = mongoTemplate;
         this.restTemplate = restTemplate;
     }
@@ -58,7 +58,7 @@ public class GetUserHeadPictureServiceImpl implements GetUserHeadPictureService 
             List<FileUpload> files = mongoTemplate.find(query, FileUpload.class);
 
             for (FileUpload file : files) {
-                return "http://127.0.0.1:9000/userconfig/api/getFile/"+file.getId();
+                return "http://127.0.0.1:9000/userconfig/api/userHeadGetFile/"+file.getId();
             }
         }else {
             return "";

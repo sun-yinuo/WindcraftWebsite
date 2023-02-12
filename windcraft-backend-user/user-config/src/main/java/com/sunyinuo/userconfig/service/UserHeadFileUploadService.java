@@ -7,7 +7,7 @@ import result.Result;
  * fileUpload
  * @author sunyinuo
  */
-public interface FileUploadService {
+public interface UserHeadFileUploadService {
 
     /**
      * 图片上传

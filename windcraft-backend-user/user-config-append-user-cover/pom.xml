@@ -8,10 +8,10 @@
         <version>1.0.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>user-config</artifactId>
+    <artifactId>user-config-append-user-cover</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>user-config</name>
-    <description>user-config</description>
+    <name>user-config-append-user-cover</name>
+    <description>user-config-append-user-cover</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -78,17 +78,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
-        <!--文件上传-->
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-            <version>1.3.3</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.4</version>
-        </dependency>
         <!--fastjson-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -106,12 +95,7 @@
             <artifactId>spring-cloud-loadbalancer</artifactId>
             <version>3.0.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongo-java-driver</artifactId>
-            <version>3.12.11</version>
-        </dependency>
+
     </dependencies>
 
     <build>

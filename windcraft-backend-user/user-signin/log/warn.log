@@ -1,4 +1,18 @@
-2023-01-25 01:33:28.198 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2023-01-25 01:33:28.198 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-01-25 01:33:28.357 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2023-01-25 01:33:28.375 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2023-02-10 14:55:36.613 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-10 14:55:36.613 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2023-02-10 14:55:36.668 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2023-02-10 14:55:36.675 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2023-02-10 16:17:16.806 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=1m31s840ms).
+2023-02-10 18:01:13.032 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=2m25s414ms).
+2023-02-10 18:07:15.606 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=6m2s582ms).
+2023-02-10 18:17:04.183 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=9m48s577ms).
+2023-02-10 18:28:59.387 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=11m55s208ms).
+2023-02-10 18:36:53.373 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=7m53s983ms).
+2023-02-10 18:41:17.765 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=4m24s392ms).
+2023-02-10 18:45:14.454 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=3m56s690ms).
+2023-02-10 18:47:54.226 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=2m39s771ms).
+2023-02-10 18:52:13.483 [33mWARN [m[mysql-development housekeeper] [36mcom.zaxxer.hikari.pool.HikariPool[m : mysql-development - Thread starvation or clock leap detected (housekeeper delta=4m19s257ms).
+2023-02-10 21:44:28.719 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2023-02-10 21:44:28.719 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-10 21:44:28.766 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2023-02-10 21:44:28.799 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end

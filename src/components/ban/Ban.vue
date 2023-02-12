@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-style1" style="margin-top: 10px">
+  <div class="demo-tabs-style2" style="margin-top: 10px">
   <Tabs value="tabs" type="card">
     <TabPane label="封禁" name="ban">
       <Grid :col="6" :hover="true">
@@ -54,14 +54,14 @@
 </template>
 
 <style>
-.tabs-style1 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
+.demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
   border-radius: 0;
   background: #fff;
 }
-.tabs-style1 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active{
+.demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active{
   border-top: 1px solid #3399ff;
 }
-.tabs-style1 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active:before{
+.demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active:before{
   content: '';
   display: block;
   width: 100%;

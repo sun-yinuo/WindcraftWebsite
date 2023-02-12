@@ -1,7 +1,7 @@
-package com.sunyinuo.userconfig.service.impl;
+package com.sunyinuo.userconfigappendusercover.service.impl;
 
-import com.sunyinuo.userconfig.model.FileUpload;
-import com.sunyinuo.userconfig.service.FileUploadService;
+import com.sunyinuo.userconfigappendusercover.model.FileUpload;
+import com.sunyinuo.userconfigappendusercover.service.UserCoverFileUploadService;
 import lombok.SneakyThrows;
 import org.bson.types.Binary;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -20,29 +20,34 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 
 /**
- * fileUpload
  * @author sunyinuo
  */
 @Service
-public class FileUploadServiceImpl implements FileUploadService {
+public class UserCoverFileUploadServiceImpl implements UserCoverFileUploadService {
 
-    private final MongoTemplate mongoTemplate;
+
     public final RestTemplate restTemplate;
+    public final MongoTemplate mongoTemplate;
 
-    public FileUploadServiceImpl(MongoTemplate mongoTemplate, RestTemplate restTemplate) {
-        this.mongoTemplate = mongoTemplate;
+    public UserCoverFileUploadServiceImpl(RestTemplate restTemplate, MongoTemplate mongoTemplate) {
         this.restTemplate = restTemplate;
+        this.mongoTemplate = mongoTemplate;
     }
 
-
+    /**
+     * 图片上传
+     *
+     * @param files files
+     * @param ip    ip
+     * @return return
+     */
     @SneakyThrows
     @Override
-    public Result fileUpload(MultipartFile[] files, String ip) {
+    public Result userCoverFileUpload(MultipartFile[] files, String ip) {
+        MultiValueMap<String, Object> userLoginCatchValueBody = new LinkedMultiValueMap<>();
+        userLoginCatchValueBody.add("ip", ip);
 
-        MultiValueMap<String, Object> postBody = new LinkedMultiValueMap<>();
-        postBody.add("ip", ip);
-
-        String userLoginCatchValue = restTemplate.postForObject("http://user-signin/usersignin/api/service/getUserLoginCatchValue/",postBody,String.class);
+        String userLoginCatchValue = restTemplate.postForObject("http://user-signin/usersignin/api/service/getUserLoginCatchValue/",userLoginCatchValueBody,String.class);
 
         if(userLoginCatchValue == null){
             return ResultUtil.result(ResultEnum.SERVER_ERROR.getCode(),"请先登陆");
@@ -65,7 +70,8 @@ public class FileUploadServiceImpl implements FileUploadService {
             }
 
             Query query = Query.query(Criteria.where("userName").is(map.get("userName")));
-            mongoTemplate.remove(query, FileUpload.class);
+
+            mongoTemplate.remove(query,FileUpload.class);
 
             //文件名
             fileUpload.setName(file.getOriginalFilename());
@@ -81,6 +87,7 @@ public class FileUploadServiceImpl implements FileUploadService {
             fileUpload.setUserName((String) map.get("userName"));
 
         }
+
         mongoTemplate.save(fileUpload);
         return ResultUtil.result(ResultEnum.SUCCESS.getCode(),"上传成功");
     }

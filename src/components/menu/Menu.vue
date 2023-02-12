@@ -48,7 +48,7 @@ export default{
   /**获取菜单栏选择项的id**/
   methods:{
     gotoMainPage(){
-      return router.push("/homePage")
+      return router.push("/")
     },
     gotoCoursePage(){
       return router.push("/course")
@@ -63,7 +63,6 @@ export default{
       return router.push("/ban")
     },
     gotoUserConfigPage() {
-      return router.push("/userConfig")
       request.get("/usersignin/api/getLoginState").then(res =>{
         console.log(res)
         if (res === true){
@@ -74,7 +73,7 @@ export default{
       })
     },
     setUserHeadPicture(){
-      request.get("/userconfig/api/getUserHeadPicture").then(res => {
+      request.get("/userconfig/api/userHeadGetUserHeadPicture").then(res => {
         console.log(res);
         this.userHeadPicture = res;
       })

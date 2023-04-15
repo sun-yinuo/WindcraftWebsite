@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunyinuo.massgecomments.mapper.CommentsMapper">
+
+        <select id="getCommentsList" resultType="com.sunyinuo.massgecomments.model.Comments">
+                select * from comments
+        </select>
+
+        <select id="getCommentsById" resultType="com.sunyinuo.massgecomments.model.Comments" parameterType="int">
+                select * from comments where id = #{id}
+        </select>
+
+        <select id="getCommentsByUuid" resultType="com.sunyinuo.massgecomments.model.Comments" parameterType="string">
+                select * from comments where uuid = #{uuid}
+        </select>
+
+        <select id="getCommentsByTime" resultType="com.sunyinuo.massgecomments.model.Comments" parameterType="string">
+                select * from comments where time = #{time}
+        </select>
+
+        <select id="getCommentsByInfo" resultType="com.sunyinuo.massgecomments.model.Comments" parameterType="string">
+                select * from comments where info = #{info}
+        </select>
+
+        <select id="getCommentsByLayer" resultType="com.sunyinuo.massgecomments.model.Comments" parameterType="long">
+                select * from comments where layer = #{layer}
+        </select>
+
+        <select id="getCommentsByReference" resultType="com.sunyinuo.massgecomments.model.Comments" parameterType="long">
+                select * from comments where reference = #{reference}
+        </select>
+
+        <select id="getCommentsByReferenceArticle" resultType="com.sunyinuo.massgecomments.model.Comments" parameterType="long">
+                select * from comments where referenceArticle = #{referenceArticle}
+        </select>
+
+        <insert id="addComments" parameterType="com.sunyinuo.massgecomments.model.Comments">
+                insert into comments (id, uuid, time, info, layer, reference, referenceArticle) value (#{id},#{uuid},#{time},#{info},#{layer},#{reference},#{referenceArticle})
+        </insert>
+
+        <delete id="deleteCommentsByUuid" parameterType="com.sunyinuo.massgecomments.model.Comments">
+                delete from comments where uuid = #{uuid}
+        </delete>
+
+        <delete id="deleteCommentsById" parameterType="com.sunyinuo.massgecomments.model.Comments">
+                delete  from comments where id = #{id}
+        </delete>
+</mapper>

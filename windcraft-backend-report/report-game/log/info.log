@@ -1,23 +1,63 @@
-2023-01-21 00:26:49.201 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-01-21 00:26:49.201 [33mWARN [m[Thread-22] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
-2023-01-21 00:26:50.721 [33mWARN [m[Thread-13] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
-2023-01-21 00:26:50.720 [33mWARN [m[Thread-22] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
-2023-01-21 00:26:52.521 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
-2023-01-21 00:26:52.711 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
-2023-01-21 00:26:59.924 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:10}] to 127.0.0.1:27017 because the pool has been closed.
-2023-01-21 19:47:24.134 [32mINFO [m[background-preinit] [36morg.hibernate.validator.internal.util.Version[m : HV000001: Hibernate Validator 6.1.7.Final
-2023-01-21 19:47:24.354 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeMacBook-Air.local with PID 38241 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
-2023-01-21 19:47:24.378 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to default profiles: default
-2023-01-21 19:47:26.569 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-5000"]
-2023-01-21 19:47:26.569 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
-2023-01-21 19:47:26.570 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2023-01-21 19:47:26.629 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
-2023-01-21 19:47:26.955 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2023-01-21 19:47:27.057 [32mINFO [m[cluster-ClusterId{value='63cbd0ceaf679312eab04872', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:65}] to 127.0.0.1:27017
-2023-01-21 19:47:27.056 [32mINFO [m[cluster-rtt-ClusterId{value='63cbd0ceaf679312eab04872', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:64}] to 127.0.0.1:27017
-2023-01-21 19:47:27.058 [32mINFO [m[cluster-ClusterId{value='63cbd0ceaf679312eab04872', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=62173583}
-2023-01-21 19:47:29.062 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-5000"]
-2023-01-21 19:47:29.132 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP report-game 192.168.0.109:5000 register finished
-2023-01-21 19:47:29.158 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 5.557 seconds (JVM running for 7.38)
-2023-01-21 19:47:29.777 [32mINFO [m[RMI TCP Connection(2)-127.0.0.1] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-21 19:47:30.131 [32mINFO [m[RMI TCP Connection(1)-127.0.0.1] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:66}] to 127.0.0.1:27017
+2023-04-09 18:51:37.134 [32mINFO [m[background-preinit] [36morg.hibernate.validator.internal.util.Version[m : HV000001: Hibernate Validator 6.1.7.Final
+2023-04-09 18:51:37.297 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeAir with PID 54912 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2023-04-09 18:51:37.332 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to default profiles: default
+2023-04-09 18:51:41.406 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-5000"]
+2023-04-09 18:51:41.407 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2023-04-09 18:51:41.407 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-04-09 18:51:41.490 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2023-04-09 18:51:41.860 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2023-04-09 18:51:41.886 [32mINFO [m[cluster-ClusterId{value='643298bd1c1ed259f682cfb1', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Exception in monitor thread while connecting to server 127.0.0.1:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188) [mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144) [mongodb-driver-core-4.1.1.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[?:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_181]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_181]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_181]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:78) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-4.1.1.jar:?]
+	... 4 more
+2023-04-09 18:51:47.868 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-5000"]
+2023-04-09 18:51:47.988 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP report-game 192.168.0.108:5000 register finished
+2023-04-09 18:51:48.051 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 12.851 seconds (JVM running for 15.584)
+2023-04-09 18:51:48.869 [32mINFO [m[RMI TCP Connection(6)-192.168.0.108] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09 18:51:49.385 [32mINFO [m[RMI TCP Connection(5)-192.168.0.108] [36morg.mongodb.driver.cluster[m : Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-04-09 18:57:00.137 [32mINFO [m[cluster-ClusterId{value='643298bd1c1ed259f682cfb1', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:121, serverValue:2}] to 127.0.0.1:27017
+2023-04-09 18:57:00.142 [32mINFO [m[cluster-ClusterId{value='643298bd1c1ed259f682cfb1', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=160663958}
+2023-04-09 18:57:02.187 [32mINFO [m[cluster-rtt-ClusterId{value='643298bd1c1ed259f682cfb1', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:122, serverValue:6}] to 127.0.0.1:27017
+2023-04-09 19:00:16.170 [33mWARN [m[Thread-30] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2023-04-09 19:00:16.169 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-04-09 19:00:16.342 [33mWARN [m[Thread-30] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2023-04-09 19:00:16.421 [33mWARN [m[Thread-20] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2023-04-09 19:00:17.547 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
+2023-04-09 19:00:17.589 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
+2023-04-09 19:00:28.892 [32mINFO [m[background-preinit] [36morg.hibernate.validator.internal.util.Version[m : HV000001: Hibernate Validator 6.1.7.Final
+2023-04-09 19:00:29.014 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Starting ReportGameApplication using Java 1.8.0_181 on martindeAir with PID 57681 (/Users/martin/Desktop/windcraft/windcraft-springboot-vue/windcraft-backend-report/report-game/target/classes started by martin in /Users/martin/Desktop/windcraft/windcraft-springboot-vue)
+2023-04-09 19:00:29.121 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : No active profile set, falling back to default profiles: default
+2023-04-09 19:00:31.582 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Initializing ProtocolHandler ["http-nio-5000"]
+2023-04-09 19:00:31.583 [32mINFO [m[main] [36morg.apache.catalina.core.StandardService[m : Starting service [Tomcat]
+2023-04-09 19:00:31.583 [32mINFO [m[main] [36morg.apache.catalina.core.StandardEngine[m : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-04-09 19:00:31.646 [32mINFO [m[main] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring embedded WebApplicationContext
+2023-04-09 19:00:32.022 [32mINFO [m[main] [36morg.mongodb.driver.cluster[m : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2023-04-09 19:00:32.130 [32mINFO [m[cluster-ClusterId{value='64329ad0fd2e8a27925110bd', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:1, serverValue:32}] to 127.0.0.1:27017
+2023-04-09 19:00:32.130 [32mINFO [m[cluster-rtt-ClusterId{value='64329ad0fd2e8a27925110bd', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:2, serverValue:33}] to 127.0.0.1:27017
+2023-04-09 19:00:32.132 [32mINFO [m[cluster-ClusterId{value='64329ad0fd2e8a27925110bd', description='null'}-127.0.0.1:27017] [36morg.mongodb.driver.cluster[m : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=68040791}
+2023-04-09 19:00:35.489 [32mINFO [m[main] [36morg.apache.coyote.http11.Http11NioProtocol[m : Starting ProtocolHandler ["http-nio-5000"]
+2023-04-09 19:00:35.582 [32mINFO [m[main] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : nacos registry, DEFAULT_GROUP report-game 192.168.0.108:5000 register finished
+2023-04-09 19:00:35.617 [32mINFO [m[main] [36mcom.sunyinuo.reportgame.ReportGameApplication[m : Started ReportGameApplication in 7.336 seconds (JVM running for 8.47)
+2023-04-09 19:00:36.308 [32mINFO [m[RMI TCP Connection(7)-192.168.0.108] [36morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][m : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09 19:00:36.570 [32mINFO [m[RMI TCP Connection(6)-192.168.0.108] [36morg.mongodb.driver.connection[m : Opened connection [connectionId{localValue:3, serverValue:34}] to 127.0.0.1:27017
+2023-04-09 22:23:26.029 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-04-09 22:23:26.029 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Start destroying Publisher
+2023-04-09 22:23:26.499 [33mWARN [m[Thread-23] [36mcom.alibaba.nacos.common.notify.NotifyCenter[m : [NotifyCenter] Destruction of the end
+2023-04-09 22:23:26.675 [33mWARN [m[Thread-14] [36mcom.alibaba.nacos.common.http.HttpClientBeanHolder[m : [HttpClientBeanHolder] Destruction of the end
+2023-04-09 22:23:29.255 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registering from Nacos Server now...
+2023-04-09 22:23:29.461 [32mINFO [m[SpringContextShutdownHook] [36mcom.alibaba.cloud.nacos.registry.NacosServiceRegistry[m : De-registration finished.
+2023-04-09 22:23:38.764 [32mINFO [m[SpringContextShutdownHook] [36morg.mongodb.driver.connection[m : Closed connection [connectionId{localValue:3, serverValue:34}] to 127.0.0.1:27017 because the pool has been closed.

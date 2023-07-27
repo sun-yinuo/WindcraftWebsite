@@ -69,6 +69,12 @@ spring:
           predicates:
             - Path=/userconfigappendusercover/**
             - Method=GET,POST
+        #massge-comments模块route
+        - id: massge-comments
+          uri: http://localhost:6001
+          predicates:
+            - Path=/massgecomments/**
+            - Method=GET,POST
     nacos:
       config:
         server-addr: 127.0.0.1:8848

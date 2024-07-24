@@ -16,7 +16,7 @@
 .userCourseImage{
   margin-bottom: 10px;
   width: auto;height: 250px;
-  background: url("/src/assets/CoursePage/image-4.jpg");
+  background: url("../../../src/assets/CoursePage/image-4.jpg");
 }
 .userHeadImage{
   margin: auto;

@@ -1,12 +1,18 @@
 <template>
   <!--菜单-->
   <Menu mode="horizontal" :theme="theme" active-name="1" width="auto">
+    <MenuItem name="0" @click="gotoMainPage">
+      <img
+          alt="Logo"
+          src="/../src/assets/logo.png"
+      />
+    </MenuItem>
     <!--首页-->
     <MenuItem name="1" @click="gotoMainPage">首页</MenuItem>
     <!--介绍-->
-    <MenuItem name="2">介绍</MenuItem>
+<!--    <MenuItem name="2">介绍</MenuItem>-->
     <!--截图-->
-    <MenuItem name="3">截图</MenuItem>
+<!--    <MenuItem name="3">截图</MenuItem>-->
     <!--op-->
     <MenuItem name="4" @click="gotoOPCoursePage">团队介绍</MenuItem>
     <!--历程-->
@@ -22,17 +28,23 @@
     <!--消息-->
     <MenuItem name="10">消息</MenuItem>
     <!--搜索框-->
-    <Input style="width: 20%; margin: 10px" placeholder="随便搜搜呗(≧∇≦)ﾉ" />
+    <Input placeholder="随便搜搜呗(≧∇≦)ﾉ" style="width: 15%; margin: 10px" />
     <!--搜索按钮-->
     <Button type="primary" icon="ios-search"></Button>
     <!--用户头像-->
-    <Avatar :src="userHeadPicture" @click="gotoUserConfigPage" style="margin-left: 3%;	"/>
+    <Avatar :src="userHeadPicture" style="margin-left: 10px;	" @click="gotoUserConfigPage"/>
     <!--Q:这里为什么不用input现成的search?
     A:因为合起来的话上边距会直接变为0 尝试过解决但是效果都不满意
     索性拆成两个单独的组件 刚好他俩中间的小地方可以撑下高度 就神奇的垂直置中了-->
+
   </Menu>
 </template>
 
+<style>
+.menu{
+
+}
+</style>
 <script>
 import router from "@/router";
 import request from "@/utils/request";
